@@ -34,39 +34,34 @@ class Signup extends Component {
                 },
                 value: ""
             }
-        }
+        },
+        loading: false
     };
 
 
-    handleFormSubmit = () => {
-        const { username, password, course, campus } = this.state;
+    handleFormSubmit = (event) => {
+        event.preventDefault();
+
         const { history } = this.props;
 
+        this.setState({
+            loading: true
+        });
 
-        this.service.signup(username, password, campus, course)
+        const userData = {};
+
+        for(let key in this.state.signupForm ) {
+            userData[key] = this.state.signupForm[key].value;
+        }
+
+        this.service.signup(...userData)
             .then( response => {
-                this.setState({
-                    username: "",
-                    password: "",
-                    course: "",
-                    campus: ""
-                });
-
-                this.props.getUser(response);
+                // this.props.getUser(response);
                 history.push('/profile');
-
             })
             .catch( error => {
-                this.setState({
-                    error: "Something went wrong!"
-                });
-
-                setTimeout(() => {
-                    this.setState({
-                        error: ""
-                    });
-                }, 2000);
-            } )
+                console.log("Something went wrong!");
+            });
     };
 
     handleChange = (event) => {
