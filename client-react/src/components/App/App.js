@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 class App extends Component {
   render() {
     return (
-        <h1 className="text-center">Hi world</h1>
     );
   }
 }
