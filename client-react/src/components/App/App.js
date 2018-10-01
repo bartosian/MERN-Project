@@ -28,6 +28,24 @@ class App extends Component {
         }
     };
 
+    componentWillMount() {
+        this.fetchUser();
+    };
+
+    getTheUser= (userObj) => {
+        this.setState({
+            loggedInUser: userObj
+        })
+    };
+
+    logoutUser = (history) =>{
+        this.service.logout()
+            .then(() => {
+                this.setState({ loggedInUser: null });
+                history.push('/');
+            })
+    };
+
       render() {
         return (
             <Switch>
