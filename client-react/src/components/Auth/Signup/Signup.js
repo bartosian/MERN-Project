@@ -5,15 +5,38 @@ import './Signup.css';
 class Signup extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            username: '',
-            email: '',
-            password: '',
-            error: ''
-        };
-
         this.service = new AuthService();
     }
+
+    state = {
+        signupForm: {
+            username: {
+                elementType: 'input',
+                elementConfig: {
+                    type: "text",
+                    placeholder: "Enter your name"
+                },
+                value: ""
+            },
+            email: {
+                elementType: 'input',
+                elementConfig: {
+                    type: "text",
+                    placeholder: "Enter your email"
+                },
+                value: ""
+            },
+            password: {
+                elementType: 'input',
+                elementConfig: {
+                    type: "password",
+                    placeholder: "Enter your password"
+                },
+                value: ""
+            }
+        }
+    };
+
 
     handleFormSubmit = () => {
         const { username, password, course, campus } = this.state;
