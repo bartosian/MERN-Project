@@ -1,0 +1,8 @@
+#user-input {
+    outline: none;
+    border: none;
+    height: 50px;
+    font-size: 1.5rem;
+    color: grey;
+    border-radius: 20px;
+}

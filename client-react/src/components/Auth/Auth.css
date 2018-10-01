@@ -1,0 +1,6 @@
+.user-form {
+    margin: 0 auto;
+    transform: translateY(25vh) ;
+    padding: 20px;
+    background: rgba(150, 159, 169, 0.2);;
+}

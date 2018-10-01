@@ -94,6 +94,7 @@ class Signup extends Component {
                 formElementsArr.map( el => (
                     <Input
                         key={ el.id }
+                        label={ el.id }
                         elementType={ el.config.elementType }
                         elementConfig={ el.config.elementConfig}
                         value={ el.config.value }
