@@ -2,7 +2,7 @@ import React from "react";
 
 const button = (props) => (
     <button
-        className={ ['Button', [props.btnType]].join(" ") }
+        className={ ['btn btn-block btn-outline-success', [props.btnType]].join(" ") }
         onClick={ props.clicked }
     >
         { props.children }
