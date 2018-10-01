@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AuthService from '../../../services/auth-service';
+import Input from './../../UI/Input/Input';
 import './Signup.css';
 
 class Signup extends Component {
@@ -64,21 +65,51 @@ class Signup extends Component {
             });
     };
 
-    handleChange = (event) => {
-        const {name, value} = event.target;
-        this.setState({[name]: value});
+    inputChangedHandler = (e, inputIdentifier) => {
+        const newSignupForm = { ...this.state.signupForm };
+        let updatedControl = { ...newSignupForm[inputIdentifier] };
+        updatedControl.value = e.target.value;
+        newSignupForm[inputIdentifier] = updatedControl;
+
+        this.setState({
+            signupForm: newSignupForm
+        });
     };
 
 
-    render(){
+    render() {
 
-        const error = this.state.error ? (
-            <div className="alert">{ this.state.error }</div>
-        ) : null;
+        const formElementsArr = [];
 
-        return(
-            <p>Signup</p>
-        )
+        for (let key in this.state.signupForm) {
+            formElementsArr.push({
+                id: key,
+                config: this.state.signupForm[key]
+            });
+        }
+
+        let form = ( <form onSubmit={ this.handleFormSubmit } action="#">
+            {
+                formElementsArr.map( el => (
+                    <Input
+                        key={ el.id }
+                        elementType={ el.config.elementType }
+                        elementConfig={ el.config.elementConfig}
+                        value={ el.config.value }
+                        changed={ (event) => this.inputChangedHandler(event, el.id) }
+                    />
+                ))
+            }
+            <Button btnType="Success">Submit</Button>
+        </form>);
+
+        return (
+            <div>
+                <h4>SignUp form</h4>
+                { form }
+            </div>
+        );
+
     }
 }
 
