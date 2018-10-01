@@ -16,5 +16,7 @@ const protectedRoute  = ({component: Component, user, ...rest}) => {
             }
         />
     )
-}
+};
+
+
 export default protectedRoute;
