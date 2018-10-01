@@ -7,7 +7,7 @@ const parser = require('../config/cloudinary');
 const bcrypt = require("bcryptjs");
 const bcryptSalt = 10;
 
-
+/* Login User */
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', (err, theUser, failureDetails) => {
         if (err) {
@@ -37,22 +37,27 @@ router.post('/login', (req, res, next) => {
     })(req, res, next);
 });
 
-
+/* Create new User */
 router.post("/signup", (req, res, next) => {
 
-    const { username, password, campus, course } = req.body;
+    const { username, password, email  } = req.body;
+    let message = "";
 
-    if (username === "" || password === "" || campus === "" || course === "") {
+    let validateErr = validateUser({
+        username,
+        password,
+        email
+    });
+
+    if(validateErr) {
+        message = validateErr.details[0].message;
         res.status(400)
-            .json({message: "Indicate all the necessary data." });
-
-        return;
+            .json({
+                "message": message
+            });
     }
 
-    if(password.length < 8){
-        res.status(400).json({ message: 'Please make your password at least 8 characters long for security purposes.' });
-        return;
-    }
+
 
     User.findOne({ username }, (err, user) => {
 
