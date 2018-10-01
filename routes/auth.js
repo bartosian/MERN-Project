@@ -55,11 +55,11 @@ router.post("/signup", (req, res, next) => {
             .json({
                 "message": message
             });
+
+        return;
     }
 
-
-
-    User.findOne({ username }, (err, user) => {
+    User.findOne({ email }, (err, user) => {
 
         if(err){
             res.status(500)
@@ -70,7 +70,7 @@ router.post("/signup", (req, res, next) => {
 
         if (user !== null) {
             res.status(400)
-                .json({message: "The username already exists" });
+                .json({message: "The email already exists" });
 
             return;
         }
@@ -81,8 +81,7 @@ router.post("/signup", (req, res, next) => {
         const newUser = new User({
             username,
             password: hashPass,
-            campus,
-            course
+            email
         });
 
         newUser.save()
@@ -108,6 +107,8 @@ router.post("/signup", (req, res, next) => {
             })
     });
 });
+
+
 
 router.post('/logout', (req, res, next) => {
 
