@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AuthService from '../../../services/auth-service';
 import Input from './../../UI/Input/Input';
+import Button from './../../UI/Button/Button';
 import './Signup.css';
 
 class Signup extends Component {
