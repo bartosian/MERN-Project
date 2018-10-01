@@ -1,7 +1,8 @@
 import React from 'react';
+import Spinner from '../UI/Spinner/Spinner';
 
 const profile = (props) => (
-    <h3>PROFILE PAGE</h3>
+    <Spinner />
 );
 
 export default profile;

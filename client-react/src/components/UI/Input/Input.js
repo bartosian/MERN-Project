@@ -6,7 +6,7 @@ const input = (props) => {
 
     switch (props.elementType) {
         case ('input'):
-            inputElement = <input className='form-control' { ...props.elementConfig } value={ props.value } onChange={ props.changed }/>;
+            inputElement = <input className='form-control' { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
             break;
         case ('select'):
             inputElement = (
@@ -18,7 +18,7 @@ const input = (props) => {
             );
             break;
         default:
-            inputElement = <input id="user-input" className='form-control'  { ...props.elementConfig } value={ props.value } onChange={ props.changed }/>;
+            inputElement = <input id="user-input" className='form-control'  { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
     }
 
 
