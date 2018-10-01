@@ -109,7 +109,7 @@ router.post("/signup", (req, res, next) => {
 });
 
 
-
+/* Log out user */
 router.post('/logout', (req, res, next) => {
 
     req.logout();
@@ -117,6 +117,8 @@ router.post('/logout', (req, res, next) => {
         .json({ message: 'Log out success!' });
 });
 
+
+/* Check loggedin */
 router.get('/loggedin', (req, res, next) => {
 
     if (req.isAuthenticated()) {
@@ -129,14 +131,19 @@ router.get('/loggedin', (req, res, next) => {
         .json({ message: 'Unauthorized' });
 });
 
+/* Uploading images */
 router.post('/upload', parser.single('picture'), (req, res, next) => {
-    User.findOneAndUpdate({ username : req.user.username }, { image: req.file.url })
+    User.findOneAndUpdate({ email : req.user.email }, { image: req.file.url })
         .then(() => {
-            res.json({
+            res.status(203)
+                .json({
                 success: true,
                 image: req.file.url
             })
-        })
+        }).catch(err => {
+            res.status(400)
+            .json({ message: 'Saving image to database went wrong.' });
+    })
 });
 
 module.exports = router;
