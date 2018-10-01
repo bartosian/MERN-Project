@@ -57,10 +57,12 @@ class Signup extends Component {
             userData[key] = this.state.signupForm[key].value;
         }
 
-        this.service.signup(...userData)
+
+        this.service.signup(userData)
             .then( response => {
                 // this.props.getUser(response);
                 history.push('/profile');
+                console.log('Ok');
             })
             .catch( error => {
                 console.log("Something went wrong!");

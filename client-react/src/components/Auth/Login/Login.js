@@ -49,7 +49,7 @@ class Login extends Component {
             userData[key] = this.state.loginForm[key].value;
         }
 
-        this.service.login(...userData)
+        this.service.login(userData)
             .then( response => {
                 // this.props.getUser(response);
                 history.push('/profile');
@@ -60,13 +60,13 @@ class Login extends Component {
     };
 
     inputChangedHandler = (e, inputIdentifier) => {
-        const newLoginForm = { ...this.state.LoginForm };
+        const newLoginForm = { ...this.state.loginForm };
         let updatedControl = { ...newLoginForm[inputIdentifier] };
         updatedControl.value = e.target.value;
         newLoginForm[inputIdentifier] = updatedControl;
 
         this.setState({
-            LoginForm: newLoginForm
+            loginForm: newLoginForm
         });
     };
 
