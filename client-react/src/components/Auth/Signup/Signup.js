@@ -62,7 +62,6 @@ class Signup extends Component {
             .then( response => {
                 // this.props.getUser(response);
                 history.push('/profile');
-                console.log('Ok');
             })
             .catch( error => {
                 console.log("Something went wrong!");

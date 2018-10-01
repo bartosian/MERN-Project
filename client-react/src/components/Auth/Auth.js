@@ -10,7 +10,7 @@ const auth = (props) => (
             <div className="col-12 d-none d-md-block col-md-5"><img className="main-bg" src="http://factorybuilderstores.com/wp-content/uploads/2016/02/SM-Graphic.png" alt="social"/></div>
             <div className="col-12 col-md-5 user-form">
                 <Switch>
-                    <Route exact path="/" render={ () => (
+                    <Route  exact path="/" render={ () => (
                         <Redirect to="/signup"/>
                     )} />
                     <Route path="/signup" component={ Signup }/>
