@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AuthService from '../../../services/auth-service';
 import Input from './../../UI/Input/Input';
 import Button from './../../UI/Button/Button';
+import { Link } from 'react-router-dom';
 import './Signup.css';
 
 class Signup extends Component {
@@ -109,6 +110,7 @@ class Signup extends Component {
             <div>
                 <h4 className="form-header">SignUp form</h4>
                 { form }
+                <p>Do you have already account?    <Link to="/login">Log in</Link></p>
             </div>
         );
 
