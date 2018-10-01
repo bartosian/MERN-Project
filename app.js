@@ -16,7 +16,7 @@ const flash      = require("connect-flash");
 
 
 mongoose
-    .connect('mongodb://localhost/profile-app', {useNewUrlParser: true})
+    .connect('mongodb://localhost/mern-app', {useNewUrlParser: true})
     .then(x => {
         console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
     })
@@ -72,6 +72,7 @@ app.use(session({
     saveUninitialized: true,
     store: new MongoStore( { mongooseConnection: mongoose.connection })
 }))
+
 app.use(flash());
 require('./passport')(app);
 
