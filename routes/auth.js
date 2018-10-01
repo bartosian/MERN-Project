@@ -3,6 +3,7 @@ const passport = require('passport');
 const router = express.Router();
 const { User, validateUser } = require("../models/User");
 const parser = require('../config/cloudinary');
+const middleAuth = require('../middleWare/auth');
 
 const bcrypt = require("bcryptjs");
 const bcryptSalt = 10;
@@ -132,7 +133,7 @@ router.get('/loggedin', (req, res, next) => {
 });
 
 /* Uploading images */
-router.post('/upload', parser.single('picture'), (req, res, next) => {
+router.post('/upload', [middleAuth, parser.single('picture')], (req, res, next) => {
     User.findOneAndUpdate({ email : req.user.email }, { image: req.file.url })
         .then(() => {
             res.status(203)
