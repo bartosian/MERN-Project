@@ -107,7 +107,7 @@ class Signup extends Component {
 
         return (
             <div>
-                <h4>SignUp form</h4>
+                <h4 className="form-header">SignUp form</h4>
                 { form }
             </div>
         );

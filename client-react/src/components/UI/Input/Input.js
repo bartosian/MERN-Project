@@ -24,7 +24,7 @@ const input = (props) => {
 
     return (
         <div className='form-group'>
-            <label className='label'>{props.label}</label>
+            <label className='label' id='user-label'>{props.label}</label>
             { inputElement }
         </div>
         )

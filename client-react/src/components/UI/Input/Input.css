@@ -6,3 +6,9 @@
     color: grey;
     border-radius: 20px;
 }
+
+#user-label {
+    color: white;
+    text-shadow: 0 2px 5px blue;
+    font-size: 1.3rem;
+}
