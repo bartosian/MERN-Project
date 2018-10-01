@@ -60,7 +60,7 @@ class Signup extends Component {
 
         this.service.signup(userData)
             .then( response => {
-                // this.props.getUser(response);
+                this.props.getTheUser(response);
                 history.push('/profile');
             })
             .catch( error => {

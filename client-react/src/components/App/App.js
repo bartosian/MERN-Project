@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Auth from '../Auth/Auth';
 import Profile from '../Profile/Profile';
 import AuthService from '../../services/auth-service';
@@ -50,7 +50,8 @@ class App extends Component {
         return (
             <Switch>
                 <Route path='/profile' component={ Profile }/>
-                <Route path='/' component={ Auth } />
+                <Route path='/' render = {() => {
+                    return this.state.loggedInUser ? <Redirect to="/profile" /> : <Auth getTheUser={ this.getTheUser }/>}} />
             </Switch>
         );
       }

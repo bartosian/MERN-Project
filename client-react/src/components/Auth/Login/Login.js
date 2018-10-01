@@ -51,7 +51,7 @@ class Login extends Component {
 
         this.service.login(userData)
             .then( response => {
-                // this.props.getUser(response);
+                this.props.getTheUser(response);
                 history.push('/profile');
             })
             .catch( error => {
