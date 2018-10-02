@@ -88,3 +88,18 @@
     width: 100%;
     height: 100%;
 }
+
+@media(min-width: 1200px) {
+    .btn {
+        font-size: 1rem !important;
+    }
+}
+
+@media(max-width:1200px) {
+    .btn {
+        font-size: 7px !important;
+    }
+}
+
+
+

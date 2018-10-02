@@ -148,6 +148,7 @@
     margin-right: 10px;
     margin-bottom: 5px;
     border-radius: 10px;
+    transition: all 300ms linear;
 }
 
 .interest:hover {
