@@ -60,6 +60,11 @@
     animation: fingerMove 800ms ease-in infinite alternate;
 }
 
+.finger-upload {
+    margin-top: 50px;
+    display: block;
+}
+
 @keyframes fingerMove {
     from {
         transform: translateY(-10px);

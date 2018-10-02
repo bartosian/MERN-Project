@@ -59,6 +59,7 @@ class PictureBlock extends Component {
                             <Fragment>
                                 <p className="upload-hint hint--block">Loaded</p>
                                 <i className="fa fa-file-image-o image-icon" aria-hidden="true"></i>
+                                <i className="fa fa-hand-o-down finger finger-upload" aria-hidden="true"></i>
                             </Fragment>
                         )
                     }
