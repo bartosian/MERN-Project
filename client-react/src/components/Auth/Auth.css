@@ -50,3 +50,12 @@
     -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 1000px) {
+    .main-logo {
+        font-size: 5rem;
+    }
+
+    .main-bg-gif {
+        left: 70px;
+    }
+}

@@ -1,10 +1,10 @@
-#input-user.invalid {
+.input-user.invalid {
     box-shadow: 0 0 3px red;
     border: 2px solid red;
     background: rgba(230, 117, 117, 0.3);
 }
 
-#input-user {
+.input-user {
     color: black;
     border-radius: 10px !important;
 }

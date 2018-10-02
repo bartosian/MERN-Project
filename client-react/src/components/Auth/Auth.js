@@ -16,6 +16,7 @@ const auth = (props) => {
                             <img className="main-bg-gif" src="https://blog.advids.co/wp-content/uploads/2017/05/Product-Sales11.gif" alt="social-gif"/>
                         </div>
                         <div className="col-12 col-md-5 user-form">
+                            <h1 className="main-logo d-md-none">InTouch</h1>
                             <Switch>
                                 <Route  exact path="/" render={ () => (
                                     <Redirect to="/signup"/>

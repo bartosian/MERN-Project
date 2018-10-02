@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/client-react/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Auth/Auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Auth/Auth.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Auth/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Auth/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/UI/Button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/UI/Button/Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/UI/Input/Input.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/UI/Input/Input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/UI/Input/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/UI/Input/Input.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +22,7 @@
       <file leaf-file-name="Signup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Signup/Signup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="323">
               <caret line="165" column="43" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="43" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -33,11 +31,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Auth.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Input.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/UI/Input/Input.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Auth.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Auth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="13" column="52" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="52" />
+            <state relative-caret-position="247">
+              <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -99,17 +109,18 @@
       <file leaf-file-name="Input.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/UI/Input/Input.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="114">
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Auth.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Auth.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Auth.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="45" column="113" selection-start-line="45" selection-start-column="113" selection-end-line="45" selection-end-column="113" />
+            <state relative-caret-position="494">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -138,16 +149,16 @@
         <option value="$PROJECT_DIR$/client-react/src/components/UI/Spinner/Spinner.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/UI/Button/Button.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/UI/Input/Input.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/UI/Input/Input.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Auth/Signup/Signup.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Auth/Signup/Signup.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Auth/Login/Login.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/UI/Button/Button.css" />
         <option value="$PROJECT_DIR$/client-react/src/index.css" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" />
         <option value="$PROJECT_DIR$/client-react/public/index.html" />
+        <option value="$PROJECT_DIR$/client-react/src/components/UI/Input/Input.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/UI/Input/Input.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Auth/Auth.css" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" />
       </list>
     </option>
   </component>
@@ -254,6 +265,15 @@
               <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="Button" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
+              <item name="client-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Input" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -303,18 +323,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
-      <workItem from="1538406188877" duration="32589000" />
+      <workItem from="1538406188877" duration="33000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32589000" />
+    <option name="totallyTimeSpent" value="33000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="105" y="23" width="1512" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.167002" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.167002" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -323,7 +343,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="npm" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.22941177" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.22941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -502,23 +522,6 @@
     <entry file="file://$PROJECT_DIR$/client-react/src/assets/images/bg2-main.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/UI/Input/Input.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/UI/Input/Input.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Signup/Signup.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -553,26 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Signup/Signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="165" column="43" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -587,10 +570,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Signup/Signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="165" column="43" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/UI/Input/Input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/UI/Input/Input.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Auth.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="45" column="113" selection-start-line="45" selection-start-column="113" selection-end-line="45" selection-end-column="113" />
+        <state relative-caret-position="494">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

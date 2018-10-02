@@ -3,7 +3,7 @@ import './Input.css';
 
 const input = (props) => {
     let inputElement = null;
-    let inputClasses = ['form-control'];
+    let inputClasses = ['form-control', 'input-user'];
 
     if(props.invalid && props.touched) {
         inputClasses.push('invalid');
@@ -11,11 +11,11 @@ const input = (props) => {
 
     switch (props.elementType) {
         case ('input'):
-            inputElement = <input id="input-user" className={ inputClasses.join(' ') } { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
+            inputElement = <input  className={ inputClasses.join(' ') } { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
             break;
         case ('select'):
             inputElement = (
-                <select id="input-user" className={ inputClasses.join(' ') }   value={ props.value } onChange={ props.changed }>
+                <select  className={ inputClasses.join(' ') }   value={ props.value } onChange={ props.changed }>
                     { props.elementConfig.options.map( option => (
                         <option value={ option.value } key={ option.value }>{ option.displayValue }</option>
                     ))}
@@ -23,7 +23,7 @@ const input = (props) => {
             );
             break;
         default:
-            inputElement = <input  id="input-user" className={ inputClasses.join(' ') }  { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
+            inputElement = <input  className={ inputClasses.join(' ') }  { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
     }
 
 
