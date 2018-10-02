@@ -27,6 +27,7 @@
     background: rgba(216, 212, 212, 0.3);
     cursor: pointer;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .choose-picture:hover {

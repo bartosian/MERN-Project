@@ -1,7 +1,39 @@
 import React, { Component } from 'react';
+import AuthService from '../../../services/auth-service';
+import Button from '../../UI/Button/Button';
 import './PictureBlock.css';
 
 class PictureBlock extends Component {
+
+    constructor(props) {
+        super(props);
+        this.authService = new AuthService();
+    }
+
+    state = {
+        file: null,
+        showImage: false
+    };
+
+    handleChange(e) {
+        this.setState({
+            file: e.target.files[0]
+        })
+    };
+
+    handleSubmit = () => {
+        this.authService.addPicture(this.state.file)
+            .then( data => {
+                this.setState({
+                    file: data.image,
+                    showImage: true
+                })
+            });
+    };
+
+    selectPhoto = () => {
+        this.input.click();
+    };
 
     render() {
         return (
@@ -9,11 +41,10 @@ class PictureBlock extends Component {
                 <div className="choose-picture">
                     <i className="fa fa-hand-o-down finger" aria-hidden="true"></i>
                     <p className="upload-hint">Choose photo</p>
-                    <i className="fa fa-camera-retro camera"></i>
-                    <input className="photo-loader" name="picture"  type="file"/>
+                    <i className="fa fa-camera-retro camera" onClick={ this.selectPhoto }></i>
+                    <input className="photo-loader" ref={ (node) => this.input = node } onChange={(e)=>this.handleChange(e)} name="picture"  type="file"/>
                 </div>
-
-                button
+                    <Button className="btn-photo" btnType="primary" disabled={ this.state.file }>Change photo</Button>
             </div>
         );
     }
