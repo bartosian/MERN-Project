@@ -5,7 +5,7 @@ const input = (props) => {
     let inputElement = null;
     let inputClasses = ['form-control'];
 
-    if(props.invalid) {
+    if(props.invalid && props.touched) {
         inputClasses.push('invalid');
     }
 

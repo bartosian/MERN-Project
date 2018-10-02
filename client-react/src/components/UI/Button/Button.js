@@ -3,6 +3,7 @@ import './Button.css';
 
 const button = (props) => (
     <button
+        disabled={ props.disabled }
         id="btn-app"
         className={ ['btn btn-block btn-outline-primary', [props.btnType]].join(" ") }
         onClick={ props.clicked }

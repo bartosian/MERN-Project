@@ -23,7 +23,8 @@ class Signup extends Component {
                 validation : {
                     required: true
                 },
-                valid: false
+                valid: false,
+                touched: false
             },
             email: {
                 elementType: 'input',
@@ -33,9 +34,11 @@ class Signup extends Component {
                 },
                 value: "",
                 validation : {
-                    required: true
+                    required: true,
+                    email: true
                 },
-                valid: false
+                valid: false,
+                touched: false
             },
             password: {
                 elementType: 'input',
@@ -48,10 +51,12 @@ class Signup extends Component {
                     required: true,
                     minLength: 8
                 },
-                valid: false
+                valid: false,
+                touched: false
             }
         },
-        loading: false
+        loading: false,
+        isFormValid: false
     };
 
 
@@ -81,6 +86,12 @@ class Signup extends Component {
             });
     };
 
+    looksLikeMail(str) {
+        var lastAtPos = str.lastIndexOf('@');
+        var lastDotPos = str.lastIndexOf('.');
+        return (lastAtPos < lastDotPos && lastAtPos > 0 && str.indexOf('@@') === -1 && lastDotPos > 2 && (str.length - lastDotPos) > 2);
+    };
+
     checkValidity(value, rules) {
         let valid = true;
 
@@ -92,18 +103,31 @@ class Signup extends Component {
             valid = value.length >= rules.minLength && valid;
         }
 
+        if(rules.email) {
+            valid = this.looksLikeMail(value) && valid;
+            console.log(this.looksLikeMail(value));
+        }
+
         return valid;
     };
+
 
     inputChangedHandler = (e, inputIdentifier) => {
         const newSignupForm = { ...this.state.signupForm };
         let updatedControl = { ...newSignupForm[inputIdentifier] };
         updatedControl.value = e.target.value;
         updatedControl.valid = this.checkValidity(updatedControl.value, updatedControl.validation);
+        updatedControl.touched = true;
         newSignupForm[inputIdentifier] = updatedControl;
 
+        let formIsValid = true;
+        for(let inputIdentifier in newSignupForm) {
+            formIsValid = newSignupForm[inputIdentifier].valid && formIsValid;
+        }
+
         this.setState({
-            signupForm: newSignupForm
+            signupForm: newSignupForm,
+            isFormValid: formIsValid
         });
     };
 
@@ -129,11 +153,12 @@ class Signup extends Component {
                         elementType={ el.config.elementType }
                         elementConfig={ el.config.elementConfig}
                         value={ el.config.value }
+                        touched={ el.config.touched }
                         changed={ (event) => this.inputChangedHandler(event, el.id) }
                     />
                 ))
             }
-            <Button btnType="Success">Submit</Button>
+            <Button btnType="Success" disabled={ !this.state.isFormValid }>Submit</Button>
         </form>);
 
         return (
