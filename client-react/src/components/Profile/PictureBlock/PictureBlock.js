@@ -52,10 +52,15 @@ class PictureBlock extends Component {
                             </Fragment>
                         )
                     }
+                    {
+                        typeof this.state.file === 'string' && (
+                            <img className="profile-photo" src={ this.state.file} alt="user"/>
+                        )
+                    }
 
                     <input className="photo-loader" ref={ (node) => this.input = node } onChange={(e)=>this.handleChange(e)} name="picture"  type="file"/>
                 </div>
-                    <Button className="btn-photo" btnType="primary" disabled={ this.state.file }>Change photo</Button>
+                    <Button className="btn-photo" btnType="primary" disabled={ !this.state.file || this.state.showImage } clicked={ this.handleSubmit }>Change photo</Button>
             </div>
         );
     }
