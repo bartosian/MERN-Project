@@ -5,6 +5,10 @@ const input = (props) => {
     let inputElement = null;
     let inputClasses = ['form-control'];
 
+    if(props.invalid) {
+        inputClasses.push('invalid');
+    }
+
     switch (props.elementType) {
         case ('input'):
             inputElement = <input className={ inputClasses.join(' ') } { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;

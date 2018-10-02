@@ -125,6 +125,7 @@ class Signup extends Component {
                     <Input
                         key={ el.id }
                         label={ el.id }
+                        invalid={ !el.config.valid }
                         elementType={ el.config.elementType }
                         elementConfig={ el.config.elementConfig}
                         value={ el.config.value }
