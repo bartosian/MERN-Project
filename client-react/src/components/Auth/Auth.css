@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     background-image: url("../../assets/images/bg-main.jpg");
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 30px black;
     border-radius: 10px;
 }
 
@@ -38,4 +38,15 @@
     bottom: -50px;
 }
 
+.main-logo {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 6rem;
+    letter-spacing: 4px;
+    background: url("https://www.123freevectors.com/wp-content/original/1446-red-triangle-abstract-background.jpg");
+    background-position: center center;
+    background-size: 190px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 

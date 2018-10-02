@@ -143,14 +143,14 @@ class Login extends Component {
                     />
                 ))
             }
-            <Button btnType="Success" disabled={ !this.state.isFormValid }>Submit</Button>
+            <Button btnType="primary" disabled={ !this.state.isFormValid }>Submit</Button>
         </form>);
 
         return (
             <div>
-                <h4 className="form-header">Log form</h4>
+                <h4 className="form-header"><span>Login</span> form</h4>
                 { form }
-                <p>Don't you have account?   <Link to="/signup">Sign up</Link></p>
+                <p>Don't you have account?   <Link className="login-link" to="/signup">Sign up</Link></p>
             </div>
         );
 
