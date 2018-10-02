@@ -1,0 +1,39 @@
+.user-info, .user-name {
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.user-name {
+    padding: 5px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.summary {
+    width: 100%;
+}
+
+.personal-details {
+    width: 100%;
+}
+
+.interests, .interests-list {
+    width: 100%;
+}
+
+.person-icon {
+    font-size: 3rem;
+    text-shadow: 0 0 2px black;
+}
