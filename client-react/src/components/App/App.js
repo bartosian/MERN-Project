@@ -50,7 +50,7 @@ class App extends Component {
       render() {
         return (
             <Switch>
-                <ProtectedRoute user={ this.state.loggedInUser } path='/profile' component={ Profile }/>
+                <Route user={ this.state.loggedInUser } path='/profile' component={ Profile }/>
                 <Route path='/' render = {() => {
                     return this.state.loggedInUser ? <Redirect to="/profile" /> : <Auth getTheUser={ this.getTheUser }/>}} />
             </Switch>
