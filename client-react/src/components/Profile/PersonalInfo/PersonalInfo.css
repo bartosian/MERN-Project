@@ -10,6 +10,10 @@
     background: rgba(216, 212, 212, 0.3);
 }
 
+.user-info {
+    padding-bottom: 0;
+}
+
 .user-name {
     padding: 5px;
     margin-bottom: 20px;
