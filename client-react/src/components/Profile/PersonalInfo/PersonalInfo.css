@@ -1,4 +1,4 @@
-.user-info, .user-name {
+.user-info, .user-name, .user-interests {
     padding: 10px;
     box-shadow: 0 0 10px black;
     border-radius: 10px;
@@ -133,5 +133,25 @@
     .user-info {
         font-size: 1.3rem;
     }
+}
+
+.user-interests {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.interest {
+    border: 1px solid #0069d9;
+    background: rgba(0, 123, 255, 0.3);
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.interest:hover {
+    background: white;
+    color: #0069d9;
 }
 
