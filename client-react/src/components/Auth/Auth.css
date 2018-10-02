@@ -2,13 +2,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    background-image: url("../../assets/images/bg-main.jpg");
+    box-shadow: 0 0 15px black;
 }
 
 .auth-wrapper {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-bg {
     width: 100%;
+}
+
+.user-form {
+    background: rgba(239, 233, 233, 0.6);
+    padding: 5px;
 }

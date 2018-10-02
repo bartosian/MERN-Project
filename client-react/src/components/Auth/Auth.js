@@ -9,8 +9,8 @@ const auth = (props) => {
 
         return (
                 <div className="container auth-wrapper">
-                    <div className="row form-wrapper">
-                        <div className="col-12 d-none d-md-block col-md-5"><img className="main-bg" src="http://factorybuilderstores.com/wp-content/uploads/2016/02/SM-Graphic.png" alt="social"/></div>
+                    <div className="col-12 col-md-10 form-wrapper">
+                        <div className="col-12 d-none d-md-block col-md-7"><img className="main-bg" src="http://www.broutinwebpublishing.com/wp-content/uploads/2016/04/social-media-local-1024x723.png" alt="social"/></div>
                         <div className="col-12 col-md-5 user-form">
                             <Switch>
                                 <Route  exact path="/" render={ () => (
