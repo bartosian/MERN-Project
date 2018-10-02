@@ -44,6 +44,10 @@
     display: none;
 }
 
+.choose-picture:hover > .hint--block {
+    display: block;
+}
+
 .finger {
     display: none;
     font-size: 3rem;
@@ -58,4 +62,14 @@
     } to {
     transform: translateY(-30px);
           }
+}
+
+.image-icon {
+    font-size: 6rem;
+    color: white;
+}
+
+.hint--block {
+    display: block;
+    color: white;
 }

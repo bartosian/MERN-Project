@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import AuthService from '../../../services/auth-service';
 import Button from '../../UI/Button/Button';
 import './PictureBlock.css';
@@ -39,9 +39,20 @@ class PictureBlock extends Component {
         return (
             <div className="picture-user">
                 <div className="choose-picture">
-                    <i className="fa fa-hand-o-down finger" aria-hidden="true"></i>
-                    <p className="upload-hint">Choose photo</p>
-                    <i className="fa fa-camera-retro camera" onClick={ this.selectPhoto }></i>
+                    { !this.state.file ? (
+                        <Fragment>
+                            <i className="fa fa-hand-o-down finger" aria-hidden="true"></i>
+                            <p className="upload-hint">Choose photo</p>
+                            <i className="fa fa-camera-retro camera" onClick={ this.selectPhoto }></i>
+                        </Fragment>
+                        ) : (
+                            <Fragment>
+                                <p className="upload-hint hint--block">Loaded</p>
+                                <i className="fa fa-file-image-o image-icon" aria-hidden="true"></i>
+                            </Fragment>
+                        )
+                    }
+
                     <input className="photo-loader" ref={ (node) => this.input = node } onChange={(e)=>this.handleChange(e)} name="picture"  type="file"/>
                 </div>
                     <Button className="btn-photo" btnType="primary" disabled={ this.state.file }>Change photo</Button>
