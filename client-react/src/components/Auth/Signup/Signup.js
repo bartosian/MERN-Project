@@ -19,7 +19,11 @@ class Signup extends Component {
                     type: "text",
                     placeholder: "Enter your name"
                 },
-                value: ""
+                value: "",
+                validation : {
+                    required: true
+                },
+                valid: false
             },
             email: {
                 elementType: 'input',
@@ -27,7 +31,11 @@ class Signup extends Component {
                     type: "text",
                     placeholder: "Enter your email"
                 },
-                value: ""
+                value: "",
+                validation : {
+                    required: true
+                },
+                valid: false
             },
             password: {
                 elementType: 'input',
@@ -35,7 +43,11 @@ class Signup extends Component {
                     type: "password",
                     placeholder: "Enter your password"
                 },
-                value: ""
+                value: "",
+                validation : {
+                    required: true
+                },
+                valid: false
             }
         },
         loading: false
@@ -68,10 +80,21 @@ class Signup extends Component {
             });
     };
 
+    checkValidity(value, rules) {
+        let valid = false;
+
+        if(rules.required) {
+             value.trim() !== '';
+        }
+
+        return valid;
+    };
+
     inputChangedHandler = (e, inputIdentifier) => {
         const newSignupForm = { ...this.state.signupForm };
         let updatedControl = { ...newSignupForm[inputIdentifier] };
         updatedControl.value = e.target.value;
+        updatedControl.valid = this.checkValidity(updatedControl.value, updatedControl.validation);
         newSignupForm[inputIdentifier] = updatedControl;
 
         this.setState({
