@@ -1,4 +1,16 @@
-.invalid {
+#input-user.invalid {
     box-shadow: 0 0 3px red;
-    background: rgba(230, 117, 117, 0.3) !important;
+    border: 2px solid red;
+    background: rgba(230, 117, 117, 0.3);
+}
+
+#input-user {
+    color: black;
+    border-radius: 10px !important;
+}
+
+#user-label {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 1px black;
 }

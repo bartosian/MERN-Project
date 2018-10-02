@@ -158,14 +158,14 @@ class Signup extends Component {
                     />
                 ))
             }
-            <Button btnType="Success" disabled={ !this.state.isFormValid }>Submit</Button>
+            <Button btnType="primary" disabled={ !this.state.isFormValid }>Submit</Button>
         </form>);
 
         return (
             <div>
-                <h4 className="form-header">SignUp form</h4>
+                <h4 className="form-header"><span>SignUp</span> form</h4>
                 { form }
-                <p>Do you have already account?    <Link to="/login">Log in</Link></p>
+                <p>Do you have already account?    <Link className="login-link" to="/login">Log in</Link></p>
             </div>
         );
 
