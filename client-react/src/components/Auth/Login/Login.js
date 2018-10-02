@@ -43,7 +43,8 @@ class Login extends Component {
             }
         },
         loading: false,
-        isFormValid: false
+        isFormValid: false,
+        error: false
     };
 
 
@@ -68,7 +69,15 @@ class Login extends Component {
                 history.push('/profile');
             })
             .catch( error => {
-                console.log("Something went wrong!");
+                this.setState({
+                    error: true
+                });
+
+                setTimeout(() => {
+                    this.setState({
+                        error: false
+                    });
+                }, 2000);
             });
     };
 
@@ -146,9 +155,14 @@ class Login extends Component {
             <Button btnType="primary" disabled={ !this.state.isFormValid }>Submit</Button>
         </form>);
 
+        let error = (
+            <p className="alert alert-danger">There is error with your credentials!</p>
+        );
+
         return (
             <div>
                 <h4 className="form-header"><span>Login</span> form</h4>
+                {this.state.error && error }
                 { form }
                 <p>Don't you have account?   <Link className="login-link" to="/signup">Sign up</Link></p>
             </div>
