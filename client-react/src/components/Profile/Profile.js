@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Profile.css';
 import Picture from './PictureBlock/PictureBlock';
+import PersonalInfo from './PersonalInfo/PersonalInfo';
+
 
 class Profile extends Component {
 
@@ -15,7 +17,9 @@ class Profile extends Component {
                     <div className="col-12 col-md-4">
                         <Picture user={ this.state.user }/>
                     </div>
-                    <div className="col-12 col-md-8">Personal info</div>
+                    <div className="col-12 col-md-8">
+                        <PersonalInfo />
+                    </div>
                 </div>
                 <div className="row">
                     <div className="col-12 col-md-4">Friends options</div>
