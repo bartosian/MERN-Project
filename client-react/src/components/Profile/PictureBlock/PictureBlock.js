@@ -11,7 +11,7 @@ class PictureBlock extends Component {
     }
 
     state = {
-        file: null,
+        file: this.props.user.image || null,
         showImage: false
     };
 
@@ -34,6 +34,16 @@ class PictureBlock extends Component {
     selectPhoto = () => {
         this.input.click();
     };
+
+    deleteFile = () => {
+        this.setState({
+            file: null,
+            showImage: false
+        });
+
+        this.input.click();
+    };
+
 
     render() {
         return (
@@ -60,7 +70,13 @@ class PictureBlock extends Component {
 
                     <input className="photo-loader" ref={ (node) => this.input = node } onChange={(e)=>this.handleChange(e)} name="picture"  type="file"/>
                 </div>
-                    <Button className="btn-photo" btnType="primary" disabled={ !this.state.file || this.state.showImage } clicked={ this.handleSubmit }>Change photo</Button>
+                {
+                    typeof this.state.file === 'string' ?  (
+                        <Button className="btn-photo" btnType="primary" clicked={ this.deleteFile }>Choose another photo</Button>
+                    ) : (
+                        <Button className="btn-photo" btnType="primary" disabled={ !this.state.file || this.state.showImage } clicked={ this.handleSubmit }>Change photo</Button>
+                    )
+                }
             </div>
         );
     }
