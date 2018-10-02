@@ -19,7 +19,13 @@ class Login extends Component {
                     type: "text",
                     placeholder: "Enter your email"
                 },
-                value: ""
+                value: "",
+                validation : {
+                    required: true,
+                    email: true
+                },
+                valid: false,
+                touched: false
             },
             password: {
                 elementType: 'input',
@@ -27,10 +33,17 @@ class Login extends Component {
                     type: "password",
                     placeholder: "Enter your password"
                 },
-                value: ""
+                value: "",
+                validation : {
+                    required: true,
+                    minLength: 8
+                },
+                valid: false,
+                touched: false
             }
         },
-        loading: false
+        loading: false,
+        isFormValid: false
     };
 
 
@@ -59,14 +72,47 @@ class Login extends Component {
             });
     };
 
+    looksLikeMail(str) {
+        var lastAtPos = str.lastIndexOf('@');
+        var lastDotPos = str.lastIndexOf('.');
+        return (lastAtPos < lastDotPos && lastAtPos > 0 && str.indexOf('@@') === -1 && lastDotPos > 2 && (str.length - lastDotPos) > 2);
+    };
+
+    checkValidity(value, rules) {
+        let valid = true;
+
+        if(rules.required) {
+            valid =  value.trim() !== '' && valid;
+        }
+
+        if(rules.minLength) {
+            valid = value.length >= rules.minLength && valid;
+        }
+
+        if(rules.email) {
+            valid = this.looksLikeMail(value) && valid;
+            console.log(this.looksLikeMail(value));
+        }
+
+        return valid;
+    };
+
     inputChangedHandler = (e, inputIdentifier) => {
         const newLoginForm = { ...this.state.loginForm };
         let updatedControl = { ...newLoginForm[inputIdentifier] };
         updatedControl.value = e.target.value;
+        updatedControl.valid = this.checkValidity(updatedControl.value, updatedControl.validation);
+        updatedControl.touched = true;
         newLoginForm[inputIdentifier] = updatedControl;
 
+        let formIsValid = true;
+        for(let inputIdentifier in newLoginForm) {
+            formIsValid = newLoginForm[inputIdentifier].valid && formIsValid;
+        }
+
         this.setState({
-            loginForm: newLoginForm
+            loginForm: newLoginForm,
+            isFormValid: formIsValid
         });
     };
 
@@ -89,13 +135,15 @@ class Login extends Component {
                         key={ el.id }
                         label={ el.id }
                         elementType={ el.config.elementType }
+                        invalid={ !el.config.valid }
                         elementConfig={ el.config.elementConfig}
                         value={ el.config.value }
+                        touched={ el.config.touched }
                         changed={ (event) => this.inputChangedHandler(event, el.id) }
                     />
                 ))
             }
-            <Button btnType="Success">Submit</Button>
+            <Button btnType="Success" disabled={ !this.state.isFormValid }>Submit</Button>
         </form>);
 
         return (

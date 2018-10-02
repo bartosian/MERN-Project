@@ -1,0 +1,4 @@
+.invalid {
+    box-shadow: 0 0 3px red;
+    background: rgba(230, 117, 117, 0.3) !important;
+}
