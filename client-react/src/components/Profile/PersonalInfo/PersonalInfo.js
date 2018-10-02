@@ -16,14 +16,15 @@ class PersonalInfo extends Component {
                 <div className="user-info">
                     <div className="row summary">
                         <div className="row personal-details">
-                            <div className="col-12 col-md-4">Date of Birth</div>
-                            <div className="col-12 col-md-4">Status</div>
-                            <div className="col-12 col-md-4">Contact info</div>
-                        </div>
-                    </div>
-                    <div className="row interests">
-                        <div className="col-12 interests-list">
-                            InterestsList
+                            <div className="col-12 col-md-4 personal-detail">
+                                <h5><i className="fa fa-birthday-cake detail-icon text-primary"></i>Date of Birth</h5>
+                            </div>
+                            <div className="col-12 col-md-4 personal-detail">
+                                <h5><i className="fa fa-heart detail-icon text-primary"></i>Status</h5>
+                            </div>
+                            <div className="col-12 col-md-4 personal-detail">
+                                <h5><i className="fa fa-address-book detail-icon text-primary"></i>Contact info</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
