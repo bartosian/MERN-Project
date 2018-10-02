@@ -45,7 +45,8 @@ class Signup extends Component {
                 },
                 value: "",
                 validation : {
-                    required: true
+                    required: true,
+                    minLength: 8
                 },
                 valid: false
             }
@@ -81,10 +82,14 @@ class Signup extends Component {
     };
 
     checkValidity(value, rules) {
-        let valid = false;
+        let valid = true;
 
         if(rules.required) {
-             value.trim() !== '';
+            valid =  value.trim() !== '' && valid;
+        }
+
+        if(rules.minLength) {
+            valid = value.length >= rules.minLength && valid;
         }
 
         return valid;
