@@ -11,6 +11,8 @@ class Profile extends Component {
     };
 
     render() {
+        const{ username } = this.state.user;
+
         return (
             <div className="container p-5">
                 <div className="row">
@@ -18,7 +20,7 @@ class Profile extends Component {
                         <Picture user={ this.state.user }/>
                     </div>
                     <div className="col-12 col-md-8">
-                        <PersonalInfo />
+                        <PersonalInfo username={ username }/>
                     </div>
                 </div>
                 <div className="row">

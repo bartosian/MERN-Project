@@ -24,11 +24,12 @@ class PersonalInfo extends Component {
     render() {
 
         const { interests } = this.state;
+        const { username } = this.props;
 
         return (
             <div className="container">
                 <div className="col-12 user-name">
-                    <Name />
+                    <Name username={ username }/>
                 </div>
                 <div className="user-info">
                     <div className="row summary">
