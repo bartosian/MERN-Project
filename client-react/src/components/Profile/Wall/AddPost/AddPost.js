@@ -29,6 +29,7 @@ class AddPost extends Component {
                     value={ this.state.post }
                     changed={ (event) => this.inputChangedHandler(event) }
                 />
+                <Button btnType="primary" disabled={ !this.state.post }>Place new post</Button>
             </Fragment>
         );
 

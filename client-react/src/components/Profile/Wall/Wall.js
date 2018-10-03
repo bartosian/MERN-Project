@@ -78,11 +78,13 @@ class Wall extends Component {
                 <div className="wall-posts">
                     <AddPost />
                 </div>
-                {
-                    this.state.posts.map((p, id) => (
-                        <Post key={ p.author + id } {...p}/>
-                    ))
-                }
+                <div className="posts-board">
+                    {
+                        this.state.posts.map((p, id) => (
+                            <Post key={ p.author + id } {...p}/>
+                        ))
+                    }
+                </div>
             </div>
         );
     }

@@ -1,9 +1,8 @@
 .user-post {
     position: relative;
-    box-shadow: 0 0 8px black;
     width: 100%;
     background: rgba(216, 212, 212, 0.3);
-    border-radius: 10px;
+    border-radius: 10px !important;
     margin-bottom: 10px;
     border: 1px solid transparent;
     display: flex;
@@ -23,10 +22,11 @@
     font-size: 1.2rem;
     color: rgb(0, 123, 254);
     text-shadow: 0 0 1px black;
+    border-radius: 10px;
 }
 
-.cred-data {
+.user-data.cred-data {
     background: rgba(216, 212, 212, 0.3);
-    border-radius: 10px;
+    border-radius: 10px !important;
     margin-bottom: 10px;
 }
