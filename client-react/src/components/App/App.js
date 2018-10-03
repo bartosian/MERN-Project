@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Auth from '../Auth/Auth';
 import Profile from '../Profile/Profile';
@@ -49,11 +49,13 @@ class App extends Component {
 
       render() {
         return (
-            <Switch>
-                <ProtectedRoute user={ this.state.loggedInUser } path='/profile' component={ Profile }/>
-                <Route path='/' render = {() => {
-                    return this.state.loggedInUser ? <Redirect to="/profile" /> : <Auth getTheUser={ this.getTheUser }/>}} />
-            </Switch>
+            <Fragment>
+                <Switch>
+                    <ProtectedRoute user={ this.state.loggedInUser } path='/profile' component={ Profile }/>
+                    <Route path='/' render = {() => {
+                        return this.state.loggedInUser ? <Redirect to="/profile" /> : <Auth getTheUser={ this.getTheUser }/>}} />
+                </Switch>
+            </Fragment>
         );
       }
 }
