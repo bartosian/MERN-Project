@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Friends.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Wall.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Friends.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="367">
-              <caret line="44" column="88" selection-start-line="44" selection-start-column="88" selection-end-line="44" selection-end-column="88" />
+              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="110" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -32,26 +45,17 @@
       <file leaf-file-name="Friends.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonalDetails.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalDetails/PersonalDetails.css">
-          <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret lean-forward="true" selection-end-line="6" selection-end-column="1" />
+              <caret selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonalInfo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalInfo.js">
+      <file leaf-file-name="Profile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="390">
+              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -59,14 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonalDetails.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalDetails/PersonalDetails.js">
+      <file leaf-file-name="Wall.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="75" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -112,12 +113,14 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalDetails/PersonalDetails.css" />
         <option value="$PROJECT_DIR$/client-react/src/index.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/PictureBlock/PictureBlock.css" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.js" />
         <option value="$PROJECT_DIR$/models/User.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.css" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" />
       </list>
     </option>
   </component>
@@ -201,25 +204,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Profile" type="462c0819:PsiDirectoryNode" />
-              <item name="PersonalInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
-              <item name="PersonalInfo" type="462c0819:PsiDirectoryNode" />
-              <item name="PersonalDetails" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
               <item name="Wall" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -272,12 +256,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="6896000" />
+      <workItem from="1538569246105" duration="7318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65812000" />
+    <option name="totallyTimeSpent" value="66234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
@@ -613,22 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalInfo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -656,19 +624,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        <state>
+          <caret selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
-          <caret line="44" column="88" selection-start-line="44" selection-start-column="88" selection-end-line="44" selection-end-column="88" />
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="110" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

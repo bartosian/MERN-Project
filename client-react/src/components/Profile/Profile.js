@@ -3,6 +3,7 @@ import './Profile.css';
 import Picture from './PictureBlock/PictureBlock';
 import PersonalInfo from './PersonalInfo/PersonalInfo';
 import Friends from './Friends/Friends';
+import Wall from './Wall/Wall';
 
 
 class Profile extends Component {
@@ -28,7 +29,9 @@ class Profile extends Component {
                     <div className="col-12 col-md-6">
                         <Friends />
                     </div>
-                    <div className="col-12 col-md-6"></div>
+                    <div className="col-12 col-md-6">
+                        <Wall />
+                    </div>
                 </div>
             </div>
         );
