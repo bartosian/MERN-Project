@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 const Joi = require('joi');
+const { postSchema } = require('./Post');
 
 const userSchema = new Schema({
   username: String,
@@ -22,7 +23,8 @@ const userSchema = new Schema({
   friends : [{
       type: Schema.Types.ObjectId,
       ref: 'User'
-  }]
+  }],
+  posts: [postSchema]
 }, {
   timestamps: {
     createdAt: 'created_at',
