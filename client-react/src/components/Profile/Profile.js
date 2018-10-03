@@ -24,8 +24,8 @@ class Profile extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12 col-md-4">Friends options</div>
-                    <div className="col-12 col-md-8">Board options</div>
+                    <div className="col-12 col-md-4"></div>
+                    <div className="col-12 col-md-8"></div>
                 </div>
             </div>
         );
