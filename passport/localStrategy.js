@@ -7,9 +7,9 @@ passport.use(new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password'
   }, 
-  (email, password, done) => {
-    User.findOne({ email })
-    .then(foundUser => {
+  async function (email, password, done)  {
+    const foundUser = await User.findOne({ email }).populate('friends');
+
       if (!foundUser) {
         done(null, false, { message: 'Incorrect email' });
         return;
@@ -22,6 +22,5 @@ passport.use(new LocalStrategy({
 
       done(null, foundUser);
     })
-    .catch(err => done(err));
-  }
-));
+
+);
