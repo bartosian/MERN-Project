@@ -1,5 +1,7 @@
 import React from 'react';
 import './Header.css';
+import Input from '../UI/Input/Input';
+import Button from '../UI/Button/Button';
 
 const header = (props) => {
 
@@ -12,10 +14,14 @@ const header = (props) => {
                     </div>
                     <h1 className="main-logo--navbar">InTouch</h1>
                 </div>
-
                 <nav className="main-nav">
-                    <div className="search"></div>
-                    <div className="logout"></div>
+                    <div className="search">
+                        <Input />
+                        <Button />
+                    </div>
+                    <div className="logout">
+                        <Button />
+                    </div>
                 </nav>
 
             </div>

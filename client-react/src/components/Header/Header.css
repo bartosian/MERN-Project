@@ -18,6 +18,10 @@
     align-items: center;
 }
 
+.main-nav {
+    width: 50%;
+}
+
 @media (max-width: 1200px) {
     .logo-bar {
         width: 25%;
