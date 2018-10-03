@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Profile.css';
 import Picture from './PictureBlock/PictureBlock';
 import PersonalInfo from './PersonalInfo/PersonalInfo';
+import Friends from './Friends/Friends';
 
 
 class Profile extends Component {
@@ -24,7 +25,9 @@ class Profile extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12 col-md-4"></div>
+                    <div className="col-12 col-md-4">
+                        <Friends />
+                    </div>
                     <div className="col-12 col-md-8"></div>
                 </div>
             </div>
