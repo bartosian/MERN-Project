@@ -6,25 +6,13 @@ import './PersonalInfo.css';
 
 class PersonalInfo extends Component {
     state = {
-        interests: [
-            'web-development',
-            'cars',
-            'music',
-            'friends',
-            'fights',
-            'fishing',
-            'drinks',
-            'money',
-            'technology',
-            'girls'
-        ]
+        user: this.props.user
     };
 
 
     render() {
 
-        const { interests } = this.state;
-        const { username } = this.props;
+        const { interests, dob, status, username, contacts } = this.state.user;
 
         return (
             <div className="container">
@@ -34,7 +22,7 @@ class PersonalInfo extends Component {
                 <div className="user-info">
                     <div className="row summary">
                         <div className="row personal-details">
-                            <Details />
+                            <Details dob={ dob } status={ status } contacts={ contacts }/>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import './Interests.css';
 
 const interests = ({ interests }) => {
 
-    const interestList = interests && (
+    const interestList = interests || (
         <div className="int-boiler">
             <i className="fa fa-list-alt" aria-hidden="true"></i>
             <p>You can add your interests here</p>
@@ -13,7 +13,9 @@ const interests = ({ interests }) => {
     return (
         <Fragment>
             {
-                interestList.length ? interestList.map((i, id) => (
+                interestList.length ? interestList.length > 10 ? interestList.slice(0, 10).map((i, id) => (
+                    <div key={i + id} className="interest">{i}</div>
+                )) :  interestList.map((i, id) => (
                     <div key={i + id} className="interest">{i}</div>
                 )) : interestList
             }

@@ -14,8 +14,8 @@ class Profile extends Component {
     };
 
     render() {
-        const{ username } = this.state.user;
-        const { logout } = this.props;
+        const{ user } = this.state;
+        const { logout, getUser } = this.props;
 
         return (
             <Fragment>
@@ -23,10 +23,10 @@ class Profile extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-4">
-                            <Picture user={ this.state.user }/>
+                            <Picture user={ user }/>
                         </div>
                         <div className="col-12 col-md-8">
-                            <PersonalInfo username={ username }/>
+                            <PersonalInfo user={ user }/>
                         </div>
                     </div>
                     <div className="row">
