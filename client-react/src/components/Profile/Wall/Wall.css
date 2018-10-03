@@ -30,14 +30,9 @@
 
 .wall-posts .form-group textarea {
     height: 100%;
-    background: rgba(216, 212, 212, 0.3);
+    background: white;
     color: black;
     border: 3px solid rgba(0, 123, 254, 0.5);
-}
-
-.wall-posts textarea:hover,
-.wall-posts textarea:focus {
-    background: rgba(255, 255, 255, 0.4);
 }
 
 .wall-posts .form-group + button {

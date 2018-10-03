@@ -20,7 +20,16 @@
 
 .main-nav {
     width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+
+.main-nav .form-group {
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
 
 @media (max-width: 1200px) {
     .logo-bar {
@@ -64,6 +73,10 @@
 }
 
 @media (max-width: 780px) {
+
+    .main-nav {
+        width: 65%;
+    }
 
     .logo-bar {
         width: 33%;
