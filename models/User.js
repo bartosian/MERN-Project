@@ -16,10 +16,17 @@ const userSchema = new Schema({
     minLength: 8
   },
   image: String,
-  status: String,
+  status: {
+      type: String,
+      default: 'single'
+  },
   contacts: [String],
   interests: [String],
-  dob: String,
+  dob: {
+      type: Date,
+      required: true,
+      default: Date.now
+  },
   friends : [{
       type: Schema.Types.ObjectId,
       ref: 'User'
