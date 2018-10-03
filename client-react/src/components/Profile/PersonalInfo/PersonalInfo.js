@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Name from '../../../components/Profile/PersonalInfo/NameSection/NameSection';
 import Details from '../../../components/Profile/PersonalInfo/PersonalDetails/PersonalDetails';
+import Interests from '../../../components/Profile/PersonalInfo/Interests/Interests';
 import './PersonalInfo.css';
 
 class PersonalInfo extends Component {
@@ -22,6 +23,8 @@ class PersonalInfo extends Component {
 
     render() {
 
+        const { interests } = this.state;
+
         return (
             <div className="container">
                 <div className="col-12 user-name">
@@ -36,11 +39,7 @@ class PersonalInfo extends Component {
                 </div>
                 <div className="col-12 user-interests">
                     <div className="row interests">
-                        {
-                            this.state.interests.map((i, id) => (
-                                <div key={i + id} className="interest">{i}</div>
-                            ))
-                        }
+                        <Interests interests={ interests }/>
                     </div>
                 </div>
             </div>
