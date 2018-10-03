@@ -2,6 +2,20 @@
     padding: 10px;
     box-shadow: 0 0 10px black;
     border-radius: 10px;
-    background: rgba(216, 212, 212, 0.3);
     margin-top: 20px;
+}
+
+.friends-wrapper {
+    position: relative;
+    box-shadow: 0 0 8px black;
+    padding: 20px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: rgba(216, 212, 212, 0.3);
+    border-radius: 10px;
+    margin-bottom: 10px;
 }

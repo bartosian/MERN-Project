@@ -25,10 +25,10 @@ class Profile extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-6">
                         <Friends />
                     </div>
-                    <div className="col-12 col-md-8"></div>
+                    <div className="col-12 col-md-6"></div>
                 </div>
             </div>
         );
