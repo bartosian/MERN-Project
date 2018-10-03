@@ -14,7 +14,11 @@ const userSchema = new Schema({
     required: true,
     minLength: 8
   },
-  image: String
+  image: String,
+  status: String,
+  contacts: [String],
+  interests: [String],
+  dob: String
 }, {
   timestamps: {
     createdAt: 'created_at',
