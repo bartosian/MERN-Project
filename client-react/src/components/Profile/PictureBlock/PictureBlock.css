@@ -96,8 +96,14 @@
 }
 
 @media(max-width:1200px) {
-    .btn {
-        font-size: 7px !important;
+    #btn-app.btn {
+        font-size: 7px;
+    }
+}
+
+@media(max-width: 770px) {
+    #btn-app.btn {
+        font-size: 1rem;
     }
 }
 
