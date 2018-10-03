@@ -1,11 +1,73 @@
 import React, { Component } from 'react';
 import AddPost from './AddPost/AddPost';
+import Post from './Post/Post';
 import './Wall.css';
 
 class Wall extends Component {
 
     state = {
-        posts: []
+        posts: [
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'Hi everyone, I am new here!'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'I like music and lot of albums'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'I want to be a real professional'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'Hi everyone, I am new here!'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'I like music and lot of albums'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'I want to be a real professional'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'Hi everyone, I am new here!'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'I like music and lot of albums'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'I want to be a real professional'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'Hi everyone, I am new here!'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'I like music and lot of albums'
+            },
+            {
+                author: "Kiryl",
+                date: new Date().toLocaleDateString(),
+                content: 'I want to be a real professional'
+            }
+        ]
     };
 
 
@@ -16,6 +78,11 @@ class Wall extends Component {
                 <div className="wall-posts">
                     <AddPost />
                 </div>
+                {
+                    this.state.posts.map((p, id) => (
+                        <Post key={ p.author + id } {...p}/>
+                    ))
+                }
             </div>
         );
     }
