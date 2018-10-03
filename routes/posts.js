@@ -32,6 +32,12 @@ router.get('/friends/posts', middleAuth, async function(req, res, next) {
 
     try {
         const user = await User.findById(_id).populate('friends');
+        if(user.friends.length === 0) {
+            res.status(200)
+                .json({
+                    message: "You don't have any friends"
+                });
+        }
         const posts = user.friends.reduce((arr,friend) => {
             return arr.push(...friend.posts);
         }, []);
