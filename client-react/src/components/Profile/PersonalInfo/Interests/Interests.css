@@ -1,0 +1,25 @@
+.int-boiler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.int-boiler p {
+    margin: 0;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.int-boiler i {
+    font-size: 4rem;
+    color: rgba(0, 123, 254, 0.3);
+    transition: all 400ms linear;
+    position: relative;
+    cursor: pointer;
+}
+
+.int-boiler > i:hover {
+    color: red;
+}
+
