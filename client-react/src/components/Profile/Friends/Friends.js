@@ -6,7 +6,9 @@ const friends = (props) => {
 
 
     return (
-        <p>Hello friends</p>
+        <div className="friends">
+
+        </div>
     );
 };
 

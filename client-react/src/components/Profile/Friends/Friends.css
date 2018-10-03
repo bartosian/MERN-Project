@@ -1,0 +1,7 @@
+.friends {
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    background: rgba(216, 212, 212, 0.3);
+    margin-top: 20px;
+}
