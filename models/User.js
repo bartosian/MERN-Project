@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 const Joi = require('joi');
 const { postSchema } = require('./Post');
+const { chatSchema } = require('./Chat');
 
 const userSchema = new Schema({
   username: String,
@@ -16,22 +17,16 @@ const userSchema = new Schema({
     minLength: 8
   },
   image: String,
-  status: {
-      type: String,
-      default: 'single'
-  },
+  status: String,
   contacts: [String],
   interests: [String],
-  dob: {
-      type: Date,
-      required: true,
-      default: Date.now
-  },
+  dob: Date,
   friends : [{
       type: Schema.Types.ObjectId,
       ref: 'User'
   }],
-  posts: [postSchema]
+  posts: [postSchema],
+  chats: [chatSchema]
 }, {
   timestamps: {
     createdAt: 'created_at',
