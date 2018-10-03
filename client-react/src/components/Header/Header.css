@@ -1,0 +1,77 @@
+.header-comp {
+    box-shadow: 0 0 8px black;
+    padding: 5px 20px;
+    width: 100%;
+    background: rgba(216, 212, 212, 0.3);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-bar {
+    display: flex;
+    width: 22%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .logo-bar {
+        width: 25%;
+    }
+}
+
+.main-logo--navbar {
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    background: url("https://www.123freevectors.com/wp-content/original/1446-red-triangle-abstract-background.jpg");
+    background-position: center center;
+    background-size: 190px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-bar > .logo {
+    width: 60px;
+}
+
+.logo-bar > .logo img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+@media (max-width: 990px) {
+
+    .main-logo--navbar {
+        font-size: 1.5rem;
+    }
+
+    .logo-bar > .logo {
+        width: 40px;
+    }
+}
+
+@media (max-width: 780px) {
+
+    .logo-bar {
+        width: 33%;
+    }
+
+    .main-logo--navbar {
+        font-size: 1.4rem;
+    }
+
+    .logo-bar > .logo {
+        width: 50px;
+    }
+}
+
+

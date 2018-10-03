@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Auth from '../Auth/Auth';
 import Profile from '../Profile/Profile';
+import Header from '../Header/Header';
 import AuthService from '../../services/auth-service';
 import ProtectedRoute from '../Auth/protected-route';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -50,6 +51,7 @@ class App extends Component {
       render() {
         return (
             <Fragment>
+                <Header />
                 <Switch>
                     <ProtectedRoute user={ this.state.loggedInUser } path='/profile' component={ Profile }/>
                     <Route path='/' render = {() => {
