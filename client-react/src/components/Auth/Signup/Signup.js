@@ -114,7 +114,6 @@ class Signup extends Component {
 
         if(rules.email) {
             valid = this.looksLikeMail(value) && valid;
-            console.log(this.looksLikeMail(value));
         }
 
         return valid;

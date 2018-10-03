@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import './Header.css';
 import Input from '../UI/Input/Input';
 import Button from '../UI/Button/Button';
+import AuthService from '../../services/auth-service';
+import { withRouter } from 'react-router-dom';
 
 class Header extends Component {
+
+    constructor(props) {
+        super(props);
+        this.service = new AuthService();
+    }
 
     state = {
       search: ""
@@ -17,8 +24,12 @@ class Header extends Component {
         });
     };
 
-
     render() {
+
+
+
+        const { logout, history } = this.props;
+
         return (
             <div className="container">
                 <div className="col-12 header-comp">
@@ -38,7 +49,7 @@ class Header extends Component {
                             />
                         </div>
                         <div className="logout">
-                            <Button btnType="danger">Logout</Button>
+                            <Button clicked={ () => logout(history) } btnType="danger">Logout</Button>
                         </div>
                     </nav>
 
@@ -48,4 +59,4 @@ class Header extends Component {
     }
 };
 
-export default Header;
+export default withRouter(Header);
