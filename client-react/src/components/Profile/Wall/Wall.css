@@ -34,4 +34,5 @@
     height: 100%;
     background: rgba(216, 212, 212, 0.3);
     color: black;
+    border: 3px solid rgba(0, 123, 254, 0.5);
 }
