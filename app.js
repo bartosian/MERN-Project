@@ -68,12 +68,11 @@ app.use(cors({
     origin: ['http://localhost:3000']
 }));
 
-
-const index = require('./routes/index');
-app.use('/', index);
-
 const authRoutes = require('./routes/auth');
 app.use('/Auth', authRoutes);
+
+const postsRoutes = require('./routes/posts');
+app.use('/api', postsRoutes);
 
 
 module.exports = app;
