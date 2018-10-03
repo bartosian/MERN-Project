@@ -9,9 +9,13 @@ const input = (props) => {
         inputClasses.push('invalid');
     }
 
+
     switch (props.elementType) {
         case ('input'):
             inputElement = <input  className={ inputClasses.join(' ') } { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
+            break;
+        case ('textarea'):
+            inputElement = <textarea  className={ inputClasses.join(' ') } { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
             break;
         case ('select'):
             inputElement = (
@@ -26,10 +30,14 @@ const input = (props) => {
             inputElement = <input  className={ inputClasses.join(' ') }  { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
     }
 
+    const label = props.label ? (
+        <label id="user-label" className='label text-primary'>{props.label}</label>
+    ) : null;
+
 
     return (
         <div className='form-group'>
-            <label id="user-label" className='label text-primary'>{props.label}</label>
+            {label }
             { inputElement }
         </div>
         )

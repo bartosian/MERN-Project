@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddPost from './AddPost/AddPost';
 import './Wall.css';
 
 class Wall extends Component {
@@ -13,7 +14,7 @@ class Wall extends Component {
             <div className="wall-wrapper">
                 <h5 className="friends-header">Posts</h5>
                 <div className="wall-posts">
-
+                    <AddPost />
                 </div>
             </div>
         );
