@@ -31,17 +31,20 @@ const friendsList = [
 ];
 
 const friends = (props) => {
-    const friendsCopyList = friendsList.slice();
+    const friendsCopyList = [].length ? (
+        friendsCopyList.map((f, id) => (
+            <Friend key={ f.name + id } name={ f.name } url={ f.url }/>
+        ))
+    ): (
+        <i className="fa fa-users empty-friends" aria-hidden="true"></i>
+    );
+
 
     return (
         <div className="friends">
-            <h5 className="friends-header">Friends <span>({ friendsCopyList.length })</span></h5>
+            <h5 className="friends-header">Friends <span>({ friendsCopyList.length !== 0 && '0' })</span></h5>
             <div className="friends-wrapper">
-                {
-                    friendsCopyList.map((f, id) => (
-                        <Friend key={ f.name + id } name={ f.name } url={ f.url }/>
-                    ))
-                }
+                { friendsCopyList }
             </div>
         </div>
     );

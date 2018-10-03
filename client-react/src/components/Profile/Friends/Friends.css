@@ -20,6 +20,40 @@
     margin-bottom: 10px;
 }
 
+.empty-friends {
+    font-size: 4rem;
+    color: rgba(0, 123, 254, 0.3);
+    transition: all 400ms linear;
+    position: relative;
+    cursor: pointer;
+}
+
+ .empty-friends::after {
+    content: "Add friends right now!";
+    color: red;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px black;
+    display: inline-block;
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    width: 150px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.empty-friends:hover {
+    color: red;
+}
+
+.empty-friends:hover::after {
+    opacity: 1;
+}
+
 .friends-header {
     text-align: left;
     text-transform: uppercase;
