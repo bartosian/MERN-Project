@@ -18,7 +18,11 @@ const userSchema = new Schema({
   status: String,
   contacts: [String],
   interests: [String],
-  dob: String
+  dob: String,
+  friends : [{
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+  }]
 }, {
   timestamps: {
     createdAt: 'created_at',
