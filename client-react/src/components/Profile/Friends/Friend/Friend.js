@@ -1,10 +1,13 @@
 import React from 'react';
+import './Friend.css';
 
-const friend = (props) => {
-
+const friend = ({ name, url }) => {
 
     return (
-        <p>friend</p>
+        <div className="friend">
+            <div className="name-layer">{ name }</div>
+            <img src={ url } alt="friend" className="friend-img"/>
+        </div>
     );
 };
 

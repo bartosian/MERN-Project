@@ -1,0 +1,31 @@
+.friend {
+    width: 20%;
+    height: 20%;
+    position: relative;
+    cursor: pointer;
+}
+
+.friend-img {
+    width: 100%;
+    height: 100%;
+}
+
+.name-layer {
+    text-transform: capitalize;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(0, 123, 254, 0.7);
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+}
+
+.friend:hover > .name-layer {
+    opacity: 1;
+}
