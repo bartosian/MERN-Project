@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
+const { messageSchema } = require('./Message');
 
 const chatSchema = new Schema({
     speakerFirst: {
