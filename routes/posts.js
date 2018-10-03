@@ -1,5 +1,6 @@
 const express = require('express');
 const router  = express.Router();
+const mongoose = require('mongoose');
 const middleAuth = require('../middleWare/auth');
 const { Post } = require('../models/Post');
 const { User } = require('../models/User');
@@ -31,6 +32,12 @@ router.delete('/posts/:id', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
     const { id } = req.params;
 
+    if(!mongoose.Types.ObjectId.isValid(id)) {
+        res.status(400)
+            .json({ message: 'Specified id is not valid' });
+        return;
+    }
+
     try {
         let user = await User.findById(_id).select('posts');
         const updatedPosts = user.posts.filter(post => {
@@ -55,11 +62,20 @@ router.put('/posts/:id', middleAuth, async function(req, res, next) {
     const { id } = req.params;
     const { content } = req.body;
 
+    if(!mongoose.Types.ObjectId.isValid(id)) {
+        res.status(400)
+            .json({ message: 'Specified id is not valid' });
+
+        return;
+    }
+
     if(!content) {
         res.status(400)
             .json({
                 message: "You need to provide new content"
             });
+
+        return;
     }
 
 
