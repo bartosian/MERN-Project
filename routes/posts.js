@@ -27,9 +27,9 @@ router.post('/posts', middleAuth, async function(req, res, next) {
 });
 
 /* Delete post */
-router.post('/posts/:id', middleAuth, async function(req, res, next) {
+router.delete('/posts/:id', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
-    let { id } = req.params;
+    const { id } = req.params;
 
     try {
         let user = await User.findById(_id).select('posts');
@@ -42,6 +42,37 @@ router.post('/posts/:id', middleAuth, async function(req, res, next) {
         await user.save();
 
         res.status(200)
+            .json(updatedPosts);
+    } catch(ex) {
+        return next(ex);
+    }
+});
+
+
+/* Edit post */
+router.put('/posts/:id', middleAuth, async function(req, res, next) {
+    const { _id } = req.user;
+    const { id } = req.params;
+    const { content } = req.body;
+
+    if(!content) {
+        res.status(400)
+            .json({
+                message: "You need to provide new content"
+            });
+    }
+
+
+    try {
+        let user = await User.findById(_id).select('posts');
+        const post = user.posts.id(id);
+        post.content = content;
+
+        await user.save();
+
+        const updatedPosts = [...user.posts];
+
+        res.status(203)
             .json(updatedPosts);
     } catch(ex) {
         return next(ex);
