@@ -20,8 +20,11 @@ router.post('/posts', middleAuth, async function(req, res, next) {
         user.posts.push(newPost);
         await user.save();
 
+
+        const copyPosts = [...user.posts];
+
          res.status(201)
-            .json(newPost);
+            .json(copyPosts);
     } catch(ex) {
         return next(ex);
     }

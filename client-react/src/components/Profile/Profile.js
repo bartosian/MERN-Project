@@ -17,7 +17,6 @@ class Profile extends Component {
     render() {
 
         const{ user } = this.state;
-        console.log('=-=-=-=-=-=-=-=-=', user);
         const { logout, getUser } = this.props;
 
         return (

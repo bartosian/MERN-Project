@@ -9,10 +9,36 @@ class Wall extends Component {
         user: this.props.user
     };
 
+    changePosts = (newPosts) => {
+        const copyUser = { ...this.state.user };
+        copyUser.posts = newPosts;
+
+        this.setState({
+            user: copyUser
+        });
+    };
+
 
     render() {
 
-        const { posts, username } = this.state.user;
+        let { posts, username } = this.state.user;
+
+
+        if(posts.length !== 0) {
+            posts = posts.sort((p1, p2) => {
+                const date1 = new Date(p1.date);
+                const date2 = new Date(p2.date);
+
+                if(date1 > date2) {
+                    return -1;
+                } else if(date1 < date2) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            });
+        }
+
 
         const postsList = posts.length !== 0 ? posts.length > 20 ? (
             posts.slice(0, 20).map((p, id) => (
@@ -32,7 +58,7 @@ class Wall extends Component {
             <div className="wall-wrapper">
                 <h5 className="friends-header">Posts</h5>
                 <div className="wall-posts">
-                    <AddPost />
+                    <AddPost changePosts={ this.changePosts }/>
                 </div>
                 <div className="posts-board">
                     { postsList }
