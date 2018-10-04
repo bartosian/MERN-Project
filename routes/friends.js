@@ -53,17 +53,17 @@ router.delete('/friends/:id', middleAuth, async function(req, res, next) {
     }
 
     try {
-        let user = await User.findById(_id).select('posts');
-        const updatedPosts = user.posts.filter(post => {
+        let user = await User.findById(_id).select('friends');
+        const updatedFriends = user.friends.filter(friend => {
 
-            return String(post._id) !== id;
+            return String(friend._id) !== id;
         });
 
-        user.posts = [...updatedPosts];
+        user.friends = [...updatedFriends];
         await user.save();
 
         res.status(200)
-            .json(updatedPosts);
+            .json(updatedFriends);
     } catch(ex) {
         return next(ex);
     }
