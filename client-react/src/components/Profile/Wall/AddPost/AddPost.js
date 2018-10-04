@@ -12,8 +12,8 @@ class AddPost extends Component {
     }
 
     state = {
-      post: this.props.editPost.content || "",
-      editPostId: this.props.editPost._id || "",
+      post: this.props.editPost.content ? this.props.editPost.content : "",
+      editPostId: this.props.editPost._id ? this.props.editPost._id : "",
       loading: false
     };
 
@@ -26,10 +26,13 @@ class AddPost extends Component {
     };
 
     componentWillReceiveProps(nextProps) {
-        this.setState({
-            post: nextProps.editPost.content,
-            editPostId: nextProps.editPost._id
-        });
+        if(nextProps.editPost) {
+            this.setState({
+                post: nextProps.editPost.content,
+                editPostId: nextProps.editPost._id
+            });
+        }
+
     };
 
     handleAddPost = () => {
@@ -57,7 +60,7 @@ class AddPost extends Component {
 
         const {post} = this.state;
         const id = this.state.editPostId;
-        const { changePosts } = this.props;
+        const { changePosts, deleteEditMode } = this.props;
 
         this.setState({
             loading: true
@@ -65,22 +68,30 @@ class AddPost extends Component {
 
         this.service.editPost({ content: post, id })
             .then(response => {
-                changePosts(response);
 
+                changePosts(response);
+                deleteEditMode();
                 this.setState({
-                    loading: false,
                     post: "",
-                    editPostId: ""
+                    editPostId: "",
+                    loading: false,
                 });
+
+
+
+
             }).catch(err => console.log(err));
+
 
     };
 
     cancelEditing = () => {
-      this.setState({
-          post: "",
-          editPostId: "",
-      });
+        const {  deleteEditMode } = this.props;
+          this.setState({
+              post: "",
+              editPostId: "",
+          });
+        deleteEditMode();
     };
 
 
@@ -90,7 +101,7 @@ class AddPost extends Component {
         let clicked = this.handleAddPost;
         let btnText = "Place new post";
 
-        if(this.state.editPostId !== "") {
+        if(this.state.editPostId) {
             clicked = this.handleEditPost;
             btnText = "Edit this post"
         }
@@ -99,7 +110,7 @@ class AddPost extends Component {
         return (
             <Fragment>
                 <Input
-                    editMode={ this.state.editPostId !== "" }
+                    editMode={ !!this.state.editPostId }
                     elementType="textarea"
                     elementConfig={{ placeholder: "Enter new post", name: "post" }}
                     value={ this.state.post }
@@ -107,7 +118,7 @@ class AddPost extends Component {
                 />
                 <Button btnType="primary" disabled={ !this.state.post || this.state.loading } clicked={ clicked }>{ btnText }</Button>
                 {
-                    this.state.editPostId && <Button btnType="danger" disabled={ !this.state.post || this.state.loading } clicked={ this.cancelEditing }>Cancel editing</Button>
+                    this.state.editPostId !== '' && <Button btnType="danger" disabled={ !this.state.post || this.state.loading } clicked={ this.cancelEditing }>Cancel editing</Button>
                 }
 
             </Fragment>

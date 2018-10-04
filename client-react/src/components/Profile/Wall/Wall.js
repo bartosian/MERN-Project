@@ -28,6 +28,12 @@ class Wall extends Component {
         });
     };
 
+    deleteEditPost = () => {
+        this.setState({
+            editPost: false
+        });
+    };
+
 
     render() {
 
@@ -68,7 +74,7 @@ class Wall extends Component {
             <div className="wall-wrapper">
                 <h5 className="friends-header">Posts</h5>
                 <div className="wall-posts">
-                    <AddPost changePosts={ this.changePosts } editPost={ this.state.editPost }/>
+                    <AddPost changePosts={ this.changePosts } editPost={ this.state.editPost } deleteEditMode={ this.deleteEditPost }/>
                 </div>
                 <div className="posts-board">
                     { postsList }
