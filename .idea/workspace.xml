@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -66,8 +64,8 @@
       <file leaf-file-name="Friends.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="29" selection-end-column="100" />
+            <state relative-caret-position="280">
+              <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -379,12 +377,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="36390000" />
+      <workItem from="1538569246105" duration="36612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95306000" />
+    <option name="totallyTimeSpent" value="95528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
@@ -816,8 +814,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="29" selection-end-column="100" />
+        <state relative-caret-position="280">
+          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

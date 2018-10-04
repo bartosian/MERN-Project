@@ -27,12 +27,26 @@ const friendsList = [
     { username: 'name', url: 'http://www.etoiledereve-animations.fr/wp-content/uploads/2014/01/anniversaire-detective.jpg' },
     { username: 'name', url: 'http://monateka.com/images/6061.jpg' },
     { username: 'name', url: 'https://im0-tub-ru.yandex.net/i?id=5779de66e079e0424ad01f06e652ac4f-sr&n=13' },
+    { username: 'name', url: 'http://www.b17.ru/foto/uploaded/93e4dcd8b884e7473fc32b3594547e43.jpg' },
+    { username: 'name', url: '' },
+    { username: 'name', url: 'https://img.buzzfeed.com/buzzfeed-static/static/2014-03/campaign_images/crondr01/20/13/25-things-that-shouldnt-end-with-sort-of-1-24944-1395335905-10_big.jpg' },
+    { username: 'name', url: 'https://consultation.spb.ru/upload/iblock/284/284acfcba3b530cda708e505c086cb57.jpg' },
+    { username: 'name', url: 'http://greatlady.net/wp-content/uploads/2011/12/DhiMDE5Yj-300x205.jpg' },
+    { username: 'name', url: 'http://www.networkdesigner.net/wp-content/uploads/2015/11/Tonsil-Stones-Remedy-Forever-Review-440x250.jpg' },
+    { username: 'name', url: 'https://d28g7970w5bq8z.cloudfront.net/p/articles/ai-163427-aux-head-20150806_ludi_360.jpg' },
+    { username: 'name', url: 'http://www.etoiledereve-animations.fr/wp-content/uploads/2014/01/anniversaire-detective.jpg' },
+    { username: 'name', url: 'http://monateka.com/images/6061.jpg' },
+    { username: 'name', url: 'https://im0-tub-ru.yandex.net/i?id=5779de66e079e0424ad01f06e652ac4f-sr&n=13' },
     { username: 'name', url: 'http://www.b17.ru/foto/uploaded/93e4dcd8b884e7473fc32b3594547e43.jpg' }
 ];
 
 const friends = (props) => {
-    const friendsCopyList = friendsList.length ? (
-        friendsList.map((f, id) => (
+    const friendsCopyList = friendsList.length ? friendsList.length > 25 ? (
+        friendsList.slice(0, 25).map((f, id) => (
+            <Friend key={ f.username + id } name={ f.username } url={ f.url }/>
+        ))
+    ):(
+        friendsList.slice(0, 25).map((f, id) => (
             <Friend key={ f.username + id } name={ f.username } url={ f.url }/>
         ))
     ): (
