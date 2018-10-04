@@ -25,6 +25,11 @@ class FriendService {
             .then(response => response.data)
     };
 
+    getFriends = () => {
+        return this.friendService.get('/friends')
+            .then(response => response.data)
+    };
+
 }
 
 export default FriendService;
