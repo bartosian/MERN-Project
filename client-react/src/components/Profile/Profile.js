@@ -31,7 +31,7 @@ class Profile extends Component {
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-6">
-                            <Friends />
+                            <Friends user={ user }/>
                         </div>
                         <div className="col-12 col-md-6">
                             <Wall />

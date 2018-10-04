@@ -9,16 +9,16 @@ const friendsList = [
     { name: 'name', url: 'http://marinovlaw.ru/wp-content/uploads/2015/07/7-kunci-sukses-membangun-bisnis-baru-360x240.jpg' },
     { name: 'name', url: 'http://www.hurdfamilydental.net/uploads/9/7/2/4/97247460/published/african-american-1180847-1920.jpg?1489201727' },
     { name: 'name', url: 'https://i0.hippopx.com/photos/381/16/19/young-man-person-guy-thumb.jpg' },
-    { name: 'name', url: 'https://i.stack.imgur.com/Eigf9.jpg?s=328&g=1' },
+    { name: 'name', url: '' },
     { name: 'name', url: 'http://ruzoo.ru/wp-content/uploads/2014/09/557.jpg' },
     { name: 'name', url: 'https://images.wallpaperscraft.com/image/gary_lucy_man_actor_dark-haired_cardigan_person_7216_300x240.jpg' },
     { name: 'name', url: 'https://www.maison-de-la-traduction.fr/img/default-concours.jpg' },
     { name: 'name', url: 'https://pbs.twimg.com/media/CZF_gxPU8AET9zz.jpg' },
-    { name: 'name', url: 'http://ak3.picdn.net/shutterstock/videos/26274773/thumb/8.jpg' },
+    { name: 'name', url: '' },
     { name: 'name', url: 'https://www.energylivenews.com/wp-content/uploads/2013/01/Salesman-annoying-350.jpg' },
     { name: 'name', url: 'https://claytonorthodontics.com/wp-content/uploads/2014/03/8-300x224.jpg' },
     { name: 'name', url: 'https://www.santamonicaendodontics.com/images/Fotolia_25219107_XS.jpg' },
-    { name: 'name', url: 'https://safirakhansa19.files.wordpress.com/2014/01/proud.jpg' },
+    { name: 'name', url: '' },
     { name: 'name', url: 'https://img.buzzfeed.com/buzzfeed-static/static/2014-03/campaign_images/crondr01/20/13/25-things-that-shouldnt-end-with-sort-of-1-24944-1395335905-10_big.jpg' },
     { name: 'name', url: 'https://consultation.spb.ru/upload/iblock/284/284acfcba3b530cda708e505c086cb57.jpg' },
     { name: 'name', url: 'http://greatlady.net/wp-content/uploads/2011/12/DhiMDE5Yj-300x205.jpg' },
@@ -31,8 +31,8 @@ const friendsList = [
 ];
 
 const friends = (props) => {
-    const friendsCopyList = [].length ? (
-        friendsCopyList.map((f, id) => (
+    const friendsCopyList = friendsList.length ? (
+        friendsList.map((f, id) => (
             <Friend key={ f.name + id } name={ f.name } url={ f.url }/>
         ))
     ): (
@@ -42,7 +42,7 @@ const friends = (props) => {
 
     return (
         <div className="friends">
-            <h5 className="friends-header">Friends <span>({ friendsCopyList.length !== 0 && '0' })</span></h5>
+            <h5 className="friends-header">Friends <span>({ friendsList.length !== 0 ? friendsList.length : '0' })</span></h5>
             <div className="friends-wrapper">
                 { friendsCopyList }
             </div>

@@ -103,8 +103,8 @@
 .personal-detail ul {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .detail-icon {
@@ -131,7 +131,8 @@
     }
 
     .personal-detail h5,
-    .personal-detail p {
+    .personal-detail p,
+    .personal-detail ul {
         width: 50%;
     }
 
