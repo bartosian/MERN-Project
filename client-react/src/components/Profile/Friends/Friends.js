@@ -40,14 +40,17 @@ const friendsList = [
     { username: 'name', url: 'http://www.b17.ru/foto/uploaded/93e4dcd8b884e7473fc32b3594547e43.jpg' }
 ];
 
-const friends = (props) => {
-    const friendsCopyList = friendsList.length ? friendsList.length > 25 ? (
-        friendsList.slice(0, 25).map((f, id) => (
-            <Friend key={ f.username + id } name={ f.username } url={ f.url }/>
+const friends = ({user}) => {
+
+    const { friends } = user;
+
+    const friendsCopyList = friends.length ? friends.length > 25 ? (
+        friends.slice(0, 25).map((f, id) => (
+            <Friend key={ f.username + id } name={ f.username } url={ f.image ? f.image : "" }/>
         ))
     ):(
-        friendsList.slice(0, 25).map((f, id) => (
-            <Friend key={ f.username + id } name={ f.username } url={ f.url }/>
+        friends.slice(0, 25).map((f, id) => (
+            <Friend key={ f.username + id } name={ f.username } url={ f.image ? f.image : "" }/>
         ))
     ): (
         <i className="fa fa-users empty-friends" aria-hidden="true"></i>
@@ -61,7 +64,7 @@ const friends = (props) => {
 
     return (
         <div className="friends">
-            <h5 className="friends-header">Friends <span>({ friendsList.length !== 0 ? friendsList.length : '0' })</span></h5>
+            <h5 className="friends-header">Friends <span>({ friends.length !== 0 ? friends.length : '0' })</span></h5>
             <div className={ friendsClasses.join(" ") }>
                 { friendsCopyList }
             </div>

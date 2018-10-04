@@ -13,8 +13,11 @@ class Profile extends Component {
       user: this.props.loggedInUser
     };
 
+
     render() {
+
         const{ user } = this.state;
+        console.log('=-=-=-=-=-=-=-=-=', user);
         const { logout, getUser } = this.props;
 
         return (
