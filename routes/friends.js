@@ -61,6 +61,20 @@ router.get('/friends/:id', middleAuth, async function(req, res, next) {
     }
 });
 
+/* Get all the friends */
+router.get('/friends', middleAuth, async function(req, res, next) {
+    const { _id } = req.user;
+
+    try {
+        const user = await User.findById(_id).select('friends').populate('friends');
+
+        res.status(200)
+            .json(user.friends);
+    } catch(ex) {
+        return next(ex);
+    }
+});
+
 
 /* Delete friend */
 router.delete('/friends/:id', middleAuth, async function(req, res, next) {
