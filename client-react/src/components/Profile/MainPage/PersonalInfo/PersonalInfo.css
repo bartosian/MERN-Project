@@ -49,6 +49,14 @@
     transition: all 500ms ease-in-out;
 }
 
+.navLink {
+    text-decoration: none;
+}
+
+.navLink:hover {
+    text-decoration: none;
+}
+
 .person-icon:hover {
     color: red !important;
 }

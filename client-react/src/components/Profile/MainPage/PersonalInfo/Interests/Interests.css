@@ -19,7 +19,7 @@
     cursor: pointer;
 }
 
-.int-boiler > i:hover {
+.int-boiler  i:hover {
     color: red;
 }
 

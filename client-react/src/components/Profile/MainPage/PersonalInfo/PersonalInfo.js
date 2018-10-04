@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Name from '../../../components/Profile/PersonalInfo/NameSection/NameSection';
-import Details from '../../../components/Profile/PersonalInfo/PersonalDetails/PersonalDetails';
-import Interests from '../../../components/Profile/PersonalInfo/Interests/Interests';
+import Name from './NameSection/NameSection';
+import Details from './PersonalDetails/PersonalDetails';
+import Interests from './Interests/Interests';
 import './PersonalInfo.css';
 
 class PersonalInfo extends Component {

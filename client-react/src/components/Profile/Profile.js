@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import './Profile.css';
-import Picture from './PictureBlock/PictureBlock';
-import PersonalInfo from './PersonalInfo/PersonalInfo';
-import Friends from './Friends/Friends';
-import Wall from './Wall/Wall';
 import Header from '../Header/Header';
+import { Switch, Route } from 'react-router-dom';
+import Edit from '../EditPage/Edit';
+import Main from './MainPage/Main';
 
 
 class Profile extends Component {
@@ -17,29 +16,17 @@ class Profile extends Component {
     render() {
 
         const{ user } = this.state;
-        const { logout, getUser } = this.props;
+        const { logout } = this.props;
+        const path = this.props.match.url;
 
         return (
             <Fragment>
                     <Header logout={ logout }/>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-md-4">
-                            <Picture user={ user }/>
-                        </div>
-                        <div className="col-12 col-md-8">
-                            <PersonalInfo user={ user }/>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-12 col-md-6">
-                            <Friends user={ user }/>
-                        </div>
-                        <div className="col-12 col-md-6">
-                            <Wall user={ user }/>
-                        </div>
-                    </div>
-                </div>
+                <Switch>
+                    <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user }/> }/>
+                    <Route path={ path } render={(props) => <Main {...props} user={ user }/> }/>
+                </Switch>
+
             </Fragment>
         );
     }

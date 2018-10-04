@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import AuthService from '../../../services/auth-service';
-import Button from '../../UI/Button/Button';
+import AuthService from '../../../../services/auth-service';
+import Button from '../../../UI/Button/Button';
 import './PictureBlock.css';
 
 class PictureBlock extends Component {

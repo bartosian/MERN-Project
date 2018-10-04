@@ -64,3 +64,12 @@
         justify-content: space-between;
     }
 }
+
+@media (max-width: 500px) {
+
+    .user-post-date {
+        display: flex;
+        width: 45%;
+        justify-content: space-between;
+    }
+}

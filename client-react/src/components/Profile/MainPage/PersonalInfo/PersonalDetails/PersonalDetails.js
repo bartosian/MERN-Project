@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react';
-import  './PersonalDetails.css';
+import './PersonalDetails.css';
+import { Link } from 'react-router-dom';
 
 const details = ({dob, status, contacts}) => {
 
     const DOB = dob || (
-        <i className="fa fa-search-plus empty-data" aria-hidden="true"></i>
+        <Link to="/profile/edit" className="navLink"><i className="fa fa-search-plus empty-data" aria-hidden="true"></i></Link>
     );
 
     const Status = status || (
-        <i className="fa fa-search-plus empty-data" aria-hidden="true"></i>
+        <Link to="/profile/edit" className="navLink"><i className="fa fa-search-plus empty-data" aria-hidden="true"></i></Link>
     );
 
     const Contacts = (contacts && contacts.length) ? contacts : (

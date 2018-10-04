@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
 import './Interests.css';
+import { Link } from 'react-router-dom';
 
 const interests = ({ interests }) => {
 
     const interestList = interests.length !== 0 ? interests : (
         <div className="int-boiler">
-            <i className="fa fa-list-alt" aria-hidden="true"></i>
+            <Link to="/profile/edit" className="navLink"><i className="fa fa-list-alt" aria-hidden="true"></i></Link>
             <p>You can add your interests here</p>
         </div>
     );

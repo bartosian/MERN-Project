@@ -51,7 +51,6 @@ class App extends Component {
         return (
                 <Switch>
                     <ProtectedRoute getUser={ this.getTheUser } logout={ this.logoutUser } user={ this.state.loggedInUser } path='/profile' component={ Profile }/>
-                    <ProtectedRoute getUser={ this.getTheUser }  logout={ this.logoutUser } user={ this.state.loggedInUser } path='/edit' component={ Profile }/>
                     <Route path='/' render = {() => {
                         return this.state.loggedInUser ? <Redirect to="/profile" /> : <Auth getTheUser={ this.getTheUser }/>}} />
                 </Switch>

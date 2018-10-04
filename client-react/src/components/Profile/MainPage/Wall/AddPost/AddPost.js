@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import Input from '../../../UI/Input/Input';
-import Button from '../../../UI/Button/Button';
-import PostService from '../../../../services/post-service';
+import Input from '../../../../UI/Input/Input';
+import Button from '../../../../UI/Button/Button';
+import PostService from '../../../../../services/post-service';
 import './AddPost.css';
 
 class AddPost extends Component {
