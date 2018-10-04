@@ -76,6 +76,13 @@ class AddPost extends Component {
 
     };
 
+    cancelEditing = () => {
+      this.setState({
+          post: "",
+          editPostId: "",
+      });
+    };
+
 
 
     render() {
@@ -99,6 +106,10 @@ class AddPost extends Component {
                     changed={ (event) => this.inputChangedHandler(event) }
                 />
                 <Button btnType="primary" disabled={ !this.state.post || this.state.loading } clicked={ clicked }>{ btnText }</Button>
+                {
+                    this.state.editPostId && <Button btnType="danger" disabled={ !this.state.post || this.state.loading } clicked={ this.cancelEditing }>Cancel editing</Button>
+                }
+
             </Fragment>
         );
 
