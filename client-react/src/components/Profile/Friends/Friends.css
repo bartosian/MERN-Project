@@ -49,6 +49,20 @@
     text-align: center;
 }
 
+ @media (max-width: 990px) {
+     .empty-friends::after {
+         width: 100px;
+         font-size: 0.7rem;
+     }
+ }
+
+    @media (max-width: 770px) {
+        .empty-friends::after {
+            width: 150px;
+            font-size: 1rem;
+        }
+    }
+
 .empty-friends:hover {
     color: red;
 }

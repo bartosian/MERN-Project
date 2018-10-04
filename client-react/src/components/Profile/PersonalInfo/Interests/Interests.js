@@ -3,7 +3,7 @@ import './Interests.css';
 
 const interests = ({ interests }) => {
 
-    const interestList = interests || (
+    const interestList = interests.length !== 0 ? interests : (
         <div className="int-boiler">
             <i className="fa fa-list-alt" aria-hidden="true"></i>
             <p>You can add your interests here</p>

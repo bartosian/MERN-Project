@@ -58,7 +58,7 @@ const friends = ({user}) => {
 
     const friendsClasses = ['friends-wrapper'];
 
-    if(friendsList.length === 0) {
+    if(friends.length === 0) {
         friendsClasses.push('empty-list-center');
     }
 
