@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Post/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" afterDir="false" />
     </list>
@@ -17,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AddPost.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddPost.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="43" column="46" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="43" selection-end-column="46" />
+            <state relative-caret-position="255">
+              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -32,8 +34,8 @@
       <file leaf-file-name="Wall.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="48" column="120" selection-start-line="48" selection-start-column="120" selection-end-line="48" selection-end-column="120" />
+            <state relative-caret-position="1329">
+              <caret line="70" column="70" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="70" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -44,7 +46,7 @@
       <file leaf-file-name="posts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/posts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-356">
+            <state relative-caret-position="285">
               <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
             </state>
           </provider>
@@ -59,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Post.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Post/Post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="645">
+              <caret line="35" column="95" lean-forward="true" selection-start-line="35" selection-start-column="95" selection-end-line="35" selection-end-column="95" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -83,7 +85,7 @@
       <file leaf-file-name="post-service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/services/post-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="387">
               <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
@@ -154,12 +156,12 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js" />
         <option value="$PROJECT_DIR$/models/Post.js" />
         <option value="$PROJECT_DIR$/routes/posts.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Post/Post.css" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Post/Post.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js" />
       </list>
     </option>
   </component>
@@ -340,18 +342,17 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="44310000" />
+      <workItem from="1538569246105" duration="46008000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103226000" />
+    <option name="totallyTimeSpent" value="104924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -359,7 +360,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25882354" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25882354" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -748,24 +749,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/services/post-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-356">
+        <state relative-caret-position="285">
           <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/services/post-service.js">
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Post/Post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="645">
+          <caret line="35" column="95" lean-forward="true" selection-start-line="35" selection-start-column="95" selection-end-line="35" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" column="120" selection-start-line="48" selection-start-column="120" selection-end-line="48" selection-end-column="120" />
+        <state relative-caret-position="1329">
+          <caret line="70" column="70" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="70" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -774,20 +785,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="43" column="46" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="43" selection-end-column="46" />
+        <state relative-caret-position="255">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Post/Post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -12,7 +12,8 @@ class AddPost extends Component {
     }
 
     state = {
-      post: "",
+      post: this.props.editPost.content || "",
+      editPostId: this.props.editPost._id || "",
       loading: false
     };
 
@@ -21,6 +22,13 @@ class AddPost extends Component {
 
         this.setState({
             [name]: value
+        });
+    };
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            post: nextProps.editPost.content,
+            editPostId: nextProps.editPost._id
         });
     };
 
@@ -45,9 +53,40 @@ class AddPost extends Component {
 
     };
 
+    handleEditPost = () => {
+
+        const {post} = this.state;
+        const id = this.state.editPostId;
+        const { changePosts } = this.props;
+
+        this.setState({
+            loading: true
+        });
+
+        this.service.editPost({ content: post, id })
+            .then(response => {
+                changePosts(response);
+
+                this.setState({
+                    loading: false,
+                    post: "",
+                    editPostId: ""
+                });
+            }).catch(err => console.log(err));
+
+    };
+
 
 
     render() {
+
+        let clicked = this.handleAddPost;
+        let btnText = "Place new post";
+
+        if(this.state.editPostId !== "") {
+            clicked = this.handleEditPost;
+            btnText = "Edit this post"
+        }
 
 
         return (
@@ -58,7 +97,7 @@ class AddPost extends Component {
                     value={ this.state.post }
                     changed={ (event) => this.inputChangedHandler(event) }
                 />
-                <Button btnType="primary" disabled={ !this.state.post || this.state.loading } clicked={ this.handleAddPost }>Place new post</Button>
+                <Button btnType="primary" disabled={ !this.state.post || this.state.loading } clicked={ clicked }>{ btnText }</Button>
             </Fragment>
         );
 

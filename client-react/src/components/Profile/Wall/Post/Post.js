@@ -22,7 +22,7 @@ class Post extends Component {
 
 
     render() {
-        const { author, date, content, id } = this.props;
+        const { author, date, content, id, editSelect } = this.props;
         const newDate = new Date(date).toLocaleDateString();
 
         return (
@@ -33,7 +33,7 @@ class Post extends Component {
                     </p>
                     <p className="user-post-date">
                         <i className="fa fa-clock-o" aria-hidden="true"></i> { newDate }
-                        <i className="fa fa-cog text-warning warn" aria-hidden="true"></i>
+                        <i className="fa fa-cog text-warning warn" aria-hidden="true" onClick={() => editSelect(id)}></i>
                         <i className="fa fa-trash text-danger danger" aria-hidden="true" onClick={() => this.deletePost(id)}></i>
                     </p>
                 </div>
