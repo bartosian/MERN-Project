@@ -13,6 +13,8 @@ const post = ({ author, date, content }) => {
                </p>
                <p className="user-post-date">
                    <i className="fa fa-clock-o" aria-hidden="true"></i> { newDate }
+                   <i className="fa fa-cog text-warning warn" aria-hidden="true"></i>
+                   <i className="fa fa-trash text-danger danger" aria-hidden="true"></i>
                </p>
            </div>
            <div className="row user-data">

@@ -14,7 +14,8 @@ router.post('/posts', middleAuth, async function(req, res, next) {
         const user = await User.findById(_id);
         const newPost = new Post({
             user: _id,
-            content
+            content,
+            username: user.username
         });
 
         user.posts.push(newPost);

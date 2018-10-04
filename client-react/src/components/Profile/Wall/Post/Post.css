@@ -30,3 +30,37 @@
     border-radius: 10px !important;
     margin-bottom: 10px;
 }
+
+.user-post-date {
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+}
+
+.danger, .warn {
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+}
+
+.danger:hover,
+.warn:hover {
+    color: white !important;
+}
+
+@media (max-width: 990px) {
+
+    .user-post-date {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 770px) {
+
+    .user-post-date {
+        display: flex;
+        width: 35%;
+        justify-content: space-between;
+    }
+}
