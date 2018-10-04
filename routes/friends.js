@@ -2,30 +2,40 @@ const express = require('express');
 const router  = express.Router();
 const mongoose = require('mongoose');
 const middleAuth = require('../middleWare/auth');
-const { Post } = require('../models/Post');
 const { User } = require('../models/User');
 
-/* Add new post */
-router.post('/posts', middleAuth, async function(req, res, next) {
+/* Add new friend */
+router.post('/friends', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
-    let { content } = req.body;
+    let { id } = req.body;
+
+    if(!mongoose.Types.ObjectId.isValid(id)) {
+        res.status(400)
+            .json({ message: 'Specified id is not valid' });
+        return;
+    }
 
     try {
         const user = await User.findById(_id);
-        const newPost = new Post({
-            user: _id,
-            content,
-            username: user.username
+        const friend = user.friends.find((f) => {
+            return String(f._id) === id;
         });
 
-        user.posts.push(newPost);
+
+        if(friend) {
+            res.status(400)
+                .json({ message: 'Specified friend exist already' });
+            return;
+        }
+
+        user.friends.push(id);
         await user.save();
 
+        const updatedFriends = await User.findById(_id).select('friends').populate('friends');
 
-        const copyPosts = [...user.posts];
 
         res.status(201)
-            .json(copyPosts);
+            .json(updatedFriends.friends);
     } catch(ex) {
         return next(ex);
     }
