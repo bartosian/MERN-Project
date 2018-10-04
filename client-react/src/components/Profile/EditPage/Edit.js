@@ -1,4 +1,6 @@
 import React, { Component }from 'react';
+import Input from './../../UI/Input/Input';
+import Button from './../../UI/Button/Button';
 import './Edit.css';
 
 class EditPage extends Component {
@@ -62,23 +64,23 @@ class EditPage extends Component {
                     <div className="col-12 col-md-11 editForm-wrapper">
                         <div className="row edit-row">
                             <div className="editForm nameForm col-12 col-md-6">
-
+                                 <h3 className="edit-subhead">Name</h3>
                             </div>
                             <div className="editForm dobForm col-12 col-md-5">
-
+                                 <h3 className="edit-subhead">Date of birthday</h3>
                             </div>
                         </div>
                         <div className="row edit-row">
                             <div className="editForm statusForm col-12 col-md-6">
-
+                                 <h3 className="edit-subhead">Status</h3>
                             </div>
                             <div className="editForm socialForm col-12 col-md-5">
-
+                                <h3 className="edit-subhead">Social links</h3>
                             </div>
                         </div>
                        <div className="row edit-row">
                            <div className="editForm interestsForm col-12 col-md-6">
-
+                               <h3 className="edit-subhead">Interests</h3>
                            </div>
                        </div>
                     </div>
