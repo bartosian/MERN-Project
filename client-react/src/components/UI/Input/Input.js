@@ -5,6 +5,10 @@ const input = (props) => {
     let inputElement = null;
     let inputClasses = ['form-control', 'input-user'];
 
+    if(props.editMode && props.elementType === "textarea") {
+        inputClasses.push("edit");
+    }
+
     if(props.invalid && props.touched) {
         inputClasses.push('invalid');
     }

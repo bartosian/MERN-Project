@@ -92,6 +92,7 @@ class AddPost extends Component {
         return (
             <Fragment>
                 <Input
+                    editMode={ this.state.editPostId !== "" }
                     elementType="textarea"
                     elementConfig={{ placeholder: "Enter new post", name: "post" }}
                     value={ this.state.post }

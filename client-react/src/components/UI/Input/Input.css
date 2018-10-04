@@ -9,6 +9,10 @@
     border-radius: 10px !important;
 }
 
+.input-user.edit {
+    background: rgba(0, 123, 254, 0.4);
+}
+
 #user-label {
     text-transform: uppercase;
     letter-spacing: 3px;

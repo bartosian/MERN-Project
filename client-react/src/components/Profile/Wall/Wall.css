@@ -35,6 +35,24 @@
     border: 3px solid rgba(0, 123, 254, 0.5);
 }
 
+
+.wall-posts .form-group textarea.edit{
+    animation: changeColor 1400ms ease-in-out alternate;
+    animation-iteration-count: 2;
+    animation-play-state: running;
+}
+
+@keyframes changeColor {
+    0% {
+              background: white;
+    } 50% {
+              background: rgba(0, 123, 254, 0.5);
+          }
+    100% {
+        background: white;
+    }
+}
+
 .wall-posts .form-group + button {
     border-radius: 10px;
 }
