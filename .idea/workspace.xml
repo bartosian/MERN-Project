@@ -3,15 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/NameSection/NameSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/NameSection/NameSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalDetails/PersonalDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalDetails/PersonalDetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalDetails/PersonalDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalDetails/PersonalDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalInfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,8 +66,8 @@
       <file leaf-file-name="Friends.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="238">
+              <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="29" selection-end-column="100" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -106,8 +99,8 @@
       <file leaf-file-name="Friends.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+            <state relative-caret-position="418">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -186,8 +179,8 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalDetails/PersonalDetails.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.css" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js" />
       </list>
     </option>
@@ -386,18 +379,18 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="35840000" />
+      <workItem from="1538569246105" duration="36390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94756000" />
+    <option name="totallyTimeSpent" value="95306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -405,7 +398,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.27411765" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.27411765" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -797,20 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -821,10 +800,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friend/Friend.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="238">
+          <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="29" selection-end-column="100" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
