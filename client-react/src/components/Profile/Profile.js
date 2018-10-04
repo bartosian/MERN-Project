@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './Profile.css';
 import Header from '../Header/Header';
 import { Switch, Route } from 'react-router-dom';
-import Edit from '../EditPage/Edit';
+import Edit from './EditPage/Edit';
 import Main from './MainPage/Main';
 
 
