@@ -4,6 +4,7 @@ import './Post.css';
 const post = ({ author, date, content }) => {
     const newDate = new Date(date).toLocaleDateString();
 
+
     return (
        <div className="user-post">
            <div className="row user-data cred-data">
