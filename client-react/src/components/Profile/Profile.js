@@ -37,7 +37,7 @@ class Profile extends Component {
                             <Friends user={ user }/>
                         </div>
                         <div className="col-12 col-md-6">
-                            <Wall />
+                            <Wall user={ user }/>
                         </div>
                     </div>
                 </div>

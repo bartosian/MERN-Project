@@ -6,72 +6,26 @@ import './Wall.css';
 class Wall extends Component {
 
     state = {
-        posts: [
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'Hi everyone, I am new here!'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'I like music and lot of albums'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'I want to be a real professional'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'Hi everyone, I am new here!'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'I like music and lot of albums'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'I want to be a real professional'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'Hi everyone, I am new here!'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'I like music and lot of albums'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'I want to be a real professional'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'Hi everyone, I am new here!'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'I like music and lot of albums'
-            },
-            {
-                author: "Kiryl",
-                date: new Date().toLocaleDateString(),
-                content: 'I want to be a real professional'
-            }
-        ]
+        posts: this.props.user.posts
     };
 
 
     render() {
+
+        const { posts } = this.state;
+
+        const postsList = posts.length !== 0 ? posts.length > 20 ? (
+            posts.slice(0, 20).map((p, id) => (
+                <Post key={ Math.random() + id } author={ p.user.username } date={ p.date } content={ p.content }/>
+            ))
+        ):(
+            posts.map((p, id) => (
+                <Post key={ Math.random() + id } author={ p.user.username } date={ p.date } content={ p.content }/>
+            ))
+        ): (
+            <i className="fa fa-users empty-friends" aria-hidden="true"></i>
+        );
+
         return (
             <div className="wall-wrapper">
                 <h5 className="friends-header">Posts</h5>
@@ -79,11 +33,7 @@ class Wall extends Component {
                     <AddPost />
                 </div>
                 <div className="posts-board">
-                    {
-                        this.state.posts.map((p, id) => (
-                            <Post key={ p.author + id } {...p}/>
-                        ))
-                    }
+                    { postsList }
                 </div>
             </div>
         );

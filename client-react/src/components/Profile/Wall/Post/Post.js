@@ -2,7 +2,7 @@ import React from 'react';
 import './Post.css';
 
 const post = ({ author, date, content }) => {
-
+    const newDate = new Date(date).toLocaleDateString();
 
     return (
        <div className="user-post">
@@ -11,7 +11,7 @@ const post = ({ author, date, content }) => {
                    <i className="fa fa-user" aria-hidden="true"></i> { author }
                </p>
                <p className="user-post-date">
-                   <i className="fa fa-clock-o" aria-hidden="true"></i> { date }
+                   <i className="fa fa-clock-o" aria-hidden="true"></i> { newDate }
                </p>
            </div>
            <div className="row user-data">
