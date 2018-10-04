@@ -5,9 +5,9 @@ const middleAuth = require('../middleWare/auth');
 const { User } = require('../models/User');
 
 /* Add new friend */
-router.post('/friends', middleAuth, async function(req, res, next) {
+router.post('/friends/:id', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
-    let { id } = req.body;
+    let { id } = req.params;
 
     if(!mongoose.Types.ObjectId.isValid(id)) {
         res.status(400)
@@ -41,8 +41,8 @@ router.post('/friends', middleAuth, async function(req, res, next) {
     }
 });
 
-/* Delete post */
-router.delete('/posts/:id', middleAuth, async function(req, res, next) {
+/* Delete friend */
+router.delete('/friends/:id', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
     const { id } = req.params;
 

@@ -28,6 +28,24 @@
     transition: all 400ms ease-in-out;
 }
 
+@media (max-width: 1200px) {
+    .name-layer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 990px) {
+    .name-layer {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .name-layer {
+        font-size: 0.9rem;
+    }
+}
+
 .friend:hover > .name-layer {
     opacity: 1;
 }
