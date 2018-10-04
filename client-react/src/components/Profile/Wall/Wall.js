@@ -42,11 +42,11 @@ class Wall extends Component {
 
         const postsList = posts.length !== 0 ? posts.length > 20 ? (
             posts.slice(0, 20).map((p, id) => (
-                <Post key={ Math.random() + id } author={ username } date={ p.date } content={ p.content }/>
+                <Post key={ Math.random() + id } author={ username } date={ p.date } content={ p.content } id={ p._id } changePosts={ this.changePosts }/>
             ))
         ):(
             posts.map((p, id) => (
-                <Post key={ Math.random() + id } author={ username } date={ p.date } content={ p.content }/>
+                <Post key={ Math.random() + id } author={ username } date={ p.date } content={ p.content } id={ p._id } changePosts={ this.changePosts }/>
             ))
         ): (
             <div className="empty-posts-wrapper">
