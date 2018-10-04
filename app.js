@@ -74,5 +74,8 @@ app.use('/Auth', authRoutes);
 const postsRoutes = require('./routes/posts');
 app.use('/api', postsRoutes);
 
+const friendsRoutes = require('./routes/friends');
+app.use('/api', friendsRoutes);
+
 
 module.exports = app;

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,95 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AddPost.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Input.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/UI/Input/Input.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonalInfo.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalInfo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="168" column="1" lean-forward="true" selection-start-line="168" selection-start-column="1" selection-end-line="168" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Wall.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Wall.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="76" column="109" selection-start-line="76" selection-start-column="95" selection-end-line="76" selection-end-column="109" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="posts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/posts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="228">
+              <caret line="12" column="9" lean-forward="true" selection-end-line="127" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Post.js">
+      <file leaf-file-name="friends.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/friends.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="2413">
+              <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/Post/Post.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="35" column="95" lean-forward="true" selection-start-line="35" selection-start-column="95" selection-end-line="35" selection-end-column="95" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post-service.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/services/post-service.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="393">
+              <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -119,7 +52,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/middleWare/auth.js" />
         <option value="$PROJECT_DIR$/client-react/src/index.js" />
         <option value="$PROJECT_DIR$/client-react/package.json" />
         <option value="$PROJECT_DIR$/client-react/src/services/auth-service.js" />
@@ -139,7 +71,6 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Auth/Signup/Signup.js" />
         <option value="$PROJECT_DIR$/models/Chat.js" />
         <option value="$PROJECT_DIR$/models/Message.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/client-react/src/services/post-service.js" />
         <option value="$PROJECT_DIR$/passport/localStrategy.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Auth/Login/Login.js" />
@@ -170,6 +101,8 @@
         <option value="$PROJECT_DIR$/client-react/src/components/UI/Input/Input.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/Wall.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js" />
+        <option value="$PROJECT_DIR$/routes/friends.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -210,115 +143,6 @@
             <path>
               <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Auth" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
-              <item name="PersonalInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
-              <item name="Wall" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
-              <item name="Wall" type="462c0819:PsiDirectoryNode" />
-              <item name="Post" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="Button" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="Input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
@@ -375,12 +199,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="50990000" />
+      <workItem from="1538569246105" duration="52087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109906000" />
+    <option name="totallyTimeSpent" value="111003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
@@ -438,13 +262,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Signup/Signup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -512,13 +329,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/services/auth-service.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -632,13 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/App/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/passport/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -683,16 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -728,13 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/posts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -818,11 +604,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Wall/AddPost/AddPost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
+        <state relative-caret-position="-1450">
           <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/App/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Friends/Friends.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="9" lean-forward="true" selection-end-line="127" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/friends.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2413">
+          <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
         </state>
       </provider>
     </entry>
