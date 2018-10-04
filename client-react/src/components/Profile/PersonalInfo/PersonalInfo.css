@@ -124,6 +124,19 @@
     .personal-detail {
         height: auto;
         border: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .personal-detail h5,
+    .personal-detail p {
+        width: 50%;
+    }
+
+    .personal-detail h5 {
+        text-align: left;
     }
 
     .social-link {
