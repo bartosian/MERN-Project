@@ -40,3 +40,7 @@
 .editForm-wrapper {
     margin: 0 auto;
 }
+
+.editForm > .form-group {
+    width: 100%;
+}

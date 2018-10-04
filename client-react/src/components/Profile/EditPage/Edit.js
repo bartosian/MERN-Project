@@ -5,20 +5,20 @@ import './Edit.css';
 
 class EditPage extends Component {
 
+    constructor(props) {
+        super(props);
+    }
+
     state = {
-        nameForm: {
+        user: this.props.user,
+        editForm: {
             username: {
                 elementType: 'input',
                 elementConfig: {
                     type: "text",
-                    placeholder: "Enter your name"
+                    placeholder: "Enter new name"
                 },
-                value: "",
-                validation : {
-                    required: true
-                },
-                valid: false,
-                touched: false
+                value: this.props.user.username
             },
             email: {
                 elementType: 'input',
@@ -54,6 +54,18 @@ class EditPage extends Component {
         error: false
     };
 
+    inputChangedHandler = (e, inputIdentifier) => {
+        const newEditForm = { ...this.state.editForm };
+        let updatedControl = { ...newEditForm[inputIdentifier] };
+        updatedControl.value = e.target.value;
+        newEditForm[inputIdentifier] = updatedControl;
+
+
+        this.setState({
+            editForm: newEditForm
+        });
+    };
+
     render() {
         return (
             <div className="container">
@@ -64,7 +76,13 @@ class EditPage extends Component {
                     <div className="col-12 col-md-11 editForm-wrapper">
                         <div className="row edit-row">
                             <div className="editForm nameForm col-12 col-md-6">
-                                 <h3 className="edit-subhead">Name</h3>
+                                 <Input label="Name"
+                                        elementType={ this.state.editForm.username.elementType }
+                                        elementConfig={ this.state.editForm.username.elementConfig}
+                                        value={ this.state.editForm.username.value }
+                                        changed={ (event) => this.inputChangedHandler(event, "username") }
+                                 />
+                                <Button btnType="primary">Submit</Button>
                             </div>
                             <div className="editForm dobForm col-12 col-md-5">
                                  <h3 className="edit-subhead">Date of birthday</h3>
