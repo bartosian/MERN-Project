@@ -29,3 +29,18 @@
     opacity: 1;
 }
 
+.personal-detail li {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 990px) {
+    .personal-detail h5 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .personal-detail h5 {
+        font-size: 1.5rem;
+    }
+}

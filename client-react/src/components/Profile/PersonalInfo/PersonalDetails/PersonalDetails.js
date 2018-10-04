@@ -11,7 +11,7 @@ const details = (props) => {
         <i className="fa fa-search-plus empty-data" aria-hidden="true"></i>
     );
 
-    const contacts = (props.contacts && props.contacts.length) || (
+    const contacts = (props.contacts && props.contacts.length) ? props.contacts : (
         <i className="fa fa-search-plus empty-data" aria-hidden="true"></i>
     );
 
