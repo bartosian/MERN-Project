@@ -41,6 +41,27 @@ router.post('/friends/:id', middleAuth, async function(req, res, next) {
     }
 });
 
+/* Get certain friend */
+router.get('/friends/:id', middleAuth, async function(req, res, next) {
+    let { id } = req.params;
+
+    if(!mongoose.Types.ObjectId.isValid(id)) {
+        res.status(400)
+            .json({ message: 'Specified id is not valid' });
+        return;
+    }
+
+    try {
+        const friend = await User.findById(id).populate('friends posts');
+
+        res.status(200)
+            .json(friend);
+    } catch(ex) {
+        return next(ex);
+    }
+});
+
+
 /* Delete friend */
 router.delete('/friends/:id', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
