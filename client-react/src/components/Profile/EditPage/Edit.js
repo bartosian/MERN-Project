@@ -2,12 +2,14 @@ import React, { Component }from 'react';
 import Input from './../../UI/Input/Input';
 import Button from './../../UI/Button/Button';
 import  moment  from 'moment';
+import UserService from '../../../services/user-service';
 import './Edit.css';
 
 class EditPage extends Component {
 
     constructor(props) {
         super(props);
+        this.service = new UserService();
     }
 
     state = {
@@ -76,7 +78,7 @@ class EditPage extends Component {
         updatedControl.value = e.target.value;
         newEditForm[inputIdentifier] = updatedControl;
 
-
+            console.log(inputIdentifier, e.target.value);
         this.setState({
             editForm: newEditForm
         });
