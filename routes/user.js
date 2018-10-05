@@ -4,38 +4,25 @@ const mongoose = require('mongoose');
 const middleAuth = require('../middleWare/auth');
 const { User } = require('../models/User');
 
-/* Add new friend */
-router.post('/friends/:id', middleAuth, async function(req, res, next) {
+/* Edit name of user */
+router.post('/user', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
-    let { id } = req.params;
+    let { username } = req.body;
 
-    if(!mongoose.Types.ObjectId.isValid(id)) {
+    if(!username || username.length === 0) {
         res.status(400)
-            .json({ message: 'Specified id is not valid' });
+            .json({ message: 'Username can not be empty' });
         return;
     }
 
     try {
         const user = await User.findById(_id);
-        const friend = user.friends.find((f) => {
-            return String(f._id) === id;
-        });
+        user.username = username.trim();
 
-
-        if(friend) {
-            res.status(400)
-                .json({ message: 'Specified friend exist already' });
-            return;
-        }
-
-        user.friends.push(id);
         await user.save();
 
-        const updatedFriends = await User.findById(_id).select('friends').populate('friends');
-
-
-        res.status(201)
-            .json(updatedFriends.friends);
+        res.status(203)
+            .json(user);
     } catch(ex) {
         return next(ex);
     }
