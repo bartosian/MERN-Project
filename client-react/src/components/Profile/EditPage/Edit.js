@@ -1,6 +1,7 @@
 import React, { Component }from 'react';
 import Input from './../../UI/Input/Input';
 import Button from './../../UI/Button/Button';
+import  moment  from 'moment';
 import './Edit.css';
 
 class EditPage extends Component {
@@ -16,23 +17,17 @@ class EditPage extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: "text",
-                    placeholder: "Enter new name"
+                    placeholder: "Enter new name",
                 },
                 value: this.props.user.username
             },
-            email: {
+            dob: {
                 elementType: 'input',
                 elementConfig: {
-                    type: "text",
-                    placeholder: "Enter your email"
+                    type: "date",
+                    placeholder: "Enter your date of birthday"
                 },
-                value: "",
-                validation : {
-                    required: true,
-                    email: true
-                },
-                valid: false,
-                touched: false
+                value: moment(this.props.user.dob).format('YYYY-MM-DD')
             },
             password: {
                 elementType: 'input',
@@ -66,6 +61,10 @@ class EditPage extends Component {
         });
     };
 
+    handleSubmit = () => {
+        console.log(this.state.editForm.dob.value);
+    };
+
     render() {
         return (
             <div className="container">
@@ -82,10 +81,16 @@ class EditPage extends Component {
                                         value={ this.state.editForm.username.value }
                                         changed={ (event) => this.inputChangedHandler(event, "username") }
                                  />
-                                <Button btnType="primary">Submit</Button>
+                                <Button btnType="primary" clicked={ this.handleSubmit }>Submit</Button>
                             </div>
                             <div className="editForm dobForm col-12 col-md-5">
-                                 <h3 className="edit-subhead">Date of birthday</h3>
+                                <Input label="Date of birthday"
+                                       elementType={ this.state.editForm.dob.elementType }
+                                       elementConfig={ this.state.editForm.dob.elementConfig}
+                                       value={ this.state.editForm.dob.value }
+                                       changed={ (event) => this.inputChangedHandler(event, "dob") }
+                                />
+                                <Button btnType="primary" clicked={ this.handleSubmit }>Submit</Button>
                             </div>
                         </div>
                         <div className="row edit-row">

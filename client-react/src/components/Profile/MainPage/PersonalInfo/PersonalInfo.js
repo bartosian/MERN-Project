@@ -3,6 +3,7 @@ import Name from './NameSection/NameSection';
 import Details from './PersonalDetails/PersonalDetails';
 import Interests from './Interests/Interests';
 import './PersonalInfo.css';
+import moment from 'moment';
 
 class PersonalInfo extends Component {
     state = {
@@ -12,7 +13,14 @@ class PersonalInfo extends Component {
 
     render() {
 
-        const { interests, dob, status, username, contacts } = this.state.user;
+        let { interests, dob, status, username, contacts } = this.state.user;
+
+
+        if(dob) {
+            dob = moment(dob).format('YYYY-MM-DD')
+        }
+
+
 
         return (
             <div className="container">
