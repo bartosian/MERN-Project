@@ -65,7 +65,6 @@ router.post('/user/dob', middleAuth, async function(req, res, next) {
 
     try {
 
-        console.log(dob);
         const user = await User.findById(_id);
         user.dob = dob.trim();
 
@@ -78,29 +77,29 @@ router.post('/user/dob', middleAuth, async function(req, res, next) {
     }
 });
 
-/* Delete friend */
-router.delete('/friends/:id', middleAuth, async function(req, res, next) {
+/* Edit interests of user */
+router.post('/user/interests', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
-    const { id } = req.params;
+    let { interests } = req.body;
 
-    if(!mongoose.Types.ObjectId.isValid(id)) {
+    if(!interests || interests.length === 0) {
         res.status(400)
-            .json({ message: 'Specified id is not valid' });
+            .json({ message: 'Interests can not be empty' });
         return;
     }
 
     try {
-        let user = await User.findById(_id).select('friends');
-        const updatedFriends = user.friends.filter(friend => {
+        const user = await User.findById(_id);
+        let newInterests = interests.trim().split(",");
+        newInterests = newInterests.map(itr => itr.trim());
 
-            return String(friend._id) !== id;
-        });
 
-        user.friends = [...updatedFriends];
+        user.interests = newInterests;
+
         await user.save();
 
-        res.status(200)
-            .json(updatedFriends);
+        res.status(203)
+            .json(user);
     } catch(ex) {
         return next(ex);
     }
