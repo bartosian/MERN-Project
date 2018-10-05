@@ -91,8 +91,13 @@ router.post('/user/interests', middleAuth, async function(req, res, next) {
     try {
         const user = await User.findById(_id);
         let newInterests = interests.trim().split(",");
-        newInterests = newInterests.map(itr => itr.trim());
+        newInterests = newInterests.map(itr => itr.trim()).filter(itr => itr !== "" );
 
+        if(newInterests.length === 0) {
+            res.status(400)
+                .json({ message: 'Interests can not be empty' });
+            return;
+        }
 
         user.interests = newInterests;
 
