@@ -28,7 +28,7 @@ class PictureBlock extends Component {
                     file: data.image,
                     showImage: true
                 });
-
+                    console.log(this.state.file);
                 const newUser = {...this.props.user};
                 newUser.image = data.image;
 

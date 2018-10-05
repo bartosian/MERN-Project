@@ -19,7 +19,7 @@ const userSchema = new Schema({
   image: String,
   status: {
       type: String,
-      enum: ['Single', 'Married', 'Have a friend']
+      enum: ['Single', 'Married', 'Have a friend', 'Actively looking', "Don't clear"]
   },
   country: String,
   occupation: String,

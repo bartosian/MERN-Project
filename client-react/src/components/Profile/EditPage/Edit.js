@@ -10,6 +10,7 @@ class EditPage extends Component {
     constructor(props) {
         super(props);
         this.service = new UserService();
+        this.timer = null;
     }
 
     state = {
@@ -61,7 +62,9 @@ class EditPage extends Component {
                     options: [
                         {value: "Single", displayValue: "Single"},
                         {value: "Married", displayValue: "Married"},
-                        {value: "Have a friend", displayValue: "Have a friend"}
+                        {value: "Have a friend", displayValue: "Have a friend"},
+                        {value: "Actively looking", displayValue: "Actively looking"},
+                        {value: "Don't clear", displayValue: "Don't clear"}
                     ]
                 },
                 value: this.props.user.status || "Single",
@@ -152,7 +155,7 @@ class EditPage extends Component {
                             loading: false
                         });
 
-                        setTimeout(()=>{
+                        this.timer = setTimeout(()=>{
                             const newEditForm = { ...this.state.editForm };
                             const updatedControl = { ...newEditForm.username};
                             updatedControl.showMessage = false;
@@ -162,7 +165,7 @@ class EditPage extends Component {
                                 editForm: newEditForm,
                                 loading: false
                             });
-                        }, 1500);
+                        }, 1200);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -187,7 +190,7 @@ class EditPage extends Component {
                             loading: false
                         });
 
-                        setTimeout(()=>{
+                        this.timer = setTimeout(()=>{
                             const newEditForm = { ...this.state.editForm };
                             const updatedControl = { ...newEditForm.country};
                             updatedControl.showMessage = false;
@@ -197,7 +200,7 @@ class EditPage extends Component {
                                 editForm: newEditForm,
                                 loading: false
                             });
-                        }, 1500);
+                        }, 1200);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -223,7 +226,7 @@ class EditPage extends Component {
                             loading: false
                         });
 
-                        setTimeout(()=>{
+                        this.timer = setTimeout(()=>{
                             const newEditForm = { ...this.state.editForm };
                             const updatedControl = { ...newEditForm.occupation};
                             updatedControl.showMessage = false;
@@ -233,7 +236,7 @@ class EditPage extends Component {
                                 editForm: newEditForm,
                                 loading: false
                             });
-                        },1500);
+                        },1200);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -259,7 +262,7 @@ class EditPage extends Component {
                             loading: false
                         });
 
-                        setTimeout(()=>{
+                        this.timer = setTimeout(()=>{
                             const newEditForm = { ...this.state.editForm };
                             const updatedControl = { ...newEditForm.status};
                             updatedControl.showMessage = false;
@@ -269,7 +272,7 @@ class EditPage extends Component {
                                 editForm: newEditForm,
                                 loading: false
                             });
-                        },1500);
+                        },1200);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -295,7 +298,7 @@ class EditPage extends Component {
                             loading: false
                         });
 
-                        setTimeout(()=>{
+                        this.timer = setTimeout(()=>{
                             const newEditForm = { ...this.state.editForm };
                             const updatedControl = { ...newEditForm.dob};
                             updatedControl.showMessage = false;
@@ -305,7 +308,7 @@ class EditPage extends Component {
                                 editForm: newEditForm,
                                 loading: false
                             });
-                        },1500);
+                        },1200);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -331,7 +334,7 @@ class EditPage extends Component {
                             loading: false
                         });
 
-                        setTimeout(()=>{
+                        this.timer = setTimeout(()=>{
                             const newEditForm = { ...this.state.editForm };
                             const updatedControl = { ...newEditForm.interests};
                             updatedControl.showMessage = false;
@@ -341,7 +344,7 @@ class EditPage extends Component {
                                 editForm: newEditForm,
                                 loading: false
                             });
-                        },1500);
+                        },1200);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -368,7 +371,7 @@ class EditPage extends Component {
                             loading: false
                         });
 
-                        setTimeout(()=>{
+                        this.timer = setTimeout(()=>{
                             const newEditForm = { ...this.state.editForm };
                             const updatedControl = { ...newEditForm.contacts};
                             updatedControl.showMessage = false;
@@ -378,7 +381,7 @@ class EditPage extends Component {
                                 editForm: newEditForm,
                                 loading: false
                             });
-                        },1500);
+                        },1200);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -389,6 +392,10 @@ class EditPage extends Component {
 
 
     };
+
+    componentWillUnmount() {
+        clearTimeout(this.timer);
+    }
 
     render() {
         return (

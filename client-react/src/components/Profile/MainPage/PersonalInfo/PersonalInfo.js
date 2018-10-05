@@ -11,7 +11,6 @@ class PersonalInfo extends Component {
     };
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps);
         this.setState({
             user: nextProps.user
         });
