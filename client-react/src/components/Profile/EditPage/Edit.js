@@ -165,6 +165,24 @@ class EditPage extends Component {
                 break;
             }
 
+            case "interests": {
+                const interests = this.state.editForm.interests.value;
+
+                this.service.changeInterests({ interests })
+                    .then(response => {
+
+                        const newUser = {...user};
+                        newUser.interests = response;
+
+                        getUser(newUser);
+
+                        this.setState({
+                            loading: false
+                        });
+                    }).catch(err => console.log(err));
+                break;
+            }
+
         }
 
 

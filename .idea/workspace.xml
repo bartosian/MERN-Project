@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Auth/protected-route.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Auth/protected-route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/services/user-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/user-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,14 +16,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Edit.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Edit.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            <state relative-caret-position="340">
+              <caret line="173" column="50" lean-forward="true" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="50" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1832">
+              <caret line="168" column="35" selection-start-line="168" selection-start-column="35" selection-end-line="168" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -69,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonalInfo.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PersonalInfo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
@@ -112,18 +116,6 @@
               <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="55" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddPost.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Wall/AddPost/AddPost.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,8 +190,8 @@
         <option value="$PROJECT_DIR$/routes/user.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Auth/protected-route.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js" />
       </list>
     </option>
   </component>
@@ -414,12 +406,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="81905000" />
+      <workItem from="1538569246105" duration="82039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140821000" />
+    <option name="totallyTimeSpent" value="140955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
@@ -775,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="168" column="35" selection-start-line="168" selection-start-column="35" selection-end-line="168" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Wall/AddPost/AddPost.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -862,22 +847,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1832">
+          <caret line="168" column="35" selection-start-line="168" selection-start-column="35" selection-end-line="168" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="173" column="50" lean-forward="true" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
