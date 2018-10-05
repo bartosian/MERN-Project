@@ -110,4 +110,70 @@ router.post('/user/interests', middleAuth, async function(req, res, next) {
     }
 });
 
+
+/* Edit contacts of user */
+router.post('/user/contacts', middleAuth, async function(req, res, next) {
+    const { _id } = req.user;
+    let { email, linkedIn, instagram, facebook } = req.body;
+
+    if(email) {
+        try {
+            const user = await User.findById(_id);
+            user.contacts.email = email.trim();
+
+            await user.save();
+
+            res.status(203)
+                .json(user);
+        } catch(ex) {
+            return next(ex);
+        }
+    }
+
+    if(linkedIn) {
+        try {
+            const user = await User.findById(_id);
+            user.contacts.linkedIn = linkedIn.trim();
+
+            await user.save();
+
+            res.status(203)
+                .json(user);
+        } catch(ex) {
+            return next(ex);
+        }
+    }
+
+    if(instagram) {
+        try {
+            const user = await User.findById(_id);
+            user.contacts.instagram = instagram.trim();
+
+            await user.save();
+
+            res.status(203)
+                .json(user);
+        } catch(ex) {
+            return next(ex);
+        }
+    }
+
+    if(facebook) {
+        try {
+            const user = await User.findById(_id);
+            user.contacts.facebook = facebook.trim();
+
+            await user.save();
+
+            res.status(203)
+                .json(user);
+        } catch(ex) {
+            return next(ex);
+        }
+    }
+
+    res.status(400)
+        .json({ message: 'Contacts can not be empty' });
+});
+
 module.exports = router;

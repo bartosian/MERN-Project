@@ -56,10 +56,10 @@ class EditPage extends Component {
                 },
                 elementConfig: {
                     options: [
-                        {value: "email", displayValue: "Email", userValue: this.props.user.contacts[0]},
-                        {value: "linkedIn", displayValue: "LinkedIn", userValue: this.props.user.contacts[1]},
-                        {value: "instagram", displayValue: "Instagram", userValue: this.props.user.contacts[2]},
-                        {value: "facebook", displayValue: "Facebook", userValue: this.props.user.contacts[3]}
+                        {value: "email", displayValue: "Email", userValue: (this.props.user.contacts && this.props.user.contacts.email) || "Enter your email"},
+                        {value: "linkedIn", displayValue: "LinkedIn", userValue: (this.props.user.contacts && this.props.user.contacts.linkedIn) || "Enter your linkedIn"},
+                        {value: "instagram", displayValue: "Instagram", userValue: (this.props.user.contacts && this.props.user.contacts.instagram) || "Enter your instagram"},
+                        {value: "facebook", displayValue: "Facebook", userValue: (this.props.user.contacts && this.props.user.contacts.facebook) || "Enter your facebook"}
                     ]
                 },
                 value: "email"
