@@ -21,7 +21,12 @@ const userSchema = new Schema({
       type: String,
       enum: ['Single', 'Married', 'Have a friend']
   },
-  contacts: [String],
+  contacts: {
+      email: String,
+      linkedIn: String,
+      instagram: String,
+      facebook: String
+  },
   interests: [String],
   dob: Date,
   friends : [{

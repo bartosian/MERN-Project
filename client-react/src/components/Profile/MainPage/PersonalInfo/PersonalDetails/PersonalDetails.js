@@ -12,10 +12,6 @@ const details = ({dob, status, contacts}) => {
         <Link to="/profile/edit" className="navLink"><i className="fa fa-search-plus empty-data" aria-hidden="true"></i></Link>
     );
 
-    const Contacts = (contacts && contacts.length) ? contacts : (
-        <i className="fa fa-search-plus empty-data" aria-hidden="true"></i>
-    );
-
     return (
         <Fragment>
             <div className="col-12 col-md-4 personal-detail">
@@ -29,10 +25,10 @@ const details = ({dob, status, contacts}) => {
             <div className="col-12 col-md-4 personal-detail">
                 <h5><i className="fa fa-address-book detail-icon text-primary"></i>Contact info</h5>
                 <ul className="social-links">
-                    <li><i className="fa fa-envelope mail" aria-hidden="true"></i><span>{contacts[0] || 'not specified'}</span></li>
-                    <li><i className="fa fa-linkedin-square linked" aria-hidden="true"></i><span>{contacts[1] || 'not specified'}</span></li>
-                    <li><i className="fa fa-instagram insta" aria-hidden="true"></i><span>{contacts[2] || 'not specified'}</span></li>
-                    <li><i className="fa fa-facebook-official facebook text-primary" aria-hidden="true"></i><span>{contacts[3] || 'not specified'}</span></li>
+                    <li><i className="fa fa-envelope mail" aria-hidden="true"></i><span>{(contacts && contacts.email) || 'not specified'}</span></li>
+                    <li><i className="fa fa-linkedin-square linked" aria-hidden="true"></i><span>{(contacts && contacts.linkedIn) || 'not specified'}</span></li>
+                    <li><i className="fa fa-instagram insta" aria-hidden="true"></i><span>{(contacts && contacts.instagram) || 'not specified'}</span></li>
+                    <li><i className="fa fa-facebook-official facebook text-primary" aria-hidden="true"></i><span>{(contacts && contacts.facebook) || 'not specified'}</span></li>
                 </ul>
             </div>
         </Fragment>
