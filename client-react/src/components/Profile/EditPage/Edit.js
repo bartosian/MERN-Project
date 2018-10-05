@@ -21,7 +21,8 @@ class EditPage extends Component {
                     type: "text",
                     placeholder: "Enter new name",
                 },
-                value: this.props.user.username
+                value: this.props.user.username,
+                showMessage: false
             },
             occupation: {
                 elementType: 'input',
@@ -29,7 +30,8 @@ class EditPage extends Component {
                     type: "text",
                     placeholder: "Enter your occupation",
                 },
-                value: this.props.user.occupation
+                value: this.props.user.occupation,
+                showMessage: false
             },
             country: {
                 elementType: 'input',
@@ -37,7 +39,8 @@ class EditPage extends Component {
                     type: "text",
                     placeholder: "Enter your country",
                 },
-                value: this.props.user.country
+                value: this.props.user.country,
+                showMessage: false
             },
             dob: {
                 elementType: 'input',
@@ -49,7 +52,8 @@ class EditPage extends Component {
                     let dob = new Date(this.props.user.dob);
                     dob = dob.setDate(dob.getDate() + 1);
                     return moment(dob).format('YYYY-MM-DD')
-                })()
+                })(),
+                showMessage: false
             },
             status: {
                 elementType: 'select',
@@ -60,14 +64,16 @@ class EditPage extends Component {
                         {value: "Have a friend", displayValue: "Have a friend"}
                     ]
                 },
-                value: this.props.user.status || "Single"
+                value: this.props.user.status || "Single",
+                showMessage: false
             },
             interests: {
                 elementType: 'textarea',
                 elementConfig: {
                     placeholder: "Enter your interests separated by coma"
                 },
-                value: this.props.user.interests.join(",")
+                value: this.props.user.interests.join(","),
+                showMessage: false
             },
             contacts: {
                 elementType: 'select',
@@ -84,7 +90,8 @@ class EditPage extends Component {
                         {value: "facebook", displayValue: "Facebook", userValue: (this.props.user.contacts && this.props.user.contacts.facebook) || ""}
                     ]
                 },
-                value: "email"
+                value: "email",
+                showMessage: false
             }
         },
         loading: false
@@ -133,12 +140,29 @@ class EditPage extends Component {
 
                         const newUser = {...user};
                         newUser.username = response;
-
                         getUser(newUser);
 
+                        const newEditForm = { ...this.state.editForm };
+                        const updatedControl = { ...newEditForm.username};
+                        updatedControl.showMessage = true;
+                        newEditForm.username = updatedControl;
+
                         this.setState({
+                            editForm: newEditForm,
                             loading: false
                         });
+
+                        setTimeout(()=>{
+                            const newEditForm = { ...this.state.editForm };
+                            const updatedControl = { ...newEditForm.username};
+                            updatedControl.showMessage = false;
+                            newEditForm.username = updatedControl;
+
+                            this.setState({
+                                editForm: newEditForm,
+                                loading: false
+                            });
+                        }, 1500);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -151,12 +175,29 @@ class EditPage extends Component {
 
                         const newUser = {...user};
                         newUser.country = response;
-
                         getUser(newUser);
 
+                        const newEditForm = { ...this.state.editForm };
+                        const updatedControl = { ...newEditForm.country};
+                        updatedControl.showMessage = true;
+                        newEditForm.country = updatedControl;
+
                         this.setState({
+                            editForm: newEditForm,
                             loading: false
                         });
+
+                        setTimeout(()=>{
+                            const newEditForm = { ...this.state.editForm };
+                            const updatedControl = { ...newEditForm.country};
+                            updatedControl.showMessage = false;
+                            newEditForm.country = updatedControl;
+
+                            this.setState({
+                                editForm: newEditForm,
+                                loading: false
+                            });
+                        }, 1500);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -172,9 +213,27 @@ class EditPage extends Component {
 
                         getUser(newUser);
 
+                        const newEditForm = { ...this.state.editForm };
+                        const updatedControl = { ...newEditForm.occupation};
+                        updatedControl.showMessage = true;
+                        newEditForm.occupation = updatedControl;
+
                         this.setState({
+                            editForm: newEditForm,
                             loading: false
                         });
+
+                        setTimeout(()=>{
+                            const newEditForm = { ...this.state.editForm };
+                            const updatedControl = { ...newEditForm.occupation};
+                            updatedControl.showMessage = false;
+                            newEditForm.occupation = updatedControl;
+
+                            this.setState({
+                                editForm: newEditForm,
+                                loading: false
+                            });
+                        },1500);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -190,9 +249,27 @@ class EditPage extends Component {
 
                         getUser(newUser);
 
+                        const newEditForm = { ...this.state.editForm };
+                        const updatedControl = { ...newEditForm.status};
+                        updatedControl.showMessage = true;
+                        newEditForm.status = updatedControl;
+
                         this.setState({
+                            editForm: newEditForm,
                             loading: false
                         });
+
+                        setTimeout(()=>{
+                            const newEditForm = { ...this.state.editForm };
+                            const updatedControl = { ...newEditForm.status};
+                            updatedControl.showMessage = false;
+                            newEditForm.status = updatedControl;
+
+                            this.setState({
+                                editForm: newEditForm,
+                                loading: false
+                            });
+                        },1500);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -208,9 +285,27 @@ class EditPage extends Component {
 
                         getUser(newUser);
 
+                        const newEditForm = { ...this.state.editForm };
+                        const updatedControl = { ...newEditForm.dob};
+                        updatedControl.showMessage = true;
+                        newEditForm.dob = updatedControl;
+
                         this.setState({
+                            editForm: newEditForm,
                             loading: false
                         });
+
+                        setTimeout(()=>{
+                            const newEditForm = { ...this.state.editForm };
+                            const updatedControl = { ...newEditForm.dob};
+                            updatedControl.showMessage = false;
+                            newEditForm.dob = updatedControl;
+
+                            this.setState({
+                                editForm: newEditForm,
+                                loading: false
+                            });
+                        },1500);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -226,9 +321,27 @@ class EditPage extends Component {
 
                         getUser(newUser);
 
+                        const newEditForm = { ...this.state.editForm };
+                        const updatedControl = { ...newEditForm.interests};
+                        updatedControl.showMessage = true;
+                        newEditForm.interests = updatedControl;
+
                         this.setState({
+                            editForm: newEditForm,
                             loading: false
                         });
+
+                        setTimeout(()=>{
+                            const newEditForm = { ...this.state.editForm };
+                            const updatedControl = { ...newEditForm.interests};
+                            updatedControl.showMessage = false;
+                            newEditForm.interests = updatedControl;
+
+                            this.setState({
+                                editForm: newEditForm,
+                                loading: false
+                            });
+                        },1500);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -245,9 +358,27 @@ class EditPage extends Component {
 
                         getUser(newUser);
 
+                        const newEditForm = { ...this.state.editForm };
+                        const updatedControl = { ...newEditForm.contacts};
+                        updatedControl.showMessage = true;
+                        newEditForm.contacts = updatedControl;
+
                         this.setState({
+                            editForm: newEditForm,
                             loading: false
                         });
+
+                        setTimeout(()=>{
+                            const newEditForm = { ...this.state.editForm };
+                            const updatedControl = { ...newEditForm.contacts};
+                            updatedControl.showMessage = false;
+                            newEditForm.contacts = updatedControl;
+
+                            this.setState({
+                                editForm: newEditForm,
+                                loading: false
+                            });
+                        },1500);
                     }).catch(err => console.log(err));
                 break;
             }
@@ -269,6 +400,9 @@ class EditPage extends Component {
                     <div className="col-12 col-md-11 editForm-wrapper">
                         <div className="row edit-row">
                             <div className="editForm nameForm col-12 col-md-6">
+                                {
+                                    this.state.editForm.username.showMessage && <div className="alert alert-success alert-mes">Name was successfully changed</div>
+                                }
                                  <Input label="Name"
                                         elementType={ this.state.editForm.username.elementType }
                                         elementConfig={ this.state.editForm.username.elementConfig}
@@ -278,6 +412,9 @@ class EditPage extends Component {
                                 <Button btnType="primary" clicked={ () => this.handleSubmit("username") } disabled={ !this.state.editForm.username.value || this.state.loading }>Submit</Button>
                             </div>
                             <div className="editForm dobForm col-12 col-md-5">
+                                {
+                                    this.state.editForm.dob.showMessage && <div className="alert alert-success alert-mes">Birthday was successfully changed</div>
+                                }
                                 <Input label="Date of birthday"
                                        elementType={ this.state.editForm.dob.elementType }
                                        elementConfig={ this.state.editForm.dob.elementConfig}
@@ -289,6 +426,9 @@ class EditPage extends Component {
                         </div>
                         <div className="row edit-row">
                             <div className="editForm statusForm col-12 col-md-6">
+                                {
+                                    this.state.editForm.status.showMessage && <div className="alert alert-success alert-mes">Status was successfully changed</div>
+                                }
                                 <Input label="Status"
                                        elementType={ this.state.editForm.status.elementType }
                                        elementConfig={ this.state.editForm.status.elementConfig}
@@ -299,6 +439,9 @@ class EditPage extends Component {
                                 <Button btnType="primary" clicked={ () => this.handleSubmit("status") } disabled={ !this.state.editForm.status.value || this.state.loading }>Submit</Button>
                             </div>
                             <div className="editForm socialForm col-12 col-md-5">
+                                {
+                                    this.state.editForm.contacts.showMessage && <div className="alert alert-success alert-mes">Contact was successfully changed</div>
+                                }
                                 <Input label="Contacts"
                                        elementType={ this.state.editForm.contacts.elementType }
                                        elementConfig={ this.state.editForm.contacts.elementConfig}
@@ -316,6 +459,9 @@ class EditPage extends Component {
                         </div>
                        <div className="row edit-row">
                            <div className="editForm nameForm col-12 col-md-6">
+                               {
+                                   this.state.editForm.country.showMessage && <div className="alert alert-success alert-mes">Country was successfully changed</div>
+                               }
                                <Input label="Country"
                                       elementType={ this.state.editForm.country.elementType }
                                       elementConfig={ this.state.editForm.country.elementConfig}
@@ -325,6 +471,9 @@ class EditPage extends Component {
                                <Button btnType="primary" clicked={ () => this.handleSubmit("country") } disabled={ !this.state.editForm.country.value || this.state.loading }>Submit</Button>
                            </div>
                            <div className="editForm nameForm col-12 col-md-5">
+                               {
+                                   this.state.editForm.occupation.showMessage && <div className="alert alert-success alert-mes">Occupation was successfully changed</div>
+                               }
                                <Input label="Occupation"
                                       elementType={ this.state.editForm.occupation.elementType }
                                       elementConfig={ this.state.editForm.occupation.elementConfig}
@@ -336,6 +485,9 @@ class EditPage extends Component {
                        </div>
                         <div className="row edit-row">
                             <div className="editForm interestsForm col-12 col-md-6">
+                                {
+                                    this.state.editForm.interests.showMessage && <div className="alert alert-success alert-mes">Interests were successfully changed</div>
+                                }
                                 <Input label="Interests"
                                        elementType={ this.state.editForm.interests.elementType }
                                        elementConfig={ this.state.editForm.interests.elementConfig}

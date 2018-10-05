@@ -38,7 +38,7 @@ class Header extends Component {
                         <div className="logo">
                             <img className="logo-img" src="http://www.broutinwebpublishing.com/wp-content/uploads/2016/04/social-media-local-1024x723.png" alt="logo"/>
                         </div>
-                        <Link to='/' className='navLink'><h1 className="main-logo--navbar">InTouch</h1></Link>
+                        <Link to='/profile' className='navLink'><h1 className="main-logo--navbar">InTouch</h1></Link>
                     </div>
                     <nav className="main-nav">
                         <div className="search">

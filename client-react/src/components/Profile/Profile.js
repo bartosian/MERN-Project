@@ -13,10 +13,14 @@ class Profile extends Component {
     };
 
     changeUser = (newUser) => {
-        this.setState({
-            user: newUser
-        });
+        this.props.getUser(newUser);
     };
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            user: nextProps.loggedInUser
+        });
+    }
 
     render() {
 
@@ -29,7 +33,7 @@ class Profile extends Component {
                     <Header logout={ logout }/>
                 <Switch>
                     <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
-                    <Route path={ path } render={(props) => <Main {...props} user={ user }/> }/>
+                    <Route path={ path } render={(props) => <Main {...props} user={ user } getUser={ getUser }/> }/>
                 </Switch>
 
             </Fragment>

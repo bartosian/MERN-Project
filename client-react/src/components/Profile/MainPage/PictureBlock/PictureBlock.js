@@ -27,7 +27,12 @@ class PictureBlock extends Component {
                 this.setState({
                     file: data.image,
                     showImage: true
-                })
+                });
+
+                const newUser = {...this.props.user};
+                newUser.image = data.image;
+
+                this.props.getUser(newUser);
             });
     };
 

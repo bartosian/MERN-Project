@@ -108,6 +108,12 @@
     list-style: none;
 }
 
+.personal-detail p {
+    color: #0069d9;
+    text-shadow: 0 0 1px white;
+    font-weight: bold;
+}
+
 .personal-detail ul {
     display: flex;
     flex-direction: column;

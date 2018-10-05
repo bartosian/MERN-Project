@@ -4,12 +4,12 @@ import PersonalInfo from '../MainPage/PersonalInfo/PersonalInfo';
 import Friends from '../MainPage/Friends/Friends';
 import Wall from '../MainPage/Wall/Wall';
 
-const MainPage = ({user}) => {
+const MainPage = ({user, getUser}) => {
     return (
         <div className="container">
             <div className="row">
                 <div className="col-12 col-md-4">
-                    <Picture user={ user }/>
+                    <Picture user={ user } getUser={ getUser }/>
                 </div>
                 <div className="col-12 col-md-8">
                     <PersonalInfo user={ user }/>
