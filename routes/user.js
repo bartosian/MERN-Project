@@ -52,20 +52,31 @@ router.post('/user/status', middleAuth, async function(req, res, next) {
     }
 });
 
-/* Get all the friends */
-router.get('/friends', middleAuth, async function(req, res, next) {
+/* Edit dob of user */
+router.post('/user/dob', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
+    let { dob } = req.body;
+
+    if(!dob || dob.length === 0) {
+        res.status(400)
+            .json({ message: 'Day of birth can not be empty' });
+        return;
+    }
 
     try {
-        const user = await User.findById(_id).select('friends').populate('friends');
 
-        res.status(200)
-            .json(user.friends);
+        console.log(dob);
+        const user = await User.findById(_id);
+        user.dob = dob.trim();
+
+        await user.save();
+
+        res.status(203)
+            .json(user);
     } catch(ex) {
         return next(ex);
     }
 });
-
 
 /* Delete friend */
 router.delete('/friends/:id', middleAuth, async function(req, res, next) {
