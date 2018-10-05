@@ -22,7 +22,7 @@ router.post('/user/name', middleAuth, async function(req, res, next) {
         await user.save();
 
         res.status(203)
-            .json(user);
+            .json(user.username);
     } catch(ex) {
         return next(ex);
     }
@@ -46,7 +46,7 @@ router.post('/user/status', middleAuth, async function(req, res, next) {
         await user.save();
 
         res.status(203)
-            .json(user);
+            .json(user.status);
     } catch(ex) {
         return next(ex);
     }
@@ -71,7 +71,7 @@ router.post('/user/dob', middleAuth, async function(req, res, next) {
         await user.save();
 
         res.status(203)
-            .json(user);
+            .json(user.dob);
     } catch(ex) {
         return next(ex);
     }
@@ -104,7 +104,7 @@ router.post('/user/interests', middleAuth, async function(req, res, next) {
         await user.save();
 
         res.status(203)
-            .json(user);
+            .json(user.interests);
     } catch(ex) {
         return next(ex);
     }
@@ -124,7 +124,7 @@ router.post('/user/contacts', middleAuth, async function(req, res, next) {
             await user.save();
 
             res.status(203)
-                .json(user);
+                .json(user.contacts);
         } catch(ex) {
             return next(ex);
         }
@@ -138,7 +138,7 @@ router.post('/user/contacts', middleAuth, async function(req, res, next) {
             await user.save();
 
             res.status(203)
-                .json(user);
+                .json(user.contacts);
         } catch(ex) {
             return next(ex);
         }
@@ -152,7 +152,7 @@ router.post('/user/contacts', middleAuth, async function(req, res, next) {
             await user.save();
 
             res.status(203)
-                .json(user);
+                .json(user.contacts);
         } catch(ex) {
             return next(ex);
         }
@@ -166,7 +166,7 @@ router.post('/user/contacts', middleAuth, async function(req, res, next) {
             await user.save();
 
             res.status(203)
-                .json(user);
+                .json(user.contacts);
         } catch(ex) {
             return next(ex);
         }

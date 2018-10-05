@@ -12,18 +12,23 @@ class Profile extends Component {
       user: this.props.loggedInUser
     };
 
+    changeUser = (newUser) => {
+        this.setState({
+            user: newUser
+        });
+    };
 
     render() {
 
         const{ user } = this.state;
-        const { logout } = this.props;
+        const { logout, getUser } = this.props;
         const path = this.props.match.url;
 
         return (
             <Fragment>
                     <Header logout={ logout }/>
                 <Switch>
-                    <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user }/> }/>
+                    <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
                     <Route path={ path } render={(props) => <Main {...props} user={ user }/> }/>
                 </Switch>
 

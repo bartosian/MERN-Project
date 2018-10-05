@@ -10,6 +10,12 @@ class PersonalInfo extends Component {
         user: this.props.user
     };
 
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps);
+        this.setState({
+            user: nextProps.user
+        });
+    }
 
     render() {
 
@@ -17,7 +23,9 @@ class PersonalInfo extends Component {
 
 
         if(dob) {
-            dob = moment(dob).format('YYYY-MM-DD')
+            dob = new Date(dob);
+            dob = dob.setDate(dob.getDate() + 1);
+            dob = moment(dob).format('YYYY-MM-DD');
         }
 
 
