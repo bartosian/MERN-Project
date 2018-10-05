@@ -35,7 +35,6 @@ class Profile extends Component {
                     <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
                     <Route path={ path } render={(props) => <Main {...props} user={ user } getUser={ getUser }/> }/>
                 </Switch>
-
             </Fragment>
         );
     }
