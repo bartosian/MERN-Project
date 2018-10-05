@@ -29,19 +29,16 @@ class EditPage extends Component {
                 },
                 value: moment(this.props.user.dob).format('YYYY-MM-DD')
             },
-            password: {
-                elementType: 'input',
+            status: {
+                elementType: 'select',
                 elementConfig: {
-                    type: "password",
-                    placeholder: "Enter your password"
+                    options: [
+                        {value: "Single", displayValue: "Single"},
+                        {value: "Married", displayValue: "Married"},
+                        {value: "Have a friend", displayValue: "Have a friend"}
+                    ]
                 },
-                value: "",
-                validation : {
-                    required: true,
-                    minLength: 8
-                },
-                valid: false,
-                touched: false
+                value: this.props.user.status
             }
         },
         loading: false,
@@ -95,7 +92,13 @@ class EditPage extends Component {
                         </div>
                         <div className="row edit-row">
                             <div className="editForm statusForm col-12 col-md-6">
-                                 <h3 className="edit-subhead">Status</h3>
+                                <Input label="Status"
+                                       elementType={ this.state.editForm.status.elementType }
+                                       elementConfig={ this.state.editForm.status.elementConfig}
+                                       value={ this.state.editForm.status.value }
+                                       changed={ (event) => this.inputChangedHandler(event, "status") }
+                                />
+                                <Button btnType="primary" clicked={ this.handleSubmit }>Submit</Button>
                             </div>
                             <div className="editForm socialForm col-12 col-md-5">
                                 <h3 className="edit-subhead">Social links</h3>

@@ -17,7 +17,10 @@ const userSchema = new Schema({
     minLength: 8
   },
   image: String,
-  status: String,
+  status: {
+      type: String,
+      enum: ['Single', 'Married', 'Have a friend']
+  },
   contacts: [String],
   interests: [String],
   dob: Date,
