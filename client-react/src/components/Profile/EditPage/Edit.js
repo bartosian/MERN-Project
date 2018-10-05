@@ -183,6 +183,25 @@ class EditPage extends Component {
                 break;
             }
 
+            case "contacts": {
+                const contactProp = this.state.editForm.contacts.value;
+                const contactVal = this.state.editForm.contacts.elementConfig.options.find(opt => opt.value === contactProp).userValue;
+
+                this.service.changeContacts({ [contactProp] : contactVal })
+                    .then(response => {
+
+                        const newUser = {...user};
+                        newUser.contacts = response;
+
+                        getUser(newUser);
+
+                        this.setState({
+                            loading: false
+                        });
+                    }).catch(err => console.log(err));
+                break;
+            }
+
         }
 
 
