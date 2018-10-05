@@ -29,10 +29,10 @@ const details = ({dob, status, contacts}) => {
             <div className="col-12 col-md-4 personal-detail">
                 <h5><i className="fa fa-address-book detail-icon text-primary"></i>Contact info</h5>
                 <ul className="social-links">
-                    <li><i className="fa fa-envelope mail" aria-hidden="true"></i><span>not specified</span></li>
-                    <li><i className="fa fa-linkedin-square linked" aria-hidden="true"></i><span>not specified</span></li>
-                    <li><i className="fa fa-instagram insta" aria-hidden="true"></i><span>not specified</span></li>
-                    <li><i className="fa fa-facebook-official facebook text-primary" aria-hidden="true"></i><span>not specified</span></li>
+                    <li><i className="fa fa-envelope mail" aria-hidden="true"></i><span>{contacts[0] || 'not specified'}</span></li>
+                    <li><i className="fa fa-linkedin-square linked" aria-hidden="true"></i><span>{contacts[1] || 'not specified'}</span></li>
+                    <li><i className="fa fa-instagram insta" aria-hidden="true"></i><span>{contacts[2] || 'not specified'}</span></li>
+                    <li><i className="fa fa-facebook-official facebook text-primary" aria-hidden="true"></i><span>{contacts[3] || 'not specified'}</span></li>
                 </ul>
             </div>
         </Fragment>

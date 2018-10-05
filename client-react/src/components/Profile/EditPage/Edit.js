@@ -39,6 +39,30 @@ class EditPage extends Component {
                     ]
                 },
                 value: this.props.user.status
+            },
+            interests: {
+                elementType: 'textarea',
+                elementConfig: {
+                    placeholder: "Enter your interests separated by coma"
+                },
+                value: this.props.user.interests.join(",")
+            },
+            contacts: {
+                elementType: 'select',
+                elementSubType: 'input',
+                elementSubConfig: {
+                    type: "text",
+                    placeholder: "Enter new contact",
+                },
+                elementConfig: {
+                    options: [
+                        {value: "email", displayValue: "Email", userValue: this.props.user.contacts[0]},
+                        {value: "linkedIn", displayValue: "LinkedIn", userValue: this.props.user.contacts[1]},
+                        {value: "instagram", displayValue: "Instagram", userValue: this.props.user.contacts[2]},
+                        {value: "facebook", displayValue: "Facebook", userValue: this.props.user.contacts[3]}
+                    ]
+                },
+                value: "email"
             }
         },
         loading: false,
@@ -59,7 +83,7 @@ class EditPage extends Component {
     };
 
     handleSubmit = () => {
-        console.log(this.state.editForm.dob.value);
+        console.log(this.state.editForm.interests.value);
     };
 
     render() {
@@ -98,15 +122,35 @@ class EditPage extends Component {
                                        value={ this.state.editForm.status.value }
                                        changed={ (event) => this.inputChangedHandler(event, "status") }
                                 />
+                                <p className="interests-hint">Enter your family status</p>
                                 <Button btnType="primary" clicked={ this.handleSubmit }>Submit</Button>
                             </div>
                             <div className="editForm socialForm col-12 col-md-5">
-                                <h3 className="edit-subhead">Social links</h3>
+                                <Input label="Contacts"
+                                       elementType={ this.state.editForm.contacts.elementType }
+                                       elementConfig={ this.state.editForm.contacts.elementConfig}
+                                       value={ this.state.editForm.contacts.value }
+                                       changed={ (event) => this.inputChangedHandler(event, "contacts") }
+                                />
+                                <Input label={ this.state.editForm.contacts.value }
+                                       elementType={ this.state.editForm.contacts.elementSubType }
+                                       elementConfig={ this.state.editForm.contacts.elementSubConfig}
+                                       value={ this.state.editForm.contacts.elementConfig.options.find(o => o.value === this.state.editForm.contacts.value).userValue }
+                                       changed={ (event) => this.inputChangedHandler(event, this.state.editForm.contacts.value ) }
+                                />
+                                <Button btnType="primary" clicked={ this.handleSubmit }>Submit</Button>
                             </div>
                         </div>
                        <div className="row edit-row">
                            <div className="editForm interestsForm col-12 col-md-6">
-                               <h3 className="edit-subhead">Interests</h3>
+                               <Input label="Interests"
+                                      elementType={ this.state.editForm.interests.elementType }
+                                      elementConfig={ this.state.editForm.interests.elementConfig}
+                                      value={ this.state.editForm.interests.value }
+                                      changed={ (event) => this.inputChangedHandler(event, "interests") }
+                               />
+                               <p className="interests-hint">Enter your interests separated by coma</p>
+                               <Button btnType="primary" clicked={ this.handleSubmit }>Submit</Button>
                            </div>
                        </div>
                     </div>
