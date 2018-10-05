@@ -14,6 +14,16 @@ class UserService {
             .then(response => response.data)
     };
 
+    changeCountry = ({country}) => {
+        return this.userService.post('/country', {country})
+            .then(response => response.data)
+    };
+
+    changeOccupation = ({occupation}) => {
+        return this.userService.post('/occupation', {occupation})
+            .then(response => response.data)
+    };
+
     changeStatus = ({status}) => {
         return this.userService.post('/status', {status})
             .then(response => response.data)

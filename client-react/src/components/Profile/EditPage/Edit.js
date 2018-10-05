@@ -23,6 +23,22 @@ class EditPage extends Component {
                 },
                 value: this.props.user.username
             },
+            occupation: {
+                elementType: 'input',
+                elementConfig: {
+                    type: "text",
+                    placeholder: "Enter your occupation",
+                },
+                value: this.props.user.occupation
+            },
+            country: {
+                elementType: 'input',
+                elementConfig: {
+                    type: "text",
+                    placeholder: "Enter your country",
+                },
+                value: this.props.user.country
+            },
             dob: {
                 elementType: 'input',
                 elementConfig: {
@@ -44,7 +60,7 @@ class EditPage extends Component {
                         {value: "Have a friend", displayValue: "Have a friend"}
                     ]
                 },
-                value: this.props.user.status
+                value: this.props.user.status || "Single"
             },
             interests: {
                 elementType: 'textarea',
@@ -62,18 +78,16 @@ class EditPage extends Component {
                 },
                 elementConfig: {
                     options: [
-                        {value: "email", displayValue: "Email", userValue: (this.props.user.contacts && this.props.user.contacts.email) || "Enter your email"},
-                        {value: "linkedIn", displayValue: "LinkedIn", userValue: (this.props.user.contacts && this.props.user.contacts.linkedIn) || "Enter your linkedIn"},
-                        {value: "instagram", displayValue: "Instagram", userValue: (this.props.user.contacts && this.props.user.contacts.instagram) || "Enter your instagram"},
-                        {value: "facebook", displayValue: "Facebook", userValue: (this.props.user.contacts && this.props.user.contacts.facebook) || "Enter your facebook"}
+                        {value: "email", displayValue: "Email", userValue: (this.props.user.contacts && this.props.user.contacts.email) || ""},
+                        {value: "linkedIn", displayValue: "LinkedIn", userValue: (this.props.user.contacts && this.props.user.contacts.linkedIn) || ""},
+                        {value: "instagram", displayValue: "Instagram", userValue: (this.props.user.contacts && this.props.user.contacts.instagram) || ""},
+                        {value: "facebook", displayValue: "Facebook", userValue: (this.props.user.contacts && this.props.user.contacts.facebook) || ""}
                     ]
                 },
                 value: "email"
             }
         },
-        loading: false,
-        isFormValid: false,
-        error: false
+        loading: false
     };
 
     inputChangedHandler = (e, inputIdentifier) => {
@@ -119,6 +133,42 @@ class EditPage extends Component {
 
                         const newUser = {...user};
                         newUser.username = response;
+
+                        getUser(newUser);
+
+                        this.setState({
+                            loading: false
+                        });
+                    }).catch(err => console.log(err));
+                break;
+            }
+
+            case "country": {
+                const country = this.state.editForm.country.value;
+
+                this.service.changeCountry({ country })
+                    .then(response => {
+
+                        const newUser = {...user};
+                        newUser.country = response;
+
+                        getUser(newUser);
+
+                        this.setState({
+                            loading: false
+                        });
+                    }).catch(err => console.log(err));
+                break;
+            }
+
+            case "occupation": {
+                const occupation = this.state.editForm.occupation.value;
+
+                this.service.changeOccupation({ occupation })
+                    .then(response => {
+
+                        const newUser = {...user};
+                        newUser.occupation = response;
 
                         getUser(newUser);
 
@@ -202,6 +252,8 @@ class EditPage extends Component {
                 break;
             }
 
+            default: return;
+
         }
 
 
@@ -223,7 +275,7 @@ class EditPage extends Component {
                                         value={ this.state.editForm.username.value }
                                         changed={ (event) => this.inputChangedHandler(event, "username") }
                                  />
-                                <Button btnType="primary" clicked={ () => this.handleSubmit("username") }>Submit</Button>
+                                <Button btnType="primary" clicked={ () => this.handleSubmit("username") } disabled={ !this.state.editForm.username.value || this.state.loading }>Submit</Button>
                             </div>
                             <div className="editForm dobForm col-12 col-md-5">
                                 <Input label="Date of birthday"
@@ -232,7 +284,7 @@ class EditPage extends Component {
                                        value={ this.state.editForm.dob.value }
                                        changed={ (event) => this.inputChangedHandler(event, "dob") }
                                 />
-                                <Button btnType="primary" clicked={ () => this.handleSubmit("dob") }>Submit</Button>
+                                <Button btnType="primary" clicked={ () => this.handleSubmit("dob") } disabled={ !this.state.editForm.dob.value || this.state.loading }>Submit</Button>
                             </div>
                         </div>
                         <div className="row edit-row">
@@ -244,7 +296,7 @@ class EditPage extends Component {
                                        changed={ (event) => this.inputChangedHandler(event, "status") }
                                 />
                                 <p className="interests-hint">Enter your family status</p>
-                                <Button btnType="primary" clicked={ () => this.handleSubmit("status") }>Submit</Button>
+                                <Button btnType="primary" clicked={ () => this.handleSubmit("status") } disabled={ !this.state.editForm.status.value || this.state.loading }>Submit</Button>
                             </div>
                             <div className="editForm socialForm col-12 col-md-5">
                                 <Input label="Contacts"
@@ -259,21 +311,41 @@ class EditPage extends Component {
                                        value={ this.state.editForm.contacts.elementConfig.options.find(o => o.value === this.state.editForm.contacts.value).userValue }
                                        changed={ (event) => this.inputChangedHandler(event, this.state.editForm.contacts.value ) }
                                 />
-                                <Button btnType="primary" clicked={ () => this.handleSubmit("contacts") }>Submit</Button>
+                                <Button btnType="primary" clicked={ () => this.handleSubmit("contacts") } disabled={ !this.state.editForm.contacts.value || this.state.loading }>Submit</Button>
                             </div>
                         </div>
                        <div className="row edit-row">
-                           <div className="editForm interestsForm col-12 col-md-6">
-                               <Input label="Interests"
-                                      elementType={ this.state.editForm.interests.elementType }
-                                      elementConfig={ this.state.editForm.interests.elementConfig}
-                                      value={ this.state.editForm.interests.value }
-                                      changed={ (event) => this.inputChangedHandler(event, "interests") }
+                           <div className="editForm nameForm col-12 col-md-6">
+                               <Input label="Country"
+                                      elementType={ this.state.editForm.country.elementType }
+                                      elementConfig={ this.state.editForm.country.elementConfig}
+                                      value={ this.state.editForm.country.value }
+                                      changed={ (event) => this.inputChangedHandler(event, "country") }
                                />
-                               <p className="interests-hint">Enter your interests separated by coma</p>
-                               <Button btnType="primary" clicked={ () => this.handleSubmit("interests") }>Submit</Button>
+                               <Button btnType="primary" clicked={ () => this.handleSubmit("country") } disabled={ !this.state.editForm.country.value || this.state.loading }>Submit</Button>
+                           </div>
+                           <div className="editForm nameForm col-12 col-md-5">
+                               <Input label="Occupation"
+                                      elementType={ this.state.editForm.occupation.elementType }
+                                      elementConfig={ this.state.editForm.occupation.elementConfig}
+                                      value={ this.state.editForm.occupation.value }
+                                      changed={ (event) => this.inputChangedHandler(event, "occupation") }
+                               />
+                               <Button btnType="primary" clicked={ () => this.handleSubmit("occupation") } disabled={ !this.state.editForm.occupation.value || this.state.loading }>Submit</Button>
                            </div>
                        </div>
+                        <div className="row edit-row">
+                            <div className="editForm interestsForm col-12 col-md-6">
+                                <Input label="Interests"
+                                       elementType={ this.state.editForm.interests.elementType }
+                                       elementConfig={ this.state.editForm.interests.elementConfig}
+                                       value={ this.state.editForm.interests.value }
+                                       changed={ (event) => this.inputChangedHandler(event, "interests") }
+                                />
+                                <p className="interests-hint">Enter your interests separated by coma</p>
+                                <Button btnType="primary" clicked={ () => this.handleSubmit("interests") } disabled={ !this.state.editForm.interests.value || this.state.loading }>Submit</Button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

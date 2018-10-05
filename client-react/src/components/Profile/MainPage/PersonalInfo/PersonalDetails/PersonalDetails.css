@@ -1,5 +1,5 @@
 .empty-data {
-    font-size: 4rem;
+    font-size: 3rem;
     color: rgba(0, 123, 254, 0.6);
     transition: all 400ms linear;
     position: relative;
@@ -66,10 +66,28 @@
 
 @media (max-width: 770px) {
     .personal-detail h5 {
-        font-size: 1.2rem;
+        font-size: 0.7rem;
         display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: center !important;
+        margin-bottom: 0;
+    }
+
+    .personal-detail {
+        margin-bottom: 10px;
+        padding: 0 !important;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgb(72, 115, 143) !important;
+    }
+
+    .personal-detail h5 i {
+        margin-bottom: 5px;
+    }
+
+    .personal-detail p {
+        margin-bottom: 0;
+        font-size: 0.7rem;
+        align-self: flex-end;
     }
 
     .social-links li {
@@ -78,6 +96,14 @@
         justify-content: flex-start;
         align-items: flex-start;
         font-size: 0.6rem;
+    }
+
+    .empty-data::after {
+        display: none;
+    }
+
+    .empty-data {
+        font-size: 2rem;
     }
 }
 

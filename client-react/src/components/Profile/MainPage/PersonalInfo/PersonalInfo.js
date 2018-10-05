@@ -19,8 +19,7 @@ class PersonalInfo extends Component {
 
     render() {
 
-        let { interests, dob, status, username, contacts } = this.state.user;
-
+        let { interests, dob, status, username, contacts, country, occupation } = this.state.user;
 
         if(dob) {
             dob = new Date(dob);
@@ -38,7 +37,7 @@ class PersonalInfo extends Component {
                 <div className="user-info">
                     <div className="row summary">
                         <div className="row personal-details">
-                            <Details dob={ dob } status={ status } contacts={ contacts }/>
+                            <Details dob={ dob } status={ status } contacts={ contacts } country={ country } occupation={ occupation }/>
                         </div>
                     </div>
                 </div>

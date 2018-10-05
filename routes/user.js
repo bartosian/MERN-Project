@@ -28,6 +28,54 @@ router.post('/user/name', middleAuth, async function(req, res, next) {
     }
 });
 
+/* Edit country of user */
+router.post('/user/country', middleAuth, async function(req, res, next) {
+    const { _id } = req.user;
+    let { country } = req.body;
+
+    if(!country || country.length === 0) {
+        res.status(400)
+            .json({ message: 'Country name can not be empty' });
+        return;
+    }
+
+    try {
+        const user = await User.findById(_id);
+        user.country = country.trim();
+
+        await user.save();
+
+        res.status(203)
+            .json(user.country);
+    } catch(ex) {
+        return next(ex);
+    }
+});
+
+/* Edit occupation of user */
+router.post('/user/occupation', middleAuth, async function(req, res, next) {
+    const { _id } = req.user;
+    let { occupation } = req.body;
+
+    if(!occupation || occupation.length === 0) {
+        res.status(400)
+            .json({ message: 'Occupation name can not be empty' });
+        return;
+    }
+
+    try {
+        const user = await User.findById(_id);
+        user.occupation = occupation.trim();
+
+        await user.save();
+
+        res.status(203)
+            .json(user.occupation);
+    } catch(ex) {
+        return next(ex);
+    }
+});
+
 /* Edit status of user */
 router.post('/user/status', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
