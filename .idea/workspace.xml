@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="143">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -206,18 +205,18 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="73231000" />
+      <workItem from="1538569246105" duration="73365000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132147000" />
+    <option name="totallyTimeSpent" value="132281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -225,7 +224,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25882354" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25882354" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -665,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        <state relative-caret-position="143">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>

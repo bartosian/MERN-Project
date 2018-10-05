@@ -5,7 +5,7 @@ const middleAuth = require('../middleWare/auth');
 const { User } = require('../models/User');
 
 /* Edit name of user */
-router.post('/user', middleAuth, async function(req, res, next) {
+router.post('/user/name', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
     let { username } = req.body;
 
@@ -28,21 +28,25 @@ router.post('/user', middleAuth, async function(req, res, next) {
     }
 });
 
-/* Get certain friend */
-router.get('/friends/:id', middleAuth, async function(req, res, next) {
-    let { id } = req.params;
+/* Edit status of user */
+router.post('/user/status', middleAuth, async function(req, res, next) {
+    const { _id } = req.user;
+    let { status } = req.body;
 
-    if(!mongoose.Types.ObjectId.isValid(id)) {
+    if(!status || status.length === 0) {
         res.status(400)
-            .json({ message: 'Specified id is not valid' });
+            .json({ message: 'Status can not be empty' });
         return;
     }
 
     try {
-        const friend = await User.findById(id).populate('friends posts');
+        const user = await User.findById(_id);
+        user.status = status.trim();
 
-        res.status(200)
-            .json(friend);
+        await user.save();
+
+        res.status(203)
+            .json(user);
     } catch(ex) {
         return next(ex);
     }
