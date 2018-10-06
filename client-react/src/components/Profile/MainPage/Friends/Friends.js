@@ -27,7 +27,7 @@ const friends = ({user}) => {
 
     return (
         <div className="friends">
-            <h5 className="friends-header">Friends <span>({ friends.length !== 0 ? friends.length : '0' })</span></h5>
+            <h5 className="friends-header"><strong>Friends <span>({ friends.length !== 0 ? friends.length : '0' })</span></strong><Link className="navLink" to="/profile/users"><i className="fa fa-users detail-icon text-primary"></i></Link></h5>
             <div className={ friendsClasses.join(" ") }>
                 { friendsCopyList }
             </div>
