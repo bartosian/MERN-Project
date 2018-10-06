@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import User from './User/User';
 import './Users.css';
 
 class Users extends Component {
@@ -7,11 +8,7 @@ class Users extends Component {
     render() {
         return (
             <div className="container">
-                <div className="row friend-block">
-                    <div className="col-12 col-md-7">
-                        friend block
-                    </div>
-                </div>
+                <User />
             </div>
         );
     }

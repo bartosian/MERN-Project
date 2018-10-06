@@ -224,4 +224,17 @@ router.post('/user/contacts', middleAuth, async function(req, res, next) {
         .json({ message: 'Contacts can not be empty' });
 });
 
+/* Get random users list */
+router.get('/users', middleAuth, async function(req, res, next) {
+
+    try {
+        const users = await User.find().limit(50).select("-posts -interests -chats -friends").sort({ username: 1});
+
+        res.status(200)
+            .json(users);
+    } catch(ex) {
+        return next(ex);
+    }
+});
+
 module.exports = router;
