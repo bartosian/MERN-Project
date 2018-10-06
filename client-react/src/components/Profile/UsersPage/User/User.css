@@ -203,6 +203,24 @@
     background: rgba(0, 123, 255, 0.5);
 }
 
+.friend-delete {
+    background: rgba(220, 53, 69, 0.8);
+    border: 2px solid rgb(220, 53, 69);
+}
+
+.friend-delete i {
+    color: white;
+    transition: all 500ms ease-in-out;
+}
+
+.friend-delete:hover {
+    color: red !important;
+}
+
+.friend-delete:hover > i {
+    color: red;
+}
+
 .send-mess {
     background: rgba(59, 208, 84, 0.5);
     border: 2px solid rgb(59, 208, 84);

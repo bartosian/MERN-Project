@@ -228,7 +228,7 @@ router.post('/user/contacts', middleAuth, async function(req, res, next) {
 router.get('/users', middleAuth, async function(req, res, next) {
 
     try {
-        const users = await User.find().limit(50).select("-posts -interests -chats -friends").sort({ username: 1});
+        const users = await User.find().limit(50).select("-posts -interests -chats").sort({ username: 1});
 
         res.status(200)
             .json(users);
