@@ -13,7 +13,7 @@ class Wall extends Component {
     changePosts = (newPosts) => {
         const copyUser = { ...this.state.user };
         copyUser.posts = newPosts;
-
+        this.props.getUser(copyUser);
         this.setState({
             user: copyUser
         });

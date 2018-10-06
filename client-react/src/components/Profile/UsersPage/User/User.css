@@ -201,9 +201,6 @@
     color: rgb(59, 208, 84);
 }
 
-.send-mess i {
-    color: #0069d9;
-}
 
 .add-friend {
     background: rgba(0, 123, 255, 0.5);
@@ -242,4 +239,13 @@
     background: white;
     color: rgb(59, 208, 84);
     text-shadow: none;
+}
+
+.send-mess:hover i {
+    color: rgb(59, 208, 84) !important;
+    transition: all 500ms ease-in-out;
+}
+
+.comment-icon {
+    color: white !important;
 }

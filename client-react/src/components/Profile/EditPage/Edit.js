@@ -31,7 +31,7 @@ class EditPage extends Component {
                     type: "text",
                     placeholder: "Enter your occupation",
                 },
-                value: this.props.user.occupation,
+                value: this.props.user.occupation || "",
                 showMessage: false
             },
             country: {
@@ -40,7 +40,7 @@ class EditPage extends Component {
                     type: "text",
                     placeholder: "Enter your country",
                 },
-                value: this.props.user.country,
+                value: this.props.user.country || "",
                 showMessage: false
             },
             dob: {
@@ -50,9 +50,14 @@ class EditPage extends Component {
                     placeholder: "Enter your date of birthday"
                 },
                 value: (() => {
-                    let dob = new Date(this.props.user.dob);
-                    dob = dob.setDate(dob.getDate() + 1);
-                    return moment(dob).format('YYYY-MM-DD')
+                    if(this.props.user.dob) {
+                        let dob = new Date(this.props.user.dob);
+                        dob = dob.setDate(dob.getDate() + 1);
+                        return moment(dob).format('YYYY-MM-DD');
+                    } else {
+                        return moment().format('YYYY-MM-DD');
+                    }
+
                 })(),
                 showMessage: false
             },

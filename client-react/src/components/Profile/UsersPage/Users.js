@@ -61,8 +61,6 @@ class Users extends Component {
             .then(response => {
                 user.friends = response;
 
-                console.log(response);
-
                 this.props.getUser(user);
             }).catch(err => {
             console.log(err);

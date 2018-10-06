@@ -20,7 +20,7 @@ const MainPage = ({user, getUser}) => {
                     <Friends user={ user }/>
                 </div>
                 <div className="col-12 col-md-6">
-                    <Wall user={ user }/>
+                    <Wall user={ user } getUser={ getUser }/>
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@ const user = ({user, userFriends, selectPhoto, addFriend, deleteFriend}) => {
                 </div>
                 <div className="send-mess">
                     <span>Send message</span>
-                    <i className="fa fa-comment" aria-hidden="true"></i>
+                    <i className="fa fa-comment comment-icon" aria-hidden="true"></i>
                 </div>
             </div>
         )
