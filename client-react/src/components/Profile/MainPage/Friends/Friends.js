@@ -1,6 +1,7 @@
 import React from 'react';
 import './Friends.css';
 import Friend from './Friend/Friend';
+import { Link } from 'react-router-dom';
 
 const friends = ({user}) => {
 
@@ -15,7 +16,7 @@ const friends = ({user}) => {
             <Friend key={ f.username + id } name={ f.username } url={ f.image ? f.image : "" }/>
         ))
     ): (
-        <i className="fa fa-users empty-friends" aria-hidden="true"></i>
+        <Link to="/profile/users" className="navLink"><i className="fa fa-users empty-friends" aria-hidden="true"></i></Link>
     );
 
     const friendsClasses = ['friends-wrapper'];

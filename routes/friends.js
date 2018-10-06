@@ -5,9 +5,9 @@ const middleAuth = require('../middleWare/auth');
 const { User } = require('../models/User');
 
 /* Add new friend */
-router.post('/friends/:id', middleAuth, async function(req, res, next) {
+router.post('/friends', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
-    let { id } = req.params;
+    let { id } = req.body;
 
     if(!mongoose.Types.ObjectId.isValid(id)) {
         res.status(400)

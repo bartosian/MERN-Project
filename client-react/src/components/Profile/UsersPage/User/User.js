@@ -1,11 +1,18 @@
 import React from 'react';
 import './User.css';
 
-const user = ({user, id, selectPhoto}) => {
-    const {image, username, status, country, occupation, friends } = user;
+const user = ({user, userFriends, selectPhoto, addFriend }) => {
+    const {image, username, status, country, occupation, _id } = user;
     let controls = null;
+    let userHasFriend = false;
 
-    if(friends.includes(id)) {
+    for(let fr of userFriends) {
+        if(fr._id === _id) {
+            userHasFriend = true;
+        }
+    }
+
+    if(userHasFriend) {
         controls = (
             <div className="friend-controls">
                 <div className="add-friend friend-delete">
@@ -21,7 +28,7 @@ const user = ({user, id, selectPhoto}) => {
     } else {
         controls = (
             <div className="friend-controls">
-                <div className="add-friend">
+                <div className="add-friend" onClick={() => addFriend(_id)}>
                     <span>Add friend</span>
                     <i className="fa fa-plus-square" aria-hidden="true"></i>
                 </div>

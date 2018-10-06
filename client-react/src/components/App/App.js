@@ -37,6 +37,8 @@ class App extends Component {
         this.setState({
             loggedInUser: userObj
         })
+
+        console.log(this.state.loggedInUser.friends);
     };
 
     logoutUser = (history) =>{

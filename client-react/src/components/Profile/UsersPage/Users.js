@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import User from './User/User';
 import UsersService from '../../../services/users-service';
+import FriendService from '../../../services/friend-service';
 import './Users.css';
 
 class Users extends Component {
@@ -8,6 +9,7 @@ class Users extends Component {
     constructor(props) {
         super(props);
         this.service = new UsersService();
+        this.friendService = new FriendService();
     }
 
     state = {
@@ -18,14 +20,17 @@ class Users extends Component {
     componentDidMount() {
         this.service.getUsers()
             .then(response => {
+                const newUsers = response.filter(u => u._id !== this.props.user._id);
                 this.setState({
-                    users: response
+                    users: newUsers
                 });
-                console.log(response);
+
             }).catch(err => {
                 console.log(err);
         });
     }
+
+
 
     selectPhoto = (url) => {
         this.setState({
@@ -33,9 +38,23 @@ class Users extends Component {
         });
     };
 
+    addNewFriend = (friendId) => {
+        const id = friendId;
+        const user = {...this.props.user};
+
+        this.friendService.addFriend({id})
+            .then(response => {
+                user.friends = response;
+
+                this.props.getUser(user);
+            }).catch(err => {
+                console.log(err);
+        });
+    };
+
 
     render() {
-        const currentUserId = this.props.user._id;
+        const friends = [ ...this.props.user.friends ];
 
         return (
             <Fragment>
@@ -50,7 +69,7 @@ class Users extends Component {
                 <div className="container users-wrapper">
                     {
                         this.state.users.map((user, idx) => (
-                            <User key={ user.username + idx} user={ user } id={ currentUserId } selectPhoto={ this.selectPhoto }/>
+                            <User key={ user.username + idx} user={ user } userFriends={ friends } selectPhoto={ this.selectPhoto } addFriend={ this.addNewFriend }/>
                         ))
                     }
                 </div>
