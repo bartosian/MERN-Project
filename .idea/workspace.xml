@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" afterDir="false" />
     </list>
@@ -42,8 +42,8 @@
       <file leaf-file-name="Users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+            <state relative-caret-position="435">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -54,8 +54,8 @@
       <file leaf-file-name="Users.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+            <state relative-caret-position="247">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -72,23 +72,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="User.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="NameSection.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/NameSection/NameSection.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
               <caret line="9" column="115" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="115" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonalDetails.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="36" column="80" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="80" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -178,8 +175,8 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js" />
         <option value="$PROJECT_DIR$/client-react/src/services/users-service.js" />
         <option value="$PROJECT_DIR$/routes/user.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.css" />
       </list>
@@ -394,18 +391,18 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="109352000" />
+      <workItem from="1538569246105" duration="109773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168268000" />
+    <option name="totallyTimeSpent" value="168689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -413,7 +410,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18705882" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18705882" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -824,17 +821,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1580">
-          <caret line="212" column="38" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/services/users-service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="111" column="18" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -848,17 +845,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.css">
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="111" column="18" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="18" />
+        <state relative-caret-position="286">
+          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="435">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -867,8 +864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        <state relative-caret-position="247">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
         </state>
       </provider>
     </entry>

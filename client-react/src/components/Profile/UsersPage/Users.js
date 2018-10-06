@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import User from './User/User';
 import UsersService from '../../../services/users-service';
 import './Users.css';
@@ -38,7 +38,7 @@ class Users extends Component {
         const currentUserId = this.props.user._id;
 
         return (
-            <div className="container users-wrapper">
+            <Fragment>
                 {
                     this.state.shownImageYrl && (
                         <div className="col-12 col-md-7 picture-block">
@@ -47,12 +47,14 @@ class Users extends Component {
                         </div>
                     )
                 }
-                {
-                    this.state.users.map((user, idx) => (
-                        <User key={ user.username + idx} user={ user } id={ currentUserId } selectPhoto={ this.selectPhoto }/>
-                    ))
-                }
-            </div>
+                <div className="container users-wrapper">
+                    {
+                        this.state.users.map((user, idx) => (
+                            <User key={ user.username + idx} user={ user } id={ currentUserId } selectPhoto={ this.selectPhoto }/>
+                        ))
+                    }
+                </div>
+            </Fragment>
         );
     }
 }

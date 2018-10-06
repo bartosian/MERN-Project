@@ -9,9 +9,9 @@
 }
 
 .picture-block {
-    position: absolute !important;
+    position: fixed !important;
     height: 60vh;
-    top: 10vh;
+    top: calc(50vh - 30vh);
     z-index: 100;
     left: 0;
     right: 0;
