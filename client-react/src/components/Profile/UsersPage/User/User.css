@@ -93,6 +93,48 @@
     padding-left: 10px;
 }
 
+@media (max-width: 990px) {
+    .friend-info p {
+        font-size: 0.8rem;
+    }
+
+    .friend-info i {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .friend-info p {
+        font-size: 1rem;
+    }
+
+    .friend-info i {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .friend-info p {
+        font-size: 0.8rem;
+    }
+
+    .friend-name-block  p:nth-child(2) {
+        padding-left: 40px;
+    }
+
+    .friend-info i {
+        font-size: 1.1rem;
+    }
+
+    .friend-info {
+        width: 65%;
+    }
+
+    .friend-controls {
+        width: 5%;
+    }
+}
+
 .friend-name-block {
     height: 50%;
     width: 100%;
