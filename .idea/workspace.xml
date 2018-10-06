@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,8 +53,8 @@
       <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="49" />
+            <state relative-caret-position="435">
+              <caret line="25" column="46" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="46" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -88,8 +89,8 @@
       <file leaf-file-name="PersonalInfo.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2151">
-              <caret line="9" column="41" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="9" selection-end-column="41" />
+            <state relative-caret-position="283">
+              <caret line="176" column="38" selection-start-line="176" selection-start-column="16" selection-end-line="176" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -115,8 +116,8 @@
       <file leaf-file-name="User.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="128" column="18" lean-forward="true" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+            <state relative-caret-position="388">
+              <caret line="147" column="34" selection-start-line="147" selection-start-column="34" selection-end-line="147" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -392,12 +393,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="104477000" />
+      <workItem from="1538569246105" duration="106067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163393000" />
+    <option name="totallyTimeSpent" value="164983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
@@ -819,13 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2151">
-          <caret line="9" column="41" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
@@ -855,18 +849,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="49" />
+        <state relative-caret-position="435">
+          <caret line="25" column="46" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="46" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="176" column="38" selection-start-line="176" selection-start-column="16" selection-end-line="176" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="128" column="18" lean-forward="true" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+        <state relative-caret-position="388">
+          <caret line="147" column="34" selection-start-line="147" selection-start-column="34" selection-end-line="147" selection-end-column="34" />
         </state>
       </provider>
     </entry>

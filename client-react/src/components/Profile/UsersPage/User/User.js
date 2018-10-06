@@ -22,7 +22,16 @@ const user = ({user}) => {
                         <p><i className="fa fa-briefcase detail-icon text-primary"></i>{ occupation || "Not specified" }</p>
                     </div>
                 </div>
-                <div className="friend-controls"></div>
+                <div className="friend-controls">
+                    <div className="add-friend">
+                        <span>Add friend</span>
+                        <i className="fa fa-plus-square" aria-hidden="true"></i>
+                    </div>
+                    <div className="send-mess">
+                        <span>Send message</span>
+                        <i className="fa fa-comment" aria-hidden="true"></i>
+                    </div>
+                </div>
             </div>
         </div>
     )

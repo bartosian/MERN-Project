@@ -41,7 +41,7 @@
 }
 
 .friend-controls {
-    width: 10%;
+    width: 15%;
 }
 
 .hover-info {
@@ -101,6 +101,14 @@
     .friend-info i {
         font-size: 1.1rem;
     }
+
+    .friend-info {
+        width: 55%;
+    }
+
+    .friend-controls {
+        width: 20%;
+    }
 }
 
 @media (max-width: 770px) {
@@ -118,20 +126,30 @@
         font-size: 0.8rem;
     }
 
-    .friend-name-block  p:nth-child(2) {
-        padding-left: 40px;
-    }
 
     .friend-info i {
         font-size: 1.1rem;
     }
 
     .friend-info {
-        width: 65%;
+        width: 55%;
     }
 
     .friend-controls {
-        width: 5%;
+        width: 20%;
+    }
+
+    .friend-main {
+        padding: 10px 0 !important;
+    }
+
+    .friend-name,
+    .friend-status {
+        padding-left: 0 !important;
+    }
+
+    .friend-name + p {
+        padding-left: 20px;
     }
 }
 
@@ -139,4 +157,65 @@
     height: 50%;
     width: 100%;
     display: flex;
+}
+
+.friend-controls {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add-friend,
+.send-mess {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.6rem;
+    width: 100%;
+    height: 35%;
+    border-radius: 10px;
+    border: 2px solid #0069d9;
+    box-shadow: 0 0 1px white;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    text-shadow: 0 0 1px black;
+    transition: all 500ms ease-in-out;
+}
+
+
+.add-friend i,
+.send-mess i {
+    font-size: 1.2rem;
+}
+
+.add-friend i {
+    color: rgb(59, 208, 84);
+}
+
+.send-mess i {
+    color: #0069d9;
+}
+
+.add-friend {
+    background: rgba(0, 123, 255, 0.5);
+}
+
+.send-mess {
+    background: rgba(59, 208, 84, 0.5);
+    border: 2px solid rgb(59, 208, 84);
+}
+
+.add-friend:hover {
+    background: white;
+    color: #0069d9;
+    text-shadow: none;
+}
+
+.send-mess:hover {
+    background: white;
+    color: rgb(59, 208, 84);
+    text-shadow: none;
 }
