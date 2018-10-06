@@ -52,6 +52,23 @@ class Users extends Component {
         });
     };
 
+    deleteFriend = (friendId) => {
+
+        const id = friendId;
+        const user = {...this.props.user};
+
+        this.friendService.deleteFriend({id})
+            .then(response => {
+                user.friends = response;
+
+                console.log(response);
+
+                this.props.getUser(user);
+            }).catch(err => {
+            console.log(err);
+        });
+    };
+
 
     render() {
         const friends = [ ...this.props.user.friends ];
@@ -69,7 +86,7 @@ class Users extends Component {
                 <div className="container users-wrapper">
                     {
                         this.state.users.map((user, idx) => (
-                            <User key={ user.username + idx} user={ user } userFriends={ friends } selectPhoto={ this.selectPhoto } addFriend={ this.addNewFriend }/>
+                            <User key={ user.username + idx} user={ user } userFriends={ friends } selectPhoto={ this.selectPhoto } addFriend={ this.addNewFriend } deleteFriend={ this.deleteFriend }/>
                         ))
                     }
                 </div>

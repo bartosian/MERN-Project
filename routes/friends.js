@@ -97,8 +97,10 @@ router.delete('/friends/:id', middleAuth, async function(req, res, next) {
         user.friends = [...updatedFriends];
         await user.save();
 
+        const newUser = await User.findById(_id).select('friends').populate('friends');
+
         res.status(200)
-            .json(updatedFriends);
+            .json(newUser.friends);
     } catch(ex) {
         return next(ex);
     }
