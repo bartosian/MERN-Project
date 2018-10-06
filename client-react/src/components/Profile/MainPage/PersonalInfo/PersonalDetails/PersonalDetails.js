@@ -29,6 +29,7 @@ const details = ({dob, status, contacts, country, occupation }) => {
                 <p>{ DOB }</p>
                 <h5><i className="fa fa-globe detail-icon text-primary"></i>Country</h5>
                 <p>{ Country }</p>
+                <Link to="/profile/users">users</Link>
             </div>
             <div className="col-12 col-md-4 personal-detail">
                 <h5><i className="fa fa-heart detail-icon text-primary"></i>Status</h5>
