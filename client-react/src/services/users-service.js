@@ -6,7 +6,7 @@ class UsersService {
             baseURL: 'http://localhost:5000/api/users',
             withCredentials: true
         });
-        this.usersService = userService;
+        this.usersService = usersService;
     }
 
     getUsers = () => {

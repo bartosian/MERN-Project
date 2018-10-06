@@ -1,0 +1,37 @@
+.friend-block {
+    margin-bottom: 10px;
+}
+
+.friend-main {
+    display: flex;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 17vh;
+    text-align: center;
+    background: rgba(216, 212, 212, 0.3);
+}
+
+.friend-image {
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 100%;
+    box-shadow: 0 0 13px black;
+}
+
+.friend-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.friend-info {
+    width: 60%;
+}
+
+.friend-controls {
+    width: 10%;
+}

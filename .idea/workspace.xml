@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="" />
+    <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/services/users-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/users-service.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -38,8 +43,8 @@
       <file leaf-file-name="Users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="646">
+              <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -50,8 +55,20 @@
       <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            <state relative-caret-position="171">
+              <caret line="9" column="136" selection-start-line="9" selection-start-column="136" selection-end-line="9" selection-end-column="136" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonalInfo.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="41" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="9" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -65,18 +82,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users-service.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users-service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/services/users-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="133">
+              <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="Users.css" pinned="false" current-in-tab="false">
@@ -96,7 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/PictureBlock/PictureBlock.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/PersonalInfo.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/NameSection/NameSection.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/PersonalInfo/NameSection/NameSection.css" />
@@ -143,10 +163,11 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.css" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" />
         <option value="$PROJECT_DIR$/routes/user.js" />
         <option value="$PROJECT_DIR$/client-react/src/services/users-service.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" />
       </list>
     </option>
   </component>
@@ -222,6 +243,27 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Profile" type="462c0819:PsiDirectoryNode" />
               <item name="MainPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
+              <item name="client-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
+              <item name="MainPage" type="462c0819:PsiDirectoryNode" />
+              <item name="Friends" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
+              <item name="client-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
+              <item name="MainPage" type="462c0819:PsiDirectoryNode" />
+              <item name="Friends" type="462c0819:PsiDirectoryNode" />
+              <item name="Friend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
@@ -327,12 +369,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="100101000" />
+      <workItem from="1538569246105" duration="101448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159017000" />
+    <option name="totallyTimeSpent" value="160364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
@@ -390,13 +432,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-react/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="79" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/UI/Button/Button.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -421,16 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friends.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
@@ -737,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/friends.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -761,16 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="237" column="3" lean-forward="true" selection-start-line="237" selection-start-column="3" selection-end-line="237" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/services/user-service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -780,18 +781,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="646">
+          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="41" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/services/users-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        <state relative-caret-position="133">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="237" column="3" lean-forward="true" selection-start-line="237" selection-start-column="3" selection-end-line="237" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friends.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friend/Friend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="137" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="136" selection-start-line="9" selection-start-column="136" selection-end-line="9" selection-end-column="136" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
