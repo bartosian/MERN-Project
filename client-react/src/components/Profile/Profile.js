@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import { Switch, Route } from 'react-router-dom';
 import Edit from './EditPage/Edit';
 import Main from './MainPage/Main';
+import Footer from '../Footer/Footer';
 
 
 class Profile extends Component {
@@ -35,6 +36,7 @@ class Profile extends Component {
                     <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
                     <Route path={ path } render={(props) => <Main {...props} user={ user } getUser={ getUser }/> }/>
                 </Switch>
+                    <Footer />
             </Fragment>
         );
     }
