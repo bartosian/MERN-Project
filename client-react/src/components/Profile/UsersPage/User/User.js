@@ -1,7 +1,7 @@
 import React from 'react';
 import './User.css';
 
-const user = ({user, id}) => {
+const user = ({user, id, selectPhoto}) => {
     const {image, username, status, country, occupation, friends } = user;
     let controls = null;
 
@@ -34,7 +34,7 @@ const user = ({user, id}) => {
             <div className="col-12 col-md-7 friend-main">
                 <div className="friend-image">
                     <div className="hover-info">
-                        <i className="fa fa-search-plus" aria-hidden="true"></i>
+                        <i className="fa fa-search-plus" aria-hidden="true" onClick={ () => selectPhoto(image) }></i>
                     </div>
                     <img src={image || "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no"} alt="friend"/>
                 </div>

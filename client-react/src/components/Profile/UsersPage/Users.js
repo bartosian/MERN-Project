@@ -11,7 +11,8 @@ class Users extends Component {
     }
 
     state = {
-        users: []
+        users: [],
+        shownImageYrl: null
     };
 
     componentDidMount() {
@@ -26,15 +27,29 @@ class Users extends Component {
         });
     }
 
+    selectPhoto = (url) => {
+        this.setState({
+            shownImageYrl: url
+        });
+    };
+
 
     render() {
         const currentUserId = this.props.user._id;
 
         return (
-            <div className="container">
+            <div className="container users-wrapper">
+                {
+                    this.state.shownImageYrl && (
+                        <div className="col-12 col-md-7 picture-block">
+                            <img className="detail-photo" src={this.state.shownImageYrl} alt="profile"/>
+                            <i className="fa fa-times-circle close-btn" aria-hidden="true" onClick={ () => this.selectPhoto(null)}></i>
+                        </div>
+                    )
+                }
                 {
                     this.state.users.map((user, idx) => (
-                        <User key={ user.username + idx} user={ user } id={ currentUserId }/>
+                        <User key={ user.username + idx} user={ user } id={ currentUserId } selectPhoto={ this.selectPhoto }/>
                     ))
                 }
             </div>
