@@ -2,13 +2,14 @@ import React from 'react';
 import './Singlenews.css';
 import moment from 'moment';
 
-const singleNews = ({image, username, content, date, likes}) => {
+const singleNews = ({image, username, content, date, likes, user, _id, addLike}) => {
     let newDate = new Date(date);
     newDate = newDate.setDate(newDate.getDate() + 1);
     newDate = moment(newDate).format('YYYY-MM-DD hh:mm');
 
     let newContent = content.length > 200 ? content.slice(0, 150) + '...' : content;
-
+    const userId = user;
+    const postId = _id;
 
     return (
         <div className="row news-wrapper">
@@ -23,7 +24,7 @@ const singleNews = ({image, username, content, date, likes}) => {
                     </div>
                     <div className="btn-like">
                         <div className="like-quantity">{ likes ? likes : 0 }</div>
-                        <i className="fa fa-thumbs-up like" aria-hidden="true"></i>
+                        <i className="fa fa-thumbs-up like" aria-hidden="true" onClick={() => addLike(userId, postId)}></i>
                         <div className="send-mess">
                             <span>Send message</span>
                             <i className="fa fa-comment comment-icon" aria-hidden="true"></i>

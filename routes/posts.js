@@ -32,6 +32,47 @@ router.post('/posts', middleAuth, async function(req, res, next) {
     }
 });
 
+/* Add like to post */
+router.post('/posts/change', middleAuth, async function(req, res, next) {
+    let { userId, postId } = req.body;
+    const { _id } = req.user;
+
+    try {
+        const user = await User.findById(userId);
+
+        const newPosts = [...user.posts];
+        let idx = null;
+        const currentPost = newPosts.find((p, id)=> {
+            if( String(p._id) === postId) {
+                idx = id;
+                return true;
+            }
+
+            return false;
+            });
+
+        currentPost.likes += 1;
+        newPosts[idx] = currentPost;
+
+
+        user.posts = newPosts;
+        await user.save();
+
+        const currentUser = await User.findById(_id).populate('friends');
+
+        const posts = currentUser.friends.reduce((arr,friend) => {
+            return arr.concat(friend.posts);
+        }, []);
+
+        res.status(200)
+            .json(posts);
+    } catch(ex) {
+        return next(ex);
+    }
+});
+
+
+
 /* Delete post */
 router.delete('/posts/:id', middleAuth, async function(req, res, next) {
     const { _id } = req.user;

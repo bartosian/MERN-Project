@@ -30,8 +30,8 @@ class PostService {
             .then(response => response.data)
     };
 
-    addLikeToPost = ({userId, postId}) => {
-        return this.postService.post('/posts', {userId, postId})
+    addLikeToPost = (userId, postId) => {
+        return this.postService.post('/posts/change', {userId, postId})
             .then(response => response.data)
     };
 
