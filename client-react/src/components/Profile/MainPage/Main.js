@@ -17,6 +17,7 @@ const MainPage = ({user, getUser}) => {
             </div>
             <div className="row">
                 <div className="col-12 col-md-6">
+
                     <Friends user={ user }/>
                 </div>
                 <div className="col-12 col-md-6">
