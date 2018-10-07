@@ -1,0 +1,8 @@
+.news-block {
+    background: rgba(216, 212, 212, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    overflow: scroll;
+}

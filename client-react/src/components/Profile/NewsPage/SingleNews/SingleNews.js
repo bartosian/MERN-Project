@@ -2,7 +2,7 @@ import React from 'react';
 import './Singlenews.css';
 import moment from 'moment';
 
-const singleNews = ({image, username, content, date, likes, user, _id, addLike}) => {
+const singleNews = ({image, username, content, date, likes, user, _id, addLike, selectArticle}) => {
     let newDate = new Date(date);
     newDate = newDate.setDate(newDate.getDate() + 1);
     newDate = moment(newDate).format('YYYY-MM-DD hh:mm');
@@ -33,7 +33,7 @@ const singleNews = ({image, username, content, date, likes, user, _id, addLike})
                 </div>
                 <div className="news-content">
                     <div className="content-search">
-                        <i className="fa fa-search-plus" aria-hidden="true"></i>
+                        <i className="fa fa-search-plus" aria-hidden="true" onClick={ () => selectArticle(content) }></i>
                     </div>
                     { newContent }
                 </div>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import SingleNews from './SingleNews/SingleNews';
 import PostService from '../../../services/post-service';
 import './News.css';
@@ -12,7 +12,8 @@ class  News extends  Component {
     }
 
     state = {
-        news: []
+        news: [],
+        showArticle: false
     };
 
     componentDidMount() {
@@ -64,19 +65,35 @@ class  News extends  Component {
             })
     };
 
+    selectArticle = (content) => {
+        this.setState({
+            showArticle: content
+        });
+    };
+
     render() {
 
         const news = this.state.news.length ? (
             this.state.news.map((n, id) => (
-                <SingleNews key={ n.username + id} {...n} getUser={ this.props.getUser } addLike={ this.addLike }/>
+                <SingleNews key={ n.username + id} {...n} getUser={ this.props.getUser } selectArticle={ this.selectArticle } addLike={ this.addLike }/>
             ))
         ) : <p>No news</p>;
 
 
         return (
-            <div className="container news-wrapper">
-                { news }
-            </div>
+            <Fragment>
+                {
+                    this.state.showArticle && (
+                        <div className="col-12 col-md-7 picture-block news-block">
+                            <div>{ this.state.showArticle }</div>
+                            <i className="fa fa-times-circle close-btn" aria-hidden="true" onClick={ () => this.selectArticle(null)}></i>
+                        </div>
+                    )
+                }
+                <div className="container news-wrapper">
+                    { news }
+                </div>
+            </Fragment>
         )
     }
 
