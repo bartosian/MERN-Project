@@ -249,3 +249,15 @@
 .comment-icon {
     color: white !important;
 }
+
+.friend-name-block {
+    background: rgba(0, 123, 254, 0.5);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 1px white;
+}
+
+.friend-name-block i {
+    color: white !important;
+    text-shadow: 0 0 1px black;
+}
