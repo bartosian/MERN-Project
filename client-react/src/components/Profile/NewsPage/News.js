@@ -18,6 +18,20 @@ class  News extends  Component {
     componentDidMount() {
         this.service.getFriendsPosts()
             .then(response => {
+
+                response = response.sort((p1, p2) => {
+                    const date1 = new Date(p1.date);
+                    const date2 = new Date(p2.date);
+
+                    if(date1 > date2) {
+                        return -1;
+                    } else if(date1 < date2) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                });
+
                 this.setState({
                     news: response
                 });

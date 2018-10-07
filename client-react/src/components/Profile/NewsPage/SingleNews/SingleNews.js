@@ -22,7 +22,11 @@ const singleNews = ({image, username, content, date}) => {
                         <p className="news-user--date">{ newDate }</p>
                     </div>
                     <div className="btn-like">
-                        <i className="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <i className="fa fa-thumbs-up like" aria-hidden="true"></i>
+                        <div className="send-mess">
+                            <span>Send message</span>
+                            <i className="fa fa-comment comment-icon" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
                 <div className="news-content">

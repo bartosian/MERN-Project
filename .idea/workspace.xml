@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/SingleNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/SingleNews.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/Singlenews.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/Singlenews.css" afterDir="false" />
     </list>
@@ -20,10 +22,22 @@
       <file leaf-file-name="News.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            <state relative-caret-position="439">
+              <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="24" column="22" selection-start-line="21" selection-start-column="16" selection-end-line="24" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -32,8 +46,8 @@
       <file leaf-file-name="SingleNews.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/SingleNews.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="406">
+              <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -101,26 +115,8 @@
       <file leaf-file-name="Singlenews.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/Singlenews.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="143" column="20" lean-forward="true" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonalDetails.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1655">
-              <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonalInfo.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="37" />
+            <state relative-caret-position="530">
+              <caret line="200" column="21" selection-start-line="200" selection-start-column="21" selection-end-line="200" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -320,6 +316,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Profile" type="462c0819:PsiDirectoryNode" />
+              <item name="MainPage" type="462c0819:PsiDirectoryNode" />
+              <item name="Wall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
+              <item name="client-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
               <item name="NewsPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -420,12 +426,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="128554000" />
+      <workItem from="1538569246105" duration="130221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187470000" />
+    <option name="totallyTimeSpent" value="189137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
@@ -711,23 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/posts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Wall/Wall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/NavBar/NavBar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="606">
@@ -813,26 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -884,16 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/SingleNews.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalInfo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -904,10 +863,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1617">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Wall/Wall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="43" column="25" lean-forward="true" selection-start-line="43" selection-start-column="25" selection-end-line="54" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="24" column="22" selection-start-line="21" selection-start-column="16" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/SingleNews.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/Singlenews.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="143" column="20" lean-forward="true" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+        <state relative-caret-position="530">
+          <caret line="200" column="21" selection-start-line="200" selection-start-column="21" selection-end-line="200" selection-end-column="21" />
         </state>
       </provider>
     </entry>
