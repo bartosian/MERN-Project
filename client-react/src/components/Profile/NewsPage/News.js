@@ -13,7 +13,8 @@ class  News extends  Component {
 
     state = {
         news: [],
-        showArticle: false
+        showArticle: false,
+        showName: null
     };
 
     componentDidMount() {
@@ -65,9 +66,10 @@ class  News extends  Component {
             })
     };
 
-    selectArticle = (content) => {
+    selectArticle = (content, name) => {
         this.setState({
-            showArticle: content
+            showArticle: content,
+            showName: name
         });
     };
 
@@ -85,6 +87,7 @@ class  News extends  Component {
                 {
                     this.state.showArticle && (
                         <div className="col-12 col-md-7 picture-block news-block">
+                            <h2 className="news-block-name">{ this.state.showName }</h2>
                             <div>{ this.state.showArticle }</div>
                             <i className="fa fa-times-circle close-btn" aria-hidden="true" onClick={ () => this.selectArticle(null)}></i>
                         </div>
