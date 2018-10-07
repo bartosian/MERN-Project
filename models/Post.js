@@ -14,6 +14,10 @@ const postSchema = new Schema({
         required: true,
         minLength: 1
     },
+    likes: {
+        type: Number,
+        default: 0
+    },
     date: {
         type: Date,
         required: true,

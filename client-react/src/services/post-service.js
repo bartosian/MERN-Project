@@ -30,6 +30,11 @@ class PostService {
             .then(response => response.data)
     };
 
+    addLikeToPost = ({userId, postId}) => {
+        return this.postService.post('/posts', {userId, postId})
+            .then(response => response.data)
+    };
+
 }
 
 export default PostService;

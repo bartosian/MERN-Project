@@ -2,7 +2,7 @@ import React from 'react';
 import './Singlenews.css';
 import moment from 'moment';
 
-const singleNews = ({image, username, content, date}) => {
+const singleNews = ({image, username, content, date, likes}) => {
     let newDate = new Date(date);
     newDate = newDate.setDate(newDate.getDate() + 1);
     newDate = moment(newDate).format('YYYY-MM-DD hh:mm');
@@ -22,6 +22,7 @@ const singleNews = ({image, username, content, date}) => {
                         <p className="news-user--date">{ newDate }</p>
                     </div>
                     <div className="btn-like">
+                        <div className="like-quantity">{ likes ? likes : 0 }</div>
                         <i className="fa fa-thumbs-up like" aria-hidden="true"></i>
                         <div className="send-mess">
                             <span>Send message</span>
