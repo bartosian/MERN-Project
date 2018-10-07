@@ -1,7 +1,45 @@
 .navBar-main {
-    padding: 10px;
     box-shadow: 0 0 10px black;
     border-radius: 10px;
+    overflow: hidden;
     margin-top: 20px;
     background: rgba(216, 212, 212, 0.3);
+}
+
+.navBar-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-link {
+    text-decoration: none;
+    display: block;
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+    text-shadow: 0 0 1px white;
+    border-right: 1px solid black;
+    transition: all 400ms ease-in-out;
+}
+
+.main-link:last-child {
+    border: none;
+}
+
+.main-link:hover {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background: rgba(0, 123, 254, 0.6);
+}
+
+@media (max-width: 990px) {
+    .main-link {
+        font-size: 0.8rem;
+    }
 }
