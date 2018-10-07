@@ -32,6 +32,9 @@ const singleNews = ({image, username, content, date, likes, user, _id, addLike})
                     </div>
                 </div>
                 <div className="news-content">
+                    <div className="content-search">
+                        <i className="fa fa-search-plus" aria-hidden="true"></i>
+                    </div>
                     { newContent }
                 </div>
             </div>

@@ -49,7 +49,7 @@
     text-shadow: 0 0 1px black;
     text-align: center;
     line-height: 1;
-
+    position: relative;
 }
 
 .news-user {
@@ -219,4 +219,31 @@
         height: 70px;
         top: calc(8vh - 25px);
     }
+}
+
+.content-search {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: rgba(0, 123, 254, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+    cursor: pointer;
+}
+
+.content-search i {
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.content-search i:hover {
+    color: red;
+}
+
+.news-content:hover > .content-search {
+    opacity: 1;
 }
