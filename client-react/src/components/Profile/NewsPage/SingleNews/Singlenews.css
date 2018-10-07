@@ -1,0 +1,38 @@
+.news-main {
+    display: flex;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 17vh;
+    text-align: center;
+    background: rgba(216, 212, 212, 0.3);
+    overflow: hidden;
+}
+
+.news-wrapper {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.news-info {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.news-content {
+    width: 55%;
+}
+
+.news-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
