@@ -12,7 +12,7 @@ const singleNews = ({image, username, content, date}) => {
 
     return (
         <div className="row news-wrapper">
-            <div className="col-12 col-md-8 news-main">
+            <div className="col-10 col-md-8 news-main">
                 <div className="news-image">
                     <img src={ image ? image : "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no" } alt=""/>
                 </div>
