@@ -15,7 +15,8 @@ router.post('/posts', middleAuth, async function(req, res, next) {
         const newPost = new Post({
             user: _id,
             content,
-            username: user.username
+            username: user.username,
+            image: user.image
         });
 
         user.posts.push(newPost);
