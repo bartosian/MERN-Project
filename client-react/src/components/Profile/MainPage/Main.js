@@ -3,6 +3,7 @@ import Picture from '../MainPage/PictureBlock/PictureBlock';
 import PersonalInfo from '../MainPage/PersonalInfo/PersonalInfo';
 import Friends from '../MainPage/Friends/Friends';
 import Wall from '../MainPage/Wall/Wall';
+import NavBar from '../MainPage/NavBar/NavBar';
 
 const MainPage = ({user, getUser}) => {
     return (
@@ -17,7 +18,7 @@ const MainPage = ({user, getUser}) => {
             </div>
             <div className="row">
                 <div className="col-12 col-md-6">
-
+                    <NavBar />
                     <Friends user={ user }/>
                 </div>
                 <div className="col-12 col-md-6">
