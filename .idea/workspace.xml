@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/chats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chat.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Chat.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
@@ -60,6 +58,27 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="News.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="83" column="43" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="News.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="604">
+              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -135,8 +154,6 @@
         <option value="$PROJECT_DIR$/client-react/src/services/post-service.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/Singlenews.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/SingleNews.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" />
         <option value="$PROJECT_DIR$/models/User.js" />
         <option value="$PROJECT_DIR$/models/Chat.js" />
@@ -150,6 +167,8 @@
         <option value="$PROJECT_DIR$/routes/chats.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chats.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.css" />
       </list>
     </option>
   </component>
@@ -239,6 +258,15 @@
             <path>
               <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="mern-project" type="462c0819:PsiDirectoryNode" />
+              <item name="client-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
+              <item name="NewsPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -298,18 +326,18 @@
       <option name="presentableId" value="Default" />
       <updated>1538406185915</updated>
       <workItem from="1538406188877" duration="58916000" />
-      <workItem from="1538569246105" duration="160833000" />
+      <workItem from="1538569246105" duration="161369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219749000" />
+    <option name="totallyTimeSpent" value="220285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1579" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -317,7 +345,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18941176" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18941176" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -553,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/posts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -604,16 +625,6 @@
           <caret line="12" column="96" selection-start-line="12" selection-start-column="96" selection-end-line="12" selection-end-column="96" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -757,6 +768,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="23" column="85" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chats.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -767,13 +788,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js">
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="23" column="85" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
+        <state relative-caret-position="274">
+          <caret line="83" column="43" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="43" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
         </state>
       </provider>
     </entry>

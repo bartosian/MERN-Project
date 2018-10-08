@@ -33,7 +33,9 @@ class Chats extends Component {
             this.state.chats.map( n => (
                 <Chat key={ n._id } {...n}  getUser={ this.props.getUser } user={ this.props.user } />
             ))
-        ) : <p>No news</p>;
+        ) : (<div className="row no-wrapper">
+                <div className="col-12 col-md-7 no-news">You don't have any chats yet.</div>
+            </div>) ;;
 
         return (
             <div className="container chats-wrapper">

@@ -20,6 +20,7 @@ class  News extends  Component {
     componentDidMount() {
         this.service.getFriendsPosts()
             .then(response => {
+                if(!Array.isArray(response)) return;
 
                 response = response.sort((p1, p2) => {
                     const date1 = new Date(p1.date);
@@ -79,7 +80,10 @@ class  News extends  Component {
             this.state.news.map((n, id) => (
                 <SingleNews key={ n.username + id} {...n} getUser={ this.props.getUser } selectArticle={ this.selectArticle } addLike={ this.addLike }/>
             ))
-        ) : <p>No news</p>;
+
+        ) : (<div className="row no-wrapper">
+                <div className="col-12 col-md-7 no-news">You don't have any news yet.</div>
+            </div>) ;
 
 
         return (
