@@ -29,6 +29,29 @@ router.get('/chats/:id', middleAuth, async function(req, res, next) {
 
 });
 
+/* Get all the chats */
+router.get('/chats', middleAuth, async function(req, res, next) {
+    const { _id } = req.user;
+
+    try {
+        const resultUser = await User.findById(_id).select("chats").populate({
+            path: 'chats',
+            model: 'Chat',
+            populate: {
+                path: 'speakerFirst speakerSecond',
+                model: 'User'
+            }
+        });
+
+        res.status(200)
+            .json(resultUser.chats);
+
+    } catch(ex) {
+        return next(ex);
+    }
+
+});
+
 /* Create new chat */
 router.post('/chats', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
