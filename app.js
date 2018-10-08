@@ -83,5 +83,8 @@ app.use('/api', userRoutes);
 const chatRoutes = require('./routes/chats');
 app.use('/api', chatRoutes);
 
+const messagesRoutes = require('./routes/messages');
+app.use('/api', messagesRoutes);
+
 
 module.exports = app;
