@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Chats.css';
 import ChatService from "../../../services/chat-service";
 import Chat from './Chat/Chat';
+import { Switch, Route } from 'react-router-dom';
+import ChatList from './ChatList';
 
 class Chats extends Component {
 
@@ -28,6 +30,7 @@ class Chats extends Component {
     }
 
     render() {
+        const { path } = this.props;
 
         const chats = this.state.chats.length > 0 ? (
             this.state.chats.map( n => (
@@ -35,11 +38,14 @@ class Chats extends Component {
             ))
         ) : (<div className="row no-wrapper">
                 <div className="col-12 col-md-7 no-news">You don't have any chats yet.</div>
-            </div>) ;;
+            </div>);
 
         return (
             <div className="container chats-wrapper">
-                { chats }
+                <Switch>
+                    <Route path={`${path}/chats`} render={(props) => <ChatList chats={ chats }/> }/>
+                </Switch>
+
             </div>
         );
     }

@@ -32,12 +32,12 @@ class Profile extends Component {
         const { logout, getUser } = this.props;
         const path = this.props.match.url;
 
+
         return (
             <Fragment>
                     <Header logout={ logout }/>
                 <Switch>
-                    <Route path={`${path}/chats`} render={(props) => <Chats {...props} user={ user } getUser={ getUser } /> }/>
-                    <Route path={`${path}/chats/:id`} render={(props) => <Chats {...props} user={ user } getUser={ getUser } /> }/>
+                    <Route path={`${path}/chats`} render={(props) => <Chats path={ path } {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/news`} render={(props) => <News {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/users`} render={(props) => <Users {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
