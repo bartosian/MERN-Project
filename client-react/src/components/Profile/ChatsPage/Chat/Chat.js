@@ -2,7 +2,7 @@ import React from 'react';
 import './Chat.css';
 import moment from 'moment';
 
-const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at }) => {
+const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, redirectMessages }) => {
 
     const image = String(speakerFirst._id) === String(user._id) ? speakerSecond.image : speakerFirst.image;
     const name = !String(speakerFirst._id) === String(user._id) ? speakerFirst.username : speakerSecond.username;
@@ -36,9 +36,10 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at }) 
     newDate = newDate.setDate(newDate.getDate() + 1);
     newDate = moment(newDate).format('YYYY-MM-DD');
 
+
     return (
         <div className="row chat-wrapper">
-            <div className="col-10 col-md-7 chat-main">
+            <div className="col-10 col-md-7 chat-main" onClick={ () => redirectMessages(_id) }>
                 <div className="chat-main-wrapper"></div>
                 <div className="chat-image">
                     <img className="chat-image-src" src={ image ? image : "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no"} alt="chat"/>
