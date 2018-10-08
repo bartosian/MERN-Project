@@ -43,7 +43,8 @@ class Chats extends Component {
         return (
             <div className="container chats-wrapper">
                 <Switch>
-                    <Route path={`${path}/chats`} render={(props) => <ChatList chats={ chats }/> }/>
+                    <Route path={`${path}/chats`} render={() => <ChatList chats={ chats }/> }/>
+                    <Route path={`${path}/chats/:id`} render={() => <ChatList chats={ chats }/> }/>
                 </Switch>
 
             </div>
