@@ -148,3 +148,22 @@
     border-bottom: 2px solid white;
 
 }
+
+.sec-user-photo {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    overflow: hidden;
+    top: -17px;
+    left: -17px;
+}
+
+.sec-user-photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.sec-user-photo--none {
+    display: none;
+}

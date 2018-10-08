@@ -6,7 +6,7 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at }) 
 
     const image = String(speakerFirst._id) === String(user._id) ? speakerSecond.image : speakerFirst.image;
     const name = !String(speakerFirst._id) === String(user._id) ? speakerFirst.username : speakerSecond.username;
-
+    let image2 = null;
     let lastMessage =  messages.length > 0 ? (messages.sort((m1, m2) => {
 
         const date1 = new Date(m1.date);
@@ -19,9 +19,18 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at }) 
         } else {
             return 0;
         }
-    })[0].content) : "No messages. Start the first chat!";
+    })[0]) : "No messages. Start the first chat!";
+
+    if(lastMessage.content) {
+        lastMessage = lastMessage.content;
+        image2 = String(lastMessage.user) === speakerFirst.id ? speakerFirst.image : speakerSecond.image;
+    }
 
     lastMessage = lastMessage.length > 100 ? lastMessage : lastMessage.slice(0, 100);
+    const classesPhoto = ["sec-user-photo"];
+    if(!messages.length > 0) {
+        classesPhoto.push("sec-user-photo--none");
+    }
 
     let newDate =  new Date(created_at);
     newDate = newDate.setDate(newDate.getDate() + 1);
@@ -36,6 +45,9 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at }) 
                 </div>
                 <div className="chat-lastmes">
                     <p className="chat-name">{name}</p>
+                    <div className={ classesPhoto.join(" ") }>
+                        <img src={ image2 } alt="user-second"/>
+                    </div>
                     { lastMessage }
                 </div>
                 <div className="chat-controls">
