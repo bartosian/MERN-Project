@@ -32,7 +32,7 @@ class Chats extends Component {
 
         const chats = this.state.chats.length ? (
             this.state.chats.map( n => (
-                <Chat key={ n._id } {...n} getUser={ this.props.getUser } />
+                <Chat key={ n._id } {...n} getUser={ this.props.getUser } user={ this.props.user } />
             ))
         ) : <p>No news</p>;
 
