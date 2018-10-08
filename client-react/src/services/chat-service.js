@@ -1,40 +1,35 @@
 
 import axios from 'axios';
 
-class PostService {
+class ChatService {
     constructor() {
-        let postService = axios.create({
+        let chatService = axios.create({
             baseURL: 'http://localhost:5000/api',
             withCredentials: true
         });
-        this.postService = postService;
+        this.chatService = chatService;
     }
 
-    addPost = ({content}) => {
-        return this.postService.post('/posts', {content})
+    createChat = (id) => {
+        return this.chatService.post('/chats', {id})
             .then(response => response.data)
     };
 
-    editPost = ({content, id}) => {
-        return this.postService.put(`/posts/${id}`, {content})
+    getChat = (id) => {
+        return this.chatService.get(`/chats/${id}`)
             .then(response => response.data)
     };
 
-    deletePost = ({id}) => {
-        return this.postService.delete(`/posts/${id}`)
+    getAllChats = () => {
+        return this.chatService.get('/chats')
             .then(response => response.data)
     };
 
-    getFriendsPosts = () => {
-        return this.postService.get('/friends/posts')
-            .then(response => response.data)
-    };
-
-    addLikeToPost = (userId, postId) => {
-        return this.postService.post('/posts/change', {userId, postId})
+    deleteChat = (id) => {
+        return this.postService.delete(`/chats/${id}`)
             .then(response => response.data)
     };
 
 }
 
-export default PostService;
+export default ChatService;
