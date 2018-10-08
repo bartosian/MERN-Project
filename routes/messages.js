@@ -4,8 +4,6 @@ const mongoose = require('mongoose');
 const middleAuth = require('../middleWare/auth');
 const { Chat } = require('../models/Chat');
 const { Message } = require('../models/Message');
-const { User } = require('../models/User');
-
 
 /* Add new message */
 router.post('/messages', middleAuth, async function(req, res, next) {
