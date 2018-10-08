@@ -10,7 +10,7 @@ const navBar = (props) => {
                 <NavLink  className="main-link" activeClassName="active-link" to="/profile/edit">Settings</NavLink>
                 <NavLink  className="main-link" activeClassName="active-link" to="/profile/users">Users</NavLink>
                 <NavLink  className="main-link" activeClassName="active-link" to="/profile/news">News</NavLink>
-                <NavLink  className="main-link" activeClassName="active-link" to="/profile/messages">Messages</NavLink>
+                <NavLink  className="main-link" activeClassName="active-link" to="/profile/chats">Messages</NavLink>
             </div>
         </div>
     );

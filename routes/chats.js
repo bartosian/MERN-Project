@@ -70,6 +70,25 @@ router.post('/chats', middleAuth, async function(req, res, next) {
     }
 
     try {
+
+        let chatExist = await Chat.find({ speakerFirst: _id, speakerSecond:id }).populate("speakerFirst speakerSecond messages");
+
+        if(chatExist[0] && chatExist[0].speakerFirst && chatExist[0].speakerSecond) {
+            res.status(200)
+                .json(chatExist[0]);
+
+            return;
+        }
+
+        chatExist = await Chat.find({ speakerFirst: id, speakerSecond: _id }).populate("speakerFirst speakerSecond messages");
+
+        if(chatExist[0] && chatExist[0].speakerFirst && chatExist[0].speakerSecond) {
+            res.status(200)
+                .json(chatExist[0]);
+
+            return;
+        }
+
         const newChat = new Chat({
             speakerFirst: _id,
             speakerSecond: id
