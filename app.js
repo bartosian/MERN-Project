@@ -80,5 +80,8 @@ app.use('/api', friendsRoutes);
 const userRoutes = require('./routes/user');
 app.use('/api', userRoutes);
 
+const chatRoutes = require('./routes/chats');
+app.use('/api', chatRoutes);
+
 
 module.exports = app;
