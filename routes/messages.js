@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const middleAuth = require('../middleWare/auth');
 const { Chat } = require('../models/Chat');
 const { Message } = require('../models/Message');
+const { User } = require('../models/User');
 
 /* Add new message */
 router.post('/messages', middleAuth, async function(req, res, next) {
@@ -24,9 +25,19 @@ router.post('/messages', middleAuth, async function(req, res, next) {
             content
         });
 
-        chat.messages = [newMessage._id, ...chat.messages];
+        const mesResult = await newMessage.save();
+
+        chat.messages = [mesResult._id, ...chat.messages];
         await chat.save();
 
+        const userSecondId = String(chat.speakerFirst !== String(_id)) ? chat.speakerSecond : chat.speakerFirst;
+        const userSecond = await User.findById(userSecondId).select("chats");
+        const userSecondHasChat = userSecond.chats.filter(ch => String(ch) === String(id)).length > 0;
+
+        if(!userSecondHasChat) {
+            userSecond.chats = [id, ...userSecond.chats];
+            await userSecond.save();
+        }
         const chatResult = await Chat.findById(id).populate("speakerFirst speakerSecond messages");
 
         res.status(201)
