@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import { Switch, Route } from 'react-router-dom';
 import Edit from './EditPage/Edit';
 import Main from './MainPage/Main';
+import Chats from './ChatsPage/Chats';
 import Users from './UsersPage/Users';
 import Footer from '../Footer/Footer';
 import News from './NewsPage/News';
@@ -35,6 +36,7 @@ class Profile extends Component {
             <Fragment>
                     <Header logout={ logout }/>
                 <Switch>
+                    <Route path={`${path}/chats`} render={(props) => <Chats {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/news`} render={(props) => <News {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/users`} render={(props) => <Users {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
