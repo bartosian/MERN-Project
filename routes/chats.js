@@ -29,5 +29,34 @@ router.get('/chats/:id', middleAuth, async function(req, res, next) {
 
 });
 
+/* Create new chat */
+router.post('/chats', middleAuth, async function(req, res, next) {
+    const { _id } = req.user;
+    const { id } = req.params;
+
+    if(!mongoose.Types.ObjectId.isValid(id)) {
+        res.status(400)
+            .json({ message: 'Specified user id is not valid' });
+        return;
+    }
+
+    try {
+        let newChat = new Chat({
+            speakerFirst: _id,
+            speakerSecond: id
+        });
+
+        newChat = await newChat.save();
+        newChat = Chat.findById(newChat._id).populate("speakerFirst speakerSecond");
+
+        res.status(201)
+            .json(newChat);
+
+    } catch(ex) {
+        return next(ex);
+    }
+
+});
+
 
 module.exports = router;
