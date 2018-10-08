@@ -105,34 +105,28 @@ router.delete('/chats/:id', middleAuth, async function(req, res, next) {
 
     try {
 
-        const chat = await Chat.findById(id).select("speakerFirst speakerSecond");
-        const userOne = await User.findById(chat.speakerFirst).select("chats");
-        const userTwo = await User.findById(chat.speakerSecond).select("chats");
-
-        userOne.chats = userOne.chats.filter(chat => {
-            return String(chat) !== String(chat._id);
+        const user = await User.findById(_id).select("chats");
+        user.chats = user.chats.filter(chat => {
+            return String(chat) !== String(id);
         });
 
-        await userOne.save();
+        await user.save();
 
-        userTwo.chats = userTwo.chats.filter(chat => {
-            return String(chat) !== String(chat._id);
-        });
-
-        await userTwo.save();
-
-        await Chat.findByIdAndRemove(chat._id);
 
         const resultUser = await User.findById(_id).select("chats").populate({
             path: 'chats',
             model: 'Chat',
-            populate: {
+            populate: [{
                 path: 'speakerFirst speakerSecond',
                 model: 'User'
-            }
+            },
+                {
+                    path: 'messages',
+                    model: 'Message'
+                }]
         });
 
-        res.status(201)
+        res.status(200)
             .json(resultUser.chats);
 
     } catch(ex) {
