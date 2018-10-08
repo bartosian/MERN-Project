@@ -3,7 +3,9 @@ import './Chat.css';
 import moment from 'moment';
 
 const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at }) => {
-    const image = String(speakerFirst) === String(user._id) ? speakerFirst.image : speakerSecond.image;
+    const image = String(speakerFirst._id) === String(user._id) ? speakerSecond.image : speakerFirst.image;
+    const name = !String(speakerFirst._id) === String(user._id) ? speakerFirst.username : speakerSecond.username;
+
     const lastMessage = messages.length > 0 ? messages.sort((m1, m2) => {
         const date1 = new Date(m1.date);
         const date2 = new Date(m2.date);
@@ -23,10 +25,12 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at }) 
     return (
         <div className="row chat-wrapper">
             <div className="col-10 col-md-7 chat-main">
+                <div className="chat-main-wrapper"></div>
                 <div className="chat-image">
                     <img className="chat-image-src" src={ image ? image : "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no"} alt="chat"/>
                 </div>
                 <div className="chat-lastmes">
+                    <p className="chat-name">{name}</p>
                     { lastMessage }
                 </div>
                 <div className="chat-controls">

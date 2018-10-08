@@ -17,7 +17,6 @@ class Chats extends Component {
     componentDidMount() {
         this.service.getAllChats()
             .then(response => {
-                console.log(response);
                 this.setState({
                     chats: response
                 });
