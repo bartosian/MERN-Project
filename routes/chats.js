@@ -57,7 +57,7 @@ router.get('/chats', middleAuth, async function(req, res, next) {
 /* Create new chat */
 router.post('/chats', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
-    const { id } = req.params;
+    const { id } = req.body;
 
     if(!mongoose.Types.ObjectId.isValid(id)) {
         res.status(400)
@@ -66,16 +66,21 @@ router.post('/chats', middleAuth, async function(req, res, next) {
     }
 
     try {
-        let newChat = new Chat({
+        const newChat = new Chat({
             speakerFirst: _id,
             speakerSecond: id
         });
 
-        newChat = await newChat.save();
-        newChat = Chat.findById(newChat._id).populate("speakerFirst speakerSecond");
+        const result = await newChat.save();
+        const currentUser = await User.findById(_id).select("chats");
+        currentUser.chats = [result._id, ...currentUser.chats];
+
+        await currentUser.save();
+
+        const resultChat = await Chat.findById(result._id).populate("speakerFirst speakerSecond");
 
         res.status(201)
-            .json(newChat);
+            .json(resultChat);
 
     } catch(ex) {
         return next(ex);
