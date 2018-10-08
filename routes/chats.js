@@ -48,7 +48,6 @@ router.get('/chats', middleAuth, async function(req, res, next) {
             ]
         });
 
-
         res.status(200)
             .json(resultUser.chats);
 

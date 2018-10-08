@@ -3,10 +3,12 @@ import './Chat.css';
 import moment from 'moment';
 
 const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at }) => {
+
     const image = String(speakerFirst._id) === String(user._id) ? speakerSecond.image : speakerFirst.image;
     const name = !String(speakerFirst._id) === String(user._id) ? speakerFirst.username : speakerSecond.username;
 
-    const lastMessage = messages.length > 0 ? messages.sort((m1, m2) => {
+    let lastMessage =  messages.length > 0 ? (messages.sort((m1, m2) => {
+
         const date1 = new Date(m1.date);
         const date2 = new Date(m2.date);
 
@@ -17,7 +19,10 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at }) 
         } else {
             return 0;
         }
-    })[0] : "No messages. Start the first chat!";
+    })[0].content) : "No messages. Start the first chat!";
+
+    lastMessage = lastMessage.length > 100 ? lastMessage : lastMessage.slice(0, 100);
+
     let newDate =  new Date(created_at);
     newDate = newDate.setDate(newDate.getDate() + 1);
     newDate = moment(newDate).format('YYYY-MM-DD');

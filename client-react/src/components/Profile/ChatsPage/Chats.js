@@ -17,6 +17,7 @@ class Chats extends Component {
     componentDidMount() {
         this.service.getAllChats()
             .then(response => {
+
                 this.setState({
                     chats: response
                 });
@@ -28,10 +29,9 @@ class Chats extends Component {
 
     render() {
 
-
-        const chats = this.state.chats.length ? (
+        const chats = this.state.chats.length > 0 ? (
             this.state.chats.map( n => (
-                <Chat key={ n._id } {...n} getUser={ this.props.getUser } user={ this.props.user } />
+                <Chat key={ n._id } {...n}  getUser={ this.props.getUser } user={ this.props.user } />
             ))
         ) : <p>No news</p>;
 
