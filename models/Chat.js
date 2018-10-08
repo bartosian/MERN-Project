@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
-const { messageSchema } = require('./Message');
+const { Message } = require('./Message');
 
 const chatSchema = new Schema({
     speakerFirst: {
@@ -11,7 +11,12 @@ const chatSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    messages: [messageSchema]
+    messages: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Message'
+        }
+    ]
 }, {
     timestamps: {
         createdAt: 'created_at',
