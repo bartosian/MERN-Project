@@ -36,14 +36,18 @@ router.get('/chats', middleAuth, async function(req, res, next) {
     try {
         const resultUser = await User.findById(_id).select("chats").populate({
             path: 'chats',
-            model: 'Chat'
-        }).populate({
-            path: "chats.speakerFirst chats.speakerSecond",
-            model: 'User'
-        }).populate({
-            path: "chats.messages",
-            model: 'Message'
+            model: 'Chat',
+            populate: [{
+                            path: 'speakerFirst speakerSecond',
+                            model: 'User'
+                        },
+                        {
+                            path: 'messages',
+                            model: 'Message'
+                        }
+            ]
         });
+
 
         res.status(200)
             .json(resultUser.chats);
