@@ -20,6 +20,7 @@ class MessageList extends Component {
                 this.setState({
                     chat: response
                 });
+
             })
     }
 
