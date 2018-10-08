@@ -37,6 +37,7 @@ class Profile extends Component {
                     <Header logout={ logout }/>
                 <Switch>
                     <Route path={`${path}/chats`} render={(props) => <Chats {...props} user={ user } getUser={ getUser } /> }/>
+                    <Route path={`${path}/chats/:id`} render={(props) => <Chats {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/news`} render={(props) => <News {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/users`} render={(props) => <Users {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
