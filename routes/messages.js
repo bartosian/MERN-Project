@@ -7,84 +7,10 @@ const { Message } = require('../models/Message');
 const { User } = require('../models/User');
 
 
-/* Get certain chat */
-router.get('/chats/:id', middleAuth, async function(req, res, next) {
-    const { id } = req.params;
-
-    if(!mongoose.Types.ObjectId.isValid(id)) {
-        res.status(400)
-            .json({ message: 'Specified chat id is not valid' });
-        return;
-    }
-
-    try {
-        let chat = await Chat.findById(id).populate("speakerFirst speakerSecond messages");
-
-        res.status(200)
-            .json(chat);
-
-    } catch(ex) {
-        return next(ex);
-    }
-
-});
-
-/* Get all the chats */
-router.get('/chats', middleAuth, async function(req, res, next) {
+/* Add new message */
+router.post('/messages', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
-
-    try {
-        const resultUser = await User.findById(_id).select("chats").populate({
-            path: 'chats',
-            model: 'Chat',
-            populate: {
-                path: 'speakerFirst speakerSecond',
-                model: 'User'
-            }
-        });
-
-        res.status(200)
-            .json(resultUser.chats);
-
-    } catch(ex) {
-        return next(ex);
-    }
-
-});
-
-/* Create new chat */
-router.post('/chats', middleAuth, async function(req, res, next) {
-    const { _id } = req.user;
-    const { id } = req.params;
-
-    if(!mongoose.Types.ObjectId.isValid(id)) {
-        res.status(400)
-            .json({ message: 'Specified user id is not valid' });
-        return;
-    }
-
-    try {
-        let newChat = new Chat({
-            speakerFirst: _id,
-            speakerSecond: id
-        });
-
-        newChat = await newChat.save();
-        newChat = Chat.findById(newChat._id).populate("speakerFirst speakerSecond");
-
-        res.status(201)
-            .json(newChat);
-
-    } catch(ex) {
-        return next(ex);
-    }
-
-});
-
-/* Delete  chat */
-router.delete('/chats/:id', middleAuth, async function(req, res, next) {
-    const { _id } = req.user;
-    const { id } = req.params;
+    const { id, content } = req.body;
 
     if(!mongoose.Types.ObjectId.isValid(id)) {
         res.status(400)
@@ -94,35 +20,50 @@ router.delete('/chats/:id', middleAuth, async function(req, res, next) {
 
     try {
 
-        const chat = await Chat.findById(id).select("speakerFirst speakerSecond");
-        const userOne = await User.findById(chat.speakerFirst).select("chats");
-        const userTwo = await User.findById(chat.speakerSecond).select("chats");
-
-        userOne.chats = userOne.chats.filter(chat => {
-            return String(chat) !== String(chat._id);
+        const chat = await Chat.findById(id);
+        const newMessage = new Message({
+            user: _id,
+            content
         });
 
-        await userOne.save();
+        chat.messages = [newMessage._id, ...chat.messages];
+        await chat.save();
 
-        userTwo.chats = userTwo.chats.filter(chat => {
-            return String(chat) !== String(chat._id);
-        });
-
-        await userTwo.save();
-
-        await Chat.findByIdAndRemove(chat._id);
-
-        const resultUser = await User.findById(_id).select("chats").populate({
-            path: 'chats',
-            model: 'Chat',
-            populate: {
-                path: 'speakerFirst speakerSecond',
-                model: 'User'
-            }
-        });
+        const chatResult = await Chat.findById(id).populate("speakerFirst speakerSecond messages");
 
         res.status(201)
-            .json(resultUser.chats);
+            .json(chatResult);
+
+    } catch(ex) {
+        return next(ex);
+    }
+
+});
+
+/* Delete  message */
+router.delete('/messages/:chatId/:mesId', middleAuth, async function(req, res, next) {
+    const { _id } = req.user;
+    const { chatId, mesId } = req.params;
+
+    if(!mongoose.Types.ObjectId.isValid(chatId) || !mongoose.Types.ObjectId.isValid(mesId)) {
+        res.status(400)
+            .json({ message: 'Specified id is not valid' });
+        return;
+    }
+
+    try {
+
+        const chat = await Chat.findById(chatId);
+        chat.messages = chat.messages.filter(m => {
+            return String(m) !== String(mesId);
+        });
+
+        await chat.save();
+
+        const resultChat = await Chat.findById(chatId).populate("speakerFirst speakerSecond messages");
+
+        res.status(201)
+            .json(resultChat);
 
     } catch(ex) {
         return next(ex);
