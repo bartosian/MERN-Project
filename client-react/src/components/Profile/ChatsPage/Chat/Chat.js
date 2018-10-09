@@ -23,7 +23,7 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, re
 
     if(lastMessage.content) {
         lastMessage = lastMessage.content;
-        image2 = String(lastMessage.user) === speakerFirst.id ? speakerFirst.image : speakerSecond.image;
+        image2 = String(lastMessage.user) !== String(speakerFirst._id) ? speakerFirst.image : speakerSecond.image;
     }
 
     lastMessage = !lastMessage.length > 70 ? lastMessage : lastMessage.slice(0, 70);
@@ -48,7 +48,7 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, re
                 <div className="chat-lastmes">
                     <p className="chat-name">{name}</p>
                     <div className={ classesPhoto.join(" ") }>
-                        <img src={ image2 } alt="user-second"/>
+                        <img src={ image2 || "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no" } alt="user-second"/>
                     </div>
                     { lastMessage }
                 </div>

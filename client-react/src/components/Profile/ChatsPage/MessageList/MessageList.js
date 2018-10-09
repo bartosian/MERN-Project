@@ -93,10 +93,6 @@ class MessageList extends Component {
         const { _id } = this.props.user;
         let speaker2 = null;
 
-        if(speakerSecond && speakerFirst) {
-             speaker2 = String(_id) === speakerSecond._id ? speakerFirst.image : speakerSecond.image;
-        }
-
 
         let messagesArr = (messages && messages.length > 0) ? (
             messages.sort((m1, m2) => {
@@ -111,9 +107,15 @@ class MessageList extends Component {
             } else {
                 return 0;
             }
-        }).map((m, id) => (
-               <MessageItem {...m} key={id + m._id} userId={ _id } image={ speaker2 }/>
-            ))
+        }).map((m, id) => {
+            if(m._id !== speakerFirst._id) {
+                speaker2 = speakerFirst.image;
+            } else {
+                speaker2 = speakerSecond.image;
+            }
+
+               return <MessageItem {...m} key={id + m._id} userId={ _id } image={ speaker2 }/>
+                })
         ) : null;
 
         return (
