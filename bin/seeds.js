@@ -9,10 +9,8 @@ const User = require("../models/User");
 
 const bcryptSalt = 10;
 
-let dbURI = 'mongodb://localhost/mern-project';
-if (process.env.NODE_ENV === 'production') {
-    dbURI = process.env.MLAB_URI;
-}
+let dbURI = 'mongodb://bartosian:bart1989@ds133964.mlab.com:33964/mean-stack-app';
+
 
 mongoose
   .connect(dbURI, {useNewUrlParser: true})
