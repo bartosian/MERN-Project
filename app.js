@@ -65,7 +65,8 @@ require('./passport')(app);
 
 app.use(cors({
     credentials: true,
-    origin: ['http://localhost:3000','http://www.willbe-intouch.com']
+    origin: true,
+    methods: ['GET', 'PUT', 'POST', 'DELETE']
 }));
 
 const authRoutes = require('./routes/auth');
