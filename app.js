@@ -15,7 +15,7 @@ const flash      = require("connect-flash");
 
 
 mongoose
-    .connect('mongodb://bartosian:bart1989@ds133964.mlab.com:33964/mean-stack-app', {useNewUrlParser: true})
+    .connect(process.env.MLAB_URI, {useNewUrlParser: true})
     .then(x => {
         console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
     })
