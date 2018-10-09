@@ -136,7 +136,7 @@ router.get('/loggedin', (req, res, next) => {
 
 /* Uploading images */
 router.post('/upload', [middleAuth, parser.single('picture')], (req, res, next) => {
-    User.findOneAndUpdate({ email : req.user.email }, { image: req.file.url.replace("http","https") })
+    User.findOneAndUpdate({ email : req.user.email }, { image: req.file.secure_url })
         .then(() => {
             res.status(203)
                 .json({

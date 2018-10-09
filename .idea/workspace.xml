@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/config/cloudinary.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/cloudinary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cloudinary.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cloudinary.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/cloudinary.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
@@ -26,11 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="86" column="32" lean-forward="true" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/auth.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="137">
-              <caret line="138" column="97" selection-start-line="138" selection-start-column="97" selection-end-line="138" selection-end-column="97" />
+              <caret line="138" column="82" selection-start-line="138" selection-start-column="82" selection-end-line="138" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -92,8 +101,8 @@
         <option value="$PROJECT_DIR$/client-react/src/index.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Header/Header.js" />
-        <option value="$PROJECT_DIR$/routes/auth.js" />
         <option value="$PROJECT_DIR$/config/cloudinary.js" />
+        <option value="$PROJECT_DIR$/routes/auth.js" />
       </list>
     </option>
   </component>
@@ -202,12 +211,12 @@
       <workItem from="1538406188877" duration="58916000" />
       <workItem from="1538569246105" duration="192034000" />
       <workItem from="1539104196212" duration="1006000" />
-      <workItem from="1539105314040" duration="8726000" />
+      <workItem from="1539105314040" duration="9461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260682000" />
+    <option name="totallyTimeSpent" value="261417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1642" height="947" extended-state="0" />
@@ -358,13 +367,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1558">
-          <caret line="82" column="45" lean-forward="true" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -571,10 +573,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/auth.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="138" column="97" selection-start-line="138" selection-start-column="97" selection-end-line="138" selection-end-column="97" />
+        <state relative-caret-position="308">
+          <caret line="86" column="32" lean-forward="true" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -582,6 +584,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="138" column="82" selection-start-line="138" selection-start-column="82" selection-end-line="138" selection-end-column="82" />
         </state>
       </provider>
     </entry>
