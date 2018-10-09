@@ -1,5 +1,6 @@
 import React from 'react';
 import './User.css';
+import noUser from '../../../../assets/images/no-user.jpg';
 
 const user = ({user, userFriends, selectPhoto, addFriend, deleteFriend, history}) => {
     const {image, username, status, country, occupation, _id } = user;
@@ -43,7 +44,7 @@ const user = ({user, userFriends, selectPhoto, addFriend, deleteFriend, history}
                     <div className="hover-info">
                         <i className="fa fa-search-plus" aria-hidden="true" onClick={ () => selectPhoto(image) }></i>
                     </div>
-                    <img src={image || "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no"} alt="friend"/>
+                    <img src={image || noUser} alt="friend"/>
                 </div>
                 <div className="friend-info">
                     <div className="friend-name-block">

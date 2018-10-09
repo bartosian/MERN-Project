@@ -1,6 +1,7 @@
 import React from 'react';
 import './Chat.css';
 import moment from 'moment';
+import noUser from '../../../../assets/images/no-user.jpg';
 
 const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, redirectMessages }) => {
 
@@ -46,12 +47,12 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, re
             <div className="col-10 col-md-7 chat-main" onClick={ () => redirectMessages(_id) }>
                 <div className="chat-main-wrapper"></div>
                 <div className="chat-image">
-                    <img className="chat-image-src" src={ image ? image : "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no"} alt="chat"/>
+                    <img className="chat-image-src" src={ image ? image : noUser} alt="chat"/>
                 </div>
                 <div className="chat-lastmes">
                     <p className="chat-name">{name}</p>
                     <div className={ classesPhoto.join(" ") }>
-                        <img src={ image2 || "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no" } alt="user-second"/>
+                        <img src={ image2 || noUser } alt="user-second"/>
                     </div>
                     { lastMessageContent }
                 </div>

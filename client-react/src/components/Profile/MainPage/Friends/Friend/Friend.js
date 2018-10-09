@@ -1,8 +1,9 @@
 import React from 'react';
 import './Friend.css';
+import noUser from '../../../../../assets/images/no-user.jpg';
 
 const friend = ({ name, url }) => {
-    const imageUrl = url !== "" ? url : "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no";
+    const imageUrl = url !== "" ? url : noUser;
     return (
         <div className="friend">
             <div className="name-layer">{ name }</div>
