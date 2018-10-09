@@ -29,6 +29,12 @@ class MessageList extends Component {
 
         const { messages, speakerFirst, speakerSecond } = this.state.chat;
         const { _id } = this.props.user;
+        let speaker2 = null;
+
+        if(speakerSecond && speakerFirst) {
+             speaker2 = String(_id) === speakerSecond._id ? speakerFirst.image : speakerSecond.image;
+        }
+
 
         let messagesArr = (messages && messages.length > 0) ? (
             messages.sort((m1, m2) => {
@@ -37,14 +43,14 @@ class MessageList extends Component {
             const date2 = new Date(m2.date);
 
             if(date1 > date2) {
-                return -1;
-            } else if(date1 < date2) {
                 return 1;
+            } else if(date1 < date2) {
+                return -1;
             } else {
                 return 0;
             }
         }).map((m, id) => (
-               <MessageItem {...m} key={id + m._id} userId={ _id }/>
+               <MessageItem {...m} key={id + m._id} userId={ _id } image={ speaker2 }/>
             ))
         ) : null;
 

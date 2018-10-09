@@ -26,7 +26,8 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, re
         image2 = String(lastMessage.user) === speakerFirst.id ? speakerFirst.image : speakerSecond.image;
     }
 
-    lastMessage = lastMessage.length > 100 ? lastMessage : lastMessage.slice(0, 100);
+    lastMessage = !lastMessage.length > 70 ? lastMessage : lastMessage.slice(0, 70);
+
     const classesPhoto = ["sec-user-photo"];
     if(!messages.length > 0) {
         classesPhoto.push("sec-user-photo--none");
