@@ -35,7 +35,7 @@ class Chats extends Component {
     };
 
     render() {
-        const { path } = this.props;
+        const { path, user } = this.props;
 
         const chats = this.state.chats.length > 0 ? (
             this.state.chats.map( n => (
@@ -48,7 +48,7 @@ class Chats extends Component {
         return (
             <div className="container chats-wrapper">
                 <Switch>
-                    <Route path={`${path}/chats/:id`} render={() => <MessageList chats={ chats }/> }/>
+                    <Route path={`${path}/chats/:id`} render={() => <MessageList chats={ chats } user={ user }/> }/>
                     <Route path={`${path}/chats`} render={() => <ChatList chats={ chats }/> }/>
                 </Switch>
 

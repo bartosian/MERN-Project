@@ -1,0 +1,17 @@
+.message-row {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+
+.message-text {
+    padding: 10px;
+    background: rgba(0, 123, 254, 0.6);
+    width: 250px;
+    border-radius: 15px;
+
+}
+
+.text-right-mess {
+    float: right;
+}
