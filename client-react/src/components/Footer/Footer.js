@@ -5,7 +5,7 @@ const footer = (props) => {
 
         return (
             <div className="container footer">
-                    <div className="col-12 col-md-5 footer-info">
+                    <div className="col-12 col-md-7 footer-info">
                         <p className="copyright">
                             <i className="fa fa-copyright" aria-hidden="true"></i>
                             Bartashevich Kiryl

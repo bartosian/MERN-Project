@@ -19,15 +19,17 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, re
         } else {
             return 0;
         }
-    })[0]) : "No messages. Start the first chat!";
+    })[0]) : "";
 
     let lastMessageContent = null;
     if(lastMessage.content) {
         lastMessageContent = lastMessage.content;
         image2 = (String(lastMessage.user) === String(speakerFirst._id)) ? speakerFirst.image : speakerSecond.image;
+        lastMessageContent = !lastMessageContent.length > 70 ? lastMessageContent : lastMessageContent.slice(0, 70);
+    } else {
+        lastMessageContent = "No messages. Start the first chat!";
     }
 
-    lastMessageContent = !lastMessageContent.length > 70 ? lastMessageContent : lastMessageContent.slice(0, 70);
 
     const classesPhoto = ["sec-user-photo"];
     if(!messages.length > 0) {

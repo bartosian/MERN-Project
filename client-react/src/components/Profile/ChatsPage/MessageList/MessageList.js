@@ -116,13 +116,17 @@ class MessageList extends Component {
 
                return <MessageItem {...m} key={id + m._id} userId={ _id } image={ speaker2 }/>
                 })
-        ) : null;
+        ) : [];
 
         return (
             <div className="row messages-main-wrapper">
                 <div className="col-10 col-md-8 messages-wrapper">
                     <div className="messages-window" ref={(node) => this.messages = node}>
-                        { messagesArr }
+                        { messagesArr.length > 0 ? messagesArr : (
+                            <div className="no-messages">
+                                Start this chat - write first message!
+                            </div>
+                        ) }
                     </div>
                     <div className="messages-input">
                         <div className="input-message">
