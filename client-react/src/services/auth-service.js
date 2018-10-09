@@ -11,7 +11,7 @@ class AuthService {
     }
 
     signup = ({username, password, email} ) => {
-        return this.service.post('/Auth/signup', {username, password, email })
+        return this.service.post('https://be-in-touch.herokuapp.com/Auth/signup', {username, password, email })
             .then(response => response.data)
     };
 
