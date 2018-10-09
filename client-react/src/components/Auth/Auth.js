@@ -4,6 +4,7 @@ import Signup from './Signup/Signup';
 import Login from './Login/Login';
 import './Auth.css';
 import bg from '../../assets/images/bg2-main.png';
+import bg2 from '../../assets/images/main-bg3.gif';
 
 const auth = (props) => {
         const { getTheUser } = props;
@@ -14,7 +15,7 @@ const auth = (props) => {
                         <div className="col-12 d-none d-md-block col-md-7 img-wrapper-main">
                             <h1 className="main-logo">InTouch</h1>
                             <img className="main-bg" src={bg} alt="social"/>
-                            <img className="main-bg-gif" src="https://blog.advids.co/wp-content/uploads/2017/05/Product-Sales11.gif" alt="social-gif"/>
+                            <img className="main-bg-gif" src={bg2} alt="social-gif"/>
                         </div>
                         <div className="col-12 col-md-5 user-form">
                             <h1 className="main-logo d-md-none">InTouch</h1>
