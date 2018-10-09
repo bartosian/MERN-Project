@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import SingleNews from './SingleNews/SingleNews';
 import PostService from '../../../services/post-service';
+import { Link } from 'react-router-dom';
 import './News.css';
 
 
@@ -82,7 +83,10 @@ class  News extends  Component {
             ))
 
         ) : (<div className="row no-wrapper">
-                <div className="col-12 col-md-7 no-news">You don't have any news yet.</div>
+                <div className="col-12 col-md-7 no-news">
+                    <Link to="/profile/users" className="navLink"><i className="fa fa-users empty-friends" aria-hidden="true"></i></Link>
+                    You don't have any news yet.
+                </div>
             </div>) ;
 
 

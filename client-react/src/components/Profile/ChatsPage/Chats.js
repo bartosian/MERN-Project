@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Chats.css';
 import ChatService from "../../../services/chat-service";
 import Chat from './Chat/Chat';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import ChatList from './ChatList';
 import MessageList from './MessageList/MessageList';
 
@@ -55,7 +55,10 @@ class Chats extends Component {
                 <Chat key={ n._id } {...n}  getUser={ this.props.getUser } user={ this.props.user } redirectMessages = { this.redirectToMessages } />
             ))
         ) : (<div className="row no-wrapper">
-                <div className="col-12 col-md-7 no-news">You don't have any chats yet.</div>
+            <div className="col-12 col-md-7 no-news">
+                <Link to="/profile/users" className="navLink"><i className="fa fa-users empty-friends" aria-hidden="true"></i></Link>
+                You don't have any chats yet.
+            </div>
             </div>);
 
         return (
