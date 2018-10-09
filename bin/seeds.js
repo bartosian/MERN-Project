@@ -9,8 +9,13 @@ const User = require("../models/User");
 
 const bcryptSalt = 10;
 
+let dbURI = 'mongodb://localhost/mern-project';
+if (process.env.NODE_ENV === 'production') {
+    dbURI = process.env.MLAB_URI;
+}
+
 mongoose
-  .connect('mongodb://localhost/mern-project', {useNewUrlParser: true})
+  .connect(dbURI, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

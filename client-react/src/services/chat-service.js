@@ -4,7 +4,7 @@ import axios from 'axios';
 class ChatService {
     constructor() {
         let chatService = axios.create({
-            baseURL: 'http://localhost:5000/api',
+            baseURL: `${process.env.REACT_APP_API_URL}`,
             withCredentials: true
         });
         this.chatService = chatService;

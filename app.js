@@ -86,5 +86,8 @@ app.use('/api', chatRoutes);
 const messagesRoutes = require('./routes/messages');
 app.use('/api', messagesRoutes);
 
+app.use((req, res, next) => {
+    res.sendFile(__dirname + "/public/index.html");
+});
 
 module.exports = app;
