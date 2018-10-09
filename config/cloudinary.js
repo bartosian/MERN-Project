@@ -5,13 +5,13 @@ const multer = require('multer');
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
     api_key: process.env.CLOUDINARY_KEY,
-    api_secret: process.env.CLOUDINARY_SECRET,
-    secure: true
+    api_secret: process.env.CLOUDINARY_SECRET
 });
 
 let storage = cloudinaryStorage({
     cloudinary: cloudinary,
     folder: 'mern-app',
+    secure: true,
     allowedFormats: ['jpg', 'png'],
     filename: function (req, file, cb) {
         cb(null, file.originalname);
