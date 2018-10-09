@@ -84,9 +84,11 @@ class Users extends Component {
                 }
                 <div className="container users-wrapper">
                     {
-                        this.state.users.map((user, idx) => (
+                        this.state.users.length > 0 ? this.state.users.map((user, idx) => (
                             <User key={ user.username + idx} user={ user } userFriends={ friends } selectPhoto={ this.selectPhoto } addFriend={ this.addNewFriend } deleteFriend={ this.deleteFriend } history={ history }/>
-                        ))
+                        )) : (<div className="row no-wrapper">
+                            <div className="col-12 col-md-7 no-news">You don't have any friends yet.</div>
+                        </div>)
                     }
                 </div>
             </Fragment>

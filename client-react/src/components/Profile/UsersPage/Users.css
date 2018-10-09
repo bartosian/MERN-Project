@@ -41,3 +41,10 @@
 .close-btn:active {
     color: white;
 }
+
+.no-news {
+    text-transform: uppercase;
+    font-size: 1.4rem !important;
+    color: #0069d9;
+    text-shadow: 0 0 1px white;
+}
