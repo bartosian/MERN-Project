@@ -57,7 +57,7 @@
  }
 
     @media (max-width: 770px) {
-        .empty-friends::after {
+        .navLink .empty-friends::after {
             width: 150px;
             font-size: 1rem;
         }
