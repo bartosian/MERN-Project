@@ -4,7 +4,7 @@ import axios from 'axios';
 class AuthService {
     constructor() {
         let service = axios.create({
-            baseURL:`${process.env.REACT_APP_AUTH_URL}`,
+            baseURL:`https://be-in-touch.herokuapp.com/Auth`,
             withCredentials: true
         });
         this.service = service;

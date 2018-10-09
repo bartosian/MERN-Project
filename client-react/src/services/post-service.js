@@ -4,7 +4,7 @@ import axios from 'axios';
 class PostService {
     constructor() {
         let postService = axios.create({
-            baseURL: `${process.env.REACT_APP_API_URL}`,
+            baseURL: `https://be-in-touch.herokuapp.com/api`,
             withCredentials: true
         });
         this.postService = postService;

@@ -3,7 +3,7 @@ import axios from 'axios';
 class UsersService {
     constructor() {
         let usersService = axios.create({
-            baseURL: `${process.env.REACT_APP_API_URL}/users`,
+            baseURL: `https://be-in-touch.herokuapp.com/api/users`,
             withCredentials: true
         });
         this.usersService = usersService;
