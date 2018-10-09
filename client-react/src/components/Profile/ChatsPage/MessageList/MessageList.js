@@ -3,6 +3,7 @@ import './MessageList.css';
 import { withRouter } from "react-router";
 import ChatService from '../../../../services/chat-service';
 import MessageItem from './MessageItem/MessageItem';
+import Input from '../../../UI/Input/Input';
 
 class MessageList extends Component {
 
@@ -12,7 +13,14 @@ class MessageList extends Component {
     }
 
     state = {
-        chat: []
+        chat: [],
+        message: {
+            elementType: 'textarea',
+            elementConfig: {
+                placeholder: "Enter new message"
+            },
+            value: ""
+        }
     };
 
     componentDidMount() {
@@ -24,6 +32,15 @@ class MessageList extends Component {
 
             })
     }
+
+    inputChangedHandler = (e) => {
+
+        const newMessage = Object.assign({},{...this.state.message}, { value: e.target.value });
+
+        this.setState({
+            message: newMessage
+        });
+    };
 
     render() {
 
@@ -60,8 +77,18 @@ class MessageList extends Component {
                     <div className="messages-window">
                         { messagesArr }
                     </div>
-                    <div className="row messages-input">
-
+                    <div className="messages-input">
+                        <div className="input-message">
+                            <Input
+                                   elementType={ this.state.message.elementType }
+                                   elementConfig={ this.state.message.elementConfig}
+                                   value={ this.state.message.value }
+                                   changed={ (event) => this.inputChangedHandler(event) }
+                            />
+                        </div>
+                        <div className="send-message">
+                            <i className="fa fa-paper-plane" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
             </div>
