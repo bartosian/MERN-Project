@@ -20,7 +20,8 @@ class MessageList extends Component {
                 placeholder: "Enter new message"
             },
             value: ""
-        }
+        },
+        loading: false
     };
 
     componentDidMount() {
@@ -30,6 +31,7 @@ class MessageList extends Component {
                     chat: response
                 });
 
+                this.messages.scrollTop = this.messages.scrollHeight;
             })
     }
 
@@ -40,6 +42,32 @@ class MessageList extends Component {
         this.setState({
             message: newMessage
         });
+    };
+
+    addNewMessage = () => {
+
+        this.setState({
+            loading: true
+        });
+        const id = this.state.chat._id;
+        const content = this.state.message.value;
+        const newMessage = Object.assign({},{...this.state.message}, { value: ""});
+
+        if(content.trim() === "" || this.state.loading) {
+            return;
+        }
+
+        this.service.addNewMessage(id, content)
+            .then(response => {
+                this.setState({
+                    chat: response,
+                    message: newMessage,
+                    loading: false
+                });
+
+
+                this.messages.scrollTop = this.messages.scrollHeight;
+            }).catch(err => console.log(err));
     };
 
     render() {
@@ -74,7 +102,7 @@ class MessageList extends Component {
         return (
             <div className="row messages-main-wrapper">
                 <div className="col-10 col-md-8 messages-wrapper">
-                    <div className="messages-window">
+                    <div className="messages-window" ref={(node) => this.messages = node}>
                         { messagesArr }
                     </div>
                     <div className="messages-input">
@@ -86,7 +114,7 @@ class MessageList extends Component {
                                    changed={ (event) => this.inputChangedHandler(event) }
                             />
                         </div>
-                        <div className="send-message">
+                        <div className="send-message" onClick={ this.addNewMessage }>
                             <i className="fa fa-paper-plane" aria-hidden="true"></i>
                         </div>
                     </div>

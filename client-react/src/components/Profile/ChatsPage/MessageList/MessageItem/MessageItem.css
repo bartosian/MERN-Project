@@ -87,6 +87,14 @@
     align-items: center;
     right: 15px;
     top: 20px;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.send-message:hover {
+    background: white;
+    color: rgba(0, 123, 254, 0.8);
+    border-color: rgba(0, 123, 254, 0.8);
 }
 
 @media(max-width: 500px) {

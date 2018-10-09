@@ -10,6 +10,11 @@ class ChatService {
         this.chatService = chatService;
     }
 
+    addNewMessage = (id, content) => {
+        return this.chatService.post('/messages', {id, content})
+            .then(response => response.data)
+    };
+
     createChat = (id) => {
         return this.chatService.post('/chats', {id})
             .then(response => response.data)
