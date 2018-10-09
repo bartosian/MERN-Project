@@ -141,7 +141,7 @@ router.post('/upload', [middleAuth, parser.single('picture')], (req, res, next) 
             res.status(203)
                 .json({
                 success: true,
-                image: req.file.url
+                image: req.file.secure_url
             })
         }).catch(err => {
             res.status(400)
