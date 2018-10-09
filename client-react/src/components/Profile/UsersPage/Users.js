@@ -70,6 +70,7 @@ class Users extends Component {
 
     render() {
         const friends = [ ...this.props.user.friends ];
+        const { history } = this.props;
 
         return (
             <Fragment>
@@ -84,7 +85,7 @@ class Users extends Component {
                 <div className="container users-wrapper">
                     {
                         this.state.users.map((user, idx) => (
-                            <User key={ user.username + idx} user={ user } userFriends={ friends } selectPhoto={ this.selectPhoto } addFriend={ this.addNewFriend } deleteFriend={ this.deleteFriend }/>
+                            <User key={ user.username + idx} user={ user } userFriends={ friends } selectPhoto={ this.selectPhoto } addFriend={ this.addNewFriend } deleteFriend={ this.deleteFriend } history={ history }/>
                         ))
                     }
                 </div>

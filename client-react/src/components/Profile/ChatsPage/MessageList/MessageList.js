@@ -25,14 +25,31 @@ class MessageList extends Component {
     };
 
     componentDidMount() {
-        this.service.getChat(this.props.match.params.id)
-            .then(response => {
-                this.setState({
-                    chat: response
-                });
 
-                this.messages.scrollTop = this.messages.scrollHeight;
-            })
+        if(this.props.match.params.id.includes("new")) {
+            let id = this.props.match.params.id;
+            id = id.slice(3);
+
+            this.service.createChat(id)
+                .then(response => {
+                    this.setState({
+                        chat: response
+                    });
+
+                    this.messages.scrollTop = this.messages.scrollHeight;
+                    return;
+
+                }).catch(err => console.log(err));
+        } else {
+            this.service.getChat(this.props.match.params.id)
+                .then(response => {
+                    this.setState({
+                        chat: response
+                    });
+
+                    this.messages.scrollTop = this.messages.scrollHeight;
+                }).catch(err => console.log(err));
+        }
     }
 
     inputChangedHandler = (e) => {

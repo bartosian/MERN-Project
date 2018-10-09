@@ -1,7 +1,7 @@
 import React from 'react';
 import './User.css';
 
-const user = ({user, userFriends, selectPhoto, addFriend, deleteFriend}) => {
+const user = ({user, userFriends, selectPhoto, addFriend, deleteFriend, history}) => {
     const {image, username, status, country, occupation, _id } = user;
     let controls = null;
     let userHasFriend = false;
@@ -19,7 +19,7 @@ const user = ({user, userFriends, selectPhoto, addFriend, deleteFriend}) => {
                     <span>Delete friend</span>
                     <i className="fa fa-minus-circle" aria-hidden="true"></i>
                 </div>
-                <div className="send-mess">
+                <div className="send-mess" onClick={ () => history.push(`/profile/chats/new${user._id}`)}>
                     <span>Send message</span>
                     <i className="fa fa-comment comment-icon" aria-hidden="true"></i>
                 </div>
