@@ -70,6 +70,13 @@
     }
 }
 
+@media (max-width: 400px) {
+    .navLink .empty-friends::after {
+        width: 60px;
+        font-size: 1rem;
+    }
+}
+
 .empty-friends:hover {
     color: red;
 }

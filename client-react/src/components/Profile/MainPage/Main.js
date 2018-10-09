@@ -7,7 +7,7 @@ import NavBar from '../MainPage/NavBar/NavBar';
 
 const MainPage = ({user, getUser}) => {
     return (
-        <div className="container">
+        <div className="container main-content-footer">
             <div className="row">
                 <div className="col-12 col-md-4">
                     <Picture user={ user } getUser={ getUser }/>
