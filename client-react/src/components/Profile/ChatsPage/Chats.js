@@ -25,8 +25,6 @@ class Chats extends Component {
                     chats: response
                 });
 
-                console.log(response);
-
             }).catch(err => {
             console.log(err);
         });

@@ -29,8 +29,6 @@ class MessageList extends Component {
         if(this.props.match.params.id.includes("new")) {
             let id = this.props.match.params.id;
             id = id.slice(3);
-            console.log(id);
-            console.log("-=-=-=-=",this.props.user._id);
 
             this.service.createChat(id)
                 .then(response => {
@@ -110,7 +108,7 @@ class MessageList extends Component {
                 return 0;
             }
         }).map((m, id) => {
-            if(m._id !== speakerFirst._id) {
+            if(m.user === speakerFirst._id) {
                 speaker2 = speakerFirst.image;
             } else {
                 speaker2 = speakerSecond.image;

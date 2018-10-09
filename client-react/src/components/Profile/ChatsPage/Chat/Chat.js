@@ -21,12 +21,13 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, re
         }
     })[0]) : "No messages. Start the first chat!";
 
+    let lastMessageContent = null;
     if(lastMessage.content) {
-        lastMessage = lastMessage.content;
-        image2 = String(lastMessage.user) !== String(speakerFirst._id) ? speakerFirst.image : speakerSecond.image;
+        lastMessageContent = lastMessage.content;
+        image2 = (String(lastMessage.user) === String(speakerFirst._id)) ? speakerFirst.image : speakerSecond.image;
     }
 
-    lastMessage = !lastMessage.length > 70 ? lastMessage : lastMessage.slice(0, 70);
+    lastMessageContent = !lastMessageContent.length > 70 ? lastMessageContent : lastMessageContent.slice(0, 70);
 
     const classesPhoto = ["sec-user-photo"];
     if(!messages.length > 0) {
@@ -50,7 +51,7 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, re
                     <div className={ classesPhoto.join(" ") }>
                         <img src={ image2 || "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no" } alt="user-second"/>
                     </div>
-                    { lastMessage }
+                    { lastMessageContent }
                 </div>
                 <div className="chat-controls">
                     <p className="chat-date"><i className="fa fa-clock-o clock-icon" aria-hidden="true"></i> <span>{newDate}</span></p>
