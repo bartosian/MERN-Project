@@ -13,7 +13,7 @@ let storage = cloudinaryStorage({
     folder: 'mern-app',
     allowedFormats: ['jpg', 'png'],
     filename: function (req, file, cb) {
-        cb(null, file.originalname.replace("http", "https"));
+        cb(null, file.originalname);
     }
 });
 

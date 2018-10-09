@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/config/cloudinary.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/cloudinary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +20,17 @@
       <file leaf-file-name="cloudinary.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/cloudinary.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+            <state relative-caret-position="304">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/auth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="138" column="97" selection-start-line="138" selection-start-column="97" selection-end-line="138" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -33,7 +43,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PictureBlock/PictureBlock.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/NavBar/NavBar.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Wall/Post/Post.css" />
         <option value="$PROJECT_DIR$/models/Post.js" />
@@ -83,6 +92,7 @@
         <option value="$PROJECT_DIR$/client-react/src/index.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Header/Header.js" />
+        <option value="$PROJECT_DIR$/routes/auth.js" />
         <option value="$PROJECT_DIR$/config/cloudinary.js" />
       </list>
     </option>
@@ -131,6 +141,11 @@
               <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="mern-project" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -187,18 +202,18 @@
       <workItem from="1538406188877" duration="58916000" />
       <workItem from="1538569246105" duration="192034000" />
       <workItem from="1539104196212" duration="1006000" />
-      <workItem from="1539105314040" duration="8499000" />
+      <workItem from="1539105314040" duration="8726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260455000" />
+    <option name="totallyTimeSpent" value="260682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1642" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2510796" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2510796" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -207,7 +222,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31411764" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31411764" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -557,12 +572,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/auth.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="138" column="97" selection-start-line="138" selection-start-column="97" selection-end-line="138" selection-end-column="97" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/cloudinary.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        <state relative-caret-position="304">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
