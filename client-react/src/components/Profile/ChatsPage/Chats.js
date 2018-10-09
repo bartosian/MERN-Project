@@ -25,6 +25,8 @@ class Chats extends Component {
                     chats: response
                 });
 
+                console.log(response);
+
             }).catch(err => {
             console.log(err);
         });
@@ -34,11 +36,24 @@ class Chats extends Component {
         this.props.history.push(`/profile/chats/${idChat}`);
     };
 
+
+
     render() {
         const { path, user } = this.props;
 
         const chats = this.state.chats.length > 0 ? (
-            this.state.chats.map( n => (
+            this.state.chats.sort((c1, c2) => {
+                const date1 = new Date(c1.updated_at);
+                const date2 = new Date(c2.updated_at);
+
+                if(date1 > date2) {
+                    return -1;
+                } else if(date1 < date2) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }).map( n => (
                 <Chat key={ n._id } {...n}  getUser={ this.props.getUser } user={ this.props.user } redirectMessages = { this.redirectToMessages } />
             ))
         ) : (<div className="row no-wrapper">
