@@ -22,7 +22,7 @@ const messageItem = ({content, user, date, userId, image}) => {
                 { content }
                 <div className="date-message">{ newDate }</div>
                 <div className={imageClasses.join(" ")}>
-                    <img src={image} alt="user"/>
+                    <img src={image || "https://yt3.ggpht.com/a-/AJLlDp02y_3SsMYN_uiJd9sGjNL0fFeCjsQhSW90=s900-mo-c-c0xffffffff-rj-k-no"} alt="user"/>
                 </div>
             </div>
         </div>
