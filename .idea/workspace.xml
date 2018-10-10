@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/services/friend-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/friend-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/friends.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,20 +28,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friends.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="friends.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/friends.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+            <state relative-caret-position="281">
+              <caret line="74" column="24" lean-forward="true" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friend-service.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="friend-service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/services/friend-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+            <state relative-caret-position="361">
+              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -139,8 +136,8 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Header/Header.js" />
-        <option value="$PROJECT_DIR$/routes/friends.js" />
         <option value="$PROJECT_DIR$/client-react/src/services/friend-service.js" />
+        <option value="$PROJECT_DIR$/routes/friends.js" />
       </list>
     </option>
   </component>
@@ -294,12 +291,12 @@
       <workItem from="1538406188877" duration="58916000" />
       <workItem from="1538569246105" duration="192034000" />
       <workItem from="1539104196212" duration="1006000" />
-      <workItem from="1539105314040" duration="20173000" />
+      <workItem from="1539105314040" duration="20582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272129000" />
+    <option name="totallyTimeSpent" value="272538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1642" height="947" extended-state="0" />
@@ -694,17 +691,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/friends.js">
+    <entry file="file://$PROJECT_DIR$/client-react/src/services/friend-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+        <state relative-caret-position="361">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/services/friend-service.js">
+    <entry file="file://$PROJECT_DIR$/routes/friends.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+        <state relative-caret-position="281">
+          <caret line="74" column="24" lean-forward="true" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
         </state>
       </provider>
     </entry>
