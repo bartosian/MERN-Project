@@ -62,7 +62,7 @@ router.get('/friends/:id', middleAuth, async function(req, res, next) {
 });
 
 /* Get certain friend by name */
-router.get('/friends/:name', middleAuth, async function(req, res, next) {
+router.get('/friends/search/:name', middleAuth, async function(req, res, next) {
     let { name } = req.params;
     name = name.trim();
 

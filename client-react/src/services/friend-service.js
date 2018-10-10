@@ -25,6 +25,11 @@ class FriendService {
             .then(response => response.data)
     };
 
+    getCertainFriend = (name) => {
+        return this.friendService.get(`/friends/search/${name}`)
+            .then(response => response.data)
+    };
+
     getFriends = () => {
         return this.friendService.get('/friends')
             .then(response => response.data)

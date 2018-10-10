@@ -3,6 +3,7 @@ import './Header.css';
 import Input from '../UI/Input/Input';
 import Button from '../UI/Button/Button';
 import AuthService from '../../services/auth-service';
+import FriendService from '../../services/friend-service';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import logoBg from '../../assets/images/bg2-main.png';
@@ -12,10 +13,12 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.service = new AuthService();
+        this.friendService = new FriendService();
     }
 
     state = {
-      search: ""
+      search: "",
+      isLoading: false
     };
 
     inputChangedHandler = (e) => {
@@ -24,6 +27,23 @@ class Header extends Component {
         this.setState({
             [name]: value
         });
+    };
+
+    findUsers = () => {
+        if(this.state.isLoading) return;
+
+        this.setState({
+            isLoading: true
+        });
+
+        const name = this.state.search.trim();
+
+        if(!name) return;
+
+        this.friendService.getCertainFriend(name)
+            .then(response => {
+                console.log(response);
+            }).catch(err => console.log(err));
     };
 
     render() {
@@ -49,7 +69,7 @@ class Header extends Component {
                                 value={ this.state.search }
                                 changed={ (event) => this.inputChangedHandler(event) }
                             />
-                            <div className="search-header-btn" onClick={() => console.log("hi")}>
+                            <div className="search-header-btn" onClick={ this.findUsers }>
                                 <i className="fa fa-search" aria-hidden="true"></i>
                             </div>
                         </div>
