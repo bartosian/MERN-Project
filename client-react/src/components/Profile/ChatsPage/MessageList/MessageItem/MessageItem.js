@@ -13,6 +13,8 @@ const messageItem = ({content, user, date, userId, image}) => {
         imageClasses.push("name-message-block");
     }
 
+    const messageContent = content.includes("http") ? "Here is image" : content;
+
     let newDate =  new Date(date);
     newDate = newDate.setDate(newDate.getDate() + 1);
     newDate = moment(newDate).format('YYYY-MM-DD hh:mm');
@@ -20,7 +22,7 @@ const messageItem = ({content, user, date, userId, image}) => {
     return (
         <div className="message-row">
             <div className={ classes.join(" ") }>
-                { content }
+                { messageContent }
                 <div className="date-message">{ newDate }</div>
                 <div className={imageClasses.join(" ")}>
                     <img src={image || noUser} alt="user"/>

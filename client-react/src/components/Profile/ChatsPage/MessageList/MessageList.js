@@ -21,6 +21,7 @@ class MessageList extends Component {
             },
             value: ""
         },
+        file: "",
         loading: false
     };
 
@@ -54,6 +55,14 @@ class MessageList extends Component {
 
     inputChangedHandler = (e) => {
 
+        if(e.target.name === "picture-user") {
+            this.setState({
+                file: e.target.files[0]
+            });
+
+            return;
+        }
+
         const newMessage = Object.assign({},{...this.state.message}, { value: e.target.value });
 
         this.setState({
@@ -63,28 +72,65 @@ class MessageList extends Component {
 
     addNewMessage = () => {
 
+        if(this.state.message.value.trim() === "" || this.state.loading) {
+            return;
+        }
+
         this.setState({
             loading: true
         });
         const id = this.state.chat._id;
-        const content = this.state.message.value;
-        const newMessage = Object.assign({},{...this.state.message}, { value: ""});
 
-        if(content.trim() === "" || this.state.loading) {
-            return;
+        if(this.state.file) {
+            const file = this.state.file;
+
+            this.service.addPicture(file, id)
+                .then( response => {
+                    this.setState({
+                        chat: response,
+                        loading: false,
+                        file: ""
+                    });
+
+                    this.messages.scrollTop = this.messages.scrollHeight;
+                }).catch(err => console.log(err));
+
+        } else {
+            const content = this.state.message.value;
+            const newMessage = Object.assign({},{...this.state.message}, { value: ""});
+
+            this.service.addNewMessage(id, content)
+                .then(response => {
+                    this.setState({
+                        chat: response,
+                        message: newMessage,
+                        loading: false
+                    });
+
+
+                    this.messages.scrollTop = this.messages.scrollHeight;
+                }).catch(err => console.log(err));
         }
 
-        this.service.addNewMessage(id, content)
-            .then(response => {
+    };
+
+    selectPhoto = () => {
+        this.input.click();
+    };
+
+    handleSubmit = () => {
+        this.authService.addPicture(this.state.file)
+            .then( data => {
                 this.setState({
-                    chat: response,
-                    message: newMessage,
-                    loading: false
+                    file: data.image,
+                    showImage: true
                 });
 
+                const newUser = {...this.props.user};
+                newUser.image = data.image;
 
-                this.messages.scrollTop = this.messages.scrollHeight;
-            }).catch(err => console.log(err));
+                this.props.getUser(newUser);
+            });
     };
 
     render() {
@@ -129,10 +175,11 @@ class MessageList extends Component {
                         ) }
                     </div>
                     <div className="messages-input">
-                        <div className="send-picture" onClick={ this.addNewMessage }>
+                        <div className="send-picture" onClick={ this.selectPhoto }>
                             <i className="fa fa-paperclip" aria-hidden="true"></i>
                         </div>
                         <div className="input-message">
+                            <input className="photo-loader" ref={ (node) => this.input = node } onChange={ (event) => this.inputChangedHandler(event)}  name="picture-user"  type="file"/>
                             <Input
                                    elementType={ this.state.message.elementType }
                                    elementConfig={ this.state.message.elementConfig}

@@ -15,6 +15,18 @@ class ChatService {
             .then(response => response.data)
     };
 
+    addPicture(file, id) {
+        const formData = new FormData();
+        formData.append("picture", file);
+        return this.service
+            .post(`/messages/upload/${id}`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            })
+            .then(res => res.data);
+    };
+
     createChat = (id) => {
         return this.chatService.post('/chats', {id})
             .then(response => response.data)
