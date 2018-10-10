@@ -49,6 +49,9 @@ class Header extends Component {
                                 value={ this.state.search }
                                 changed={ (event) => this.inputChangedHandler(event) }
                             />
+                            <div className="search-header-btn">
+                                <i className="fa fa-search" aria-hidden="true"></i>
+                            </div>
                         </div>
                         <div className="logout">
                             <Button clicked={ () => logout(history) } btnType="danger">Logout</Button>
