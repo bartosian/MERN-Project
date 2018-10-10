@@ -63,6 +63,7 @@ router.get('/friends/:id', middleAuth, async function(req, res, next) {
 
 /* Get certain friend by name */
 router.get('/friends/search/:name', middleAuth, async function(req, res, next) {
+    const {_id} = req.user;
     let { name } = req.params;
     name = name.trim();
 
@@ -74,9 +75,12 @@ router.get('/friends/search/:name', middleAuth, async function(req, res, next) {
 
     try {
         const friends = await User.find({ "username" : { $regex: new RegExp(name, "ig") } });
+        const friendsResult = friends.filter(fr => {
+            return String(fr._id) !== String(_id);
+        });
 
         res.status(200)
-            .json(friends);
+            .json(friendsResult);
     } catch(ex) {
         return next(ex);
     }
