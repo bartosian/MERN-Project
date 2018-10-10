@@ -1,3 +1,10 @@
 .main-content-footer {
     margin-bottom: 60px !important;
 }
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}

@@ -8,6 +8,7 @@ import Chats from './ChatsPage/Chats';
 import Users from './UsersPage/Users';
 import Footer from '../Footer/Footer';
 import News from './NewsPage/News';
+import NavBar from './MainPage/NavBar/NavBar';
 
 
 class Profile extends Component {
@@ -31,11 +32,19 @@ class Profile extends Component {
         const{ user } = this.state;
         const { logout, getUser } = this.props;
         const path = this.props.match.url;
-
+        const { pathname } = this.props.location;
 
         return (
             <Fragment>
                     <Header logout={ logout }/>
+                {
+                    pathname !== "/profile" ? ( <div className="row navbar-wrapper">
+                        <div className="col-10 col-md-9">
+                            <NavBar />
+                        </div>
+                    </div>) : null
+                }
+
                 <Switch>
                     <Route path={`${path}/chats`} render={(props) => <Chats path={ path } {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/news`} render={(props) => <News {...props} user={ user } getUser={ getUser } /> }/>
