@@ -3,7 +3,7 @@ import './MessageItem.css';
 import moment from "moment/moment";
 import noUser from '../../../../../assets/images/no-user.jpg';
 
-const messageItem = ({content, user, date, userId, image}) => {
+const messageItem = ({content, user, date, userId, image, selectImage}) => {
     const classes = ["message-text"];
     const imageClasses = ["name-message"];
 
@@ -14,7 +14,7 @@ const messageItem = ({content, user, date, userId, image}) => {
     }
 
     const messageContent = content.includes("http") ? (
-        <div className="image-open">
+        <div className="image-open" onClick={ () => selectImage(content) }>
             <i className="fa fa-play-circle"></i>
         </div>
         ) : content;

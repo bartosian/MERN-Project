@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './MessageList.css';
 import { withRouter } from "react-router";
 import ChatService from '../../../../services/chat-service';
@@ -22,6 +22,7 @@ class MessageList extends Component {
             value: ""
         },
         file: "",
+        shownImageYrl: false,
         loading: false
     };
 
@@ -118,20 +119,12 @@ class MessageList extends Component {
         this.input.click();
     };
 
-    handleSubmit = () => {
-        this.authService.addPicture(this.state.file)
-            .then( data => {
-                this.setState({
-                    file: data.image,
-                    showImage: true
-                });
-
-                const newUser = {...this.props.user};
-                newUser.image = data.image;
-
-                this.props.getUser(newUser);
-            });
+    selectMessage = (url) => {
+        this.setState({
+            shownImageYrl: url
+        });
     };
+
 
     render() {
 
@@ -160,39 +153,49 @@ class MessageList extends Component {
                 speaker2 = speakerSecond.image;
             }
 
-               return <MessageItem {...m} key={id + m._id} userId={ _id } image={ speaker2 }/>
+               return <MessageItem {...m} key={id + m._id} userId={ _id } image={ speaker2 } selectImage={ this.selectMessage }/>
                 })
         ) : [];
 
         return (
-            <div className="row messages-main-wrapper">
-                <div className="col-10 col-md-8 messages-wrapper">
-                    <div className="messages-window" ref={(node) => this.messages = node}>
-                        { messagesArr.length > 0 ? messagesArr : (
-                            <div className="no-messages">
-                                Start this chat - write first message!
+            <Fragment>
+                {
+                    this.state.shownImageYrl && (
+                        <div className="col-12 col-md-7 picture-block">
+                            <img className="detail-photo" src={this.state.shownImageYrl} alt="profile"/>
+                            <i className="fa fa-times-circle close-btn" aria-hidden="true" onClick={ () => this.setState({ shownImageYrl: false })}></i>
+                        </div>
+                    )
+                }
+                <div className="row messages-main-wrapper">
+                    <div className="col-10 col-md-8 messages-wrapper">
+                        <div className="messages-window" ref={(node) => this.messages = node}>
+                            { messagesArr.length > 0 ? messagesArr : (
+                                <div className="no-messages">
+                                    Start this chat - write first message!
+                                </div>
+                            ) }
+                        </div>
+                        <div className="messages-input">
+                            <div className="send-picture" onClick={ this.selectPhoto }>
+                                <i className="fa fa-paperclip" aria-hidden="true"></i>
                             </div>
-                        ) }
-                    </div>
-                    <div className="messages-input">
-                        <div className="send-picture" onClick={ this.selectPhoto }>
-                            <i className="fa fa-paperclip" aria-hidden="true"></i>
-                        </div>
-                        <div className="input-message">
-                            <input className="photo-loader" ref={ (node) => this.input = node } onChange={ (event) => this.inputChangedHandler(event)}  name="picture-user"  type="file"/>
-                            <Input
-                                   elementType={ this.state.message.elementType }
-                                   elementConfig={ this.state.message.elementConfig}
-                                   value={ this.state.message.value }
-                                   changed={ (event) => this.inputChangedHandler(event) }
-                            />
-                        </div>
-                        <div className="send-message" onClick={ this.addNewMessage }>
-                            <i className="fa fa-paper-plane" aria-hidden="true"></i>
+                            <div className="input-message">
+                                <input className="photo-loader" ref={ (node) => this.input = node } onChange={ (event) => this.inputChangedHandler(event)}  name="picture-user"  type="file"/>
+                                <Input
+                                       elementType={ this.state.message.elementType }
+                                       elementConfig={ this.state.message.elementConfig}
+                                       value={ this.state.message.value }
+                                       changed={ (event) => this.inputChangedHandler(event) }
+                                />
+                            </div>
+                            <div className="send-message" onClick={ this.addNewMessage }>
+                                <i className="fa fa-paper-plane" aria-hidden="true"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Fragment>
         );
     }
 }
