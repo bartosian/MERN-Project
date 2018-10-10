@@ -129,6 +129,9 @@ class MessageList extends Component {
                         ) }
                     </div>
                     <div className="messages-input">
+                        <div className="send-picture" onClick={ this.addNewMessage }>
+                            <i className="fa fa-paperclip" aria-hidden="true"></i>
+                        </div>
                         <div className="input-message">
                             <Input
                                    elementType={ this.state.message.elementType }
