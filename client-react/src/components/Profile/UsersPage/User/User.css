@@ -261,3 +261,9 @@
     color: white !important;
     text-shadow: 0 0 1px black;
 }
+
+.friends-quantity-user {
+    display: flex !important;
+    justify-content: center !important;
+    padding-right: 10px;
+}

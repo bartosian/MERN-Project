@@ -3,7 +3,7 @@ import './User.css';
 import noUser from '../../../../assets/images/no-user.jpg';
 
 const user = ({user, userFriends, selectPhoto, addFriend, deleteFriend, history}) => {
-    const {image, username, status, country, occupation, _id } = user;
+    const {image, username, status, country, occupation, _id, friends } = user;
     let controls = null;
     let userHasFriend = false;
 
@@ -50,6 +50,7 @@ const user = ({user, userFriends, selectPhoto, addFriend, deleteFriend, history}
                     <div className="friend-name-block">
                         <p className="friend-name"><i className="fa fa-user-circle detail-icon text-primary"></i>{ username || "Not specified" }</p>
                         <p><i className="fa fa-globe detail-icon text-primary"></i>{ country || "Not specified" }</p>
+                        <p className="friends-quantity-user"><i className="fa fa-users detail-icon text-primary"></i>{ friends.length }</p>
                     </div>
                     <div className="friend-name-block">
                         <p className="friend-status"><i className="fa fa-heart detail-icon text-primary"></i>{ status || "Not specified" }</p>
