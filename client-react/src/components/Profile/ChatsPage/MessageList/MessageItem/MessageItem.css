@@ -56,6 +56,7 @@
     width: 70%;
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .input-message > .form-group {
@@ -143,6 +144,67 @@
     transition: all 400ms ease-in-out;
 }
 
+.image-open span {
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+
 .image-open:hover {
     color: red;
+}
+
+.loaded-image-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 10px;
+    background: rgba(82, 169, 239, 0.9);
+}
+
+.loaded-image-content i {
+    color: black;
+    font-size: 2.3rem;
+}
+
+.loaded-image-content span {
+    margin-left: 8px;
+    font-size: 0.7rem;
+}
+
+.arrow-sent {
+    position: absolute;
+    right: 10px;
+    animation: arrowSent 500ms ease-in-out infinite alternate;
+}
+
+.arrow-sent i {
+    color: red !important;
+}
+
+@keyframes arrowSent {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+          }
+}
+
+.close-upload {
+    font-size: 0.8rem !important;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.close-upload:hover,
+.close-upload:active {
+    color: white;
 }

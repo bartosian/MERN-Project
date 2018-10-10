@@ -125,6 +125,13 @@ class MessageList extends Component {
         });
     };
 
+    closeUploading = () => {
+      this.setState({
+          shownImageYrl: false,
+          file: ""
+      });
+    };
+
 
     render() {
 
@@ -182,6 +189,16 @@ class MessageList extends Component {
                             </div>
                             <div className="input-message">
                                 <input className="photo-loader" ref={ (node) => this.input = node } onChange={ (event) => this.inputChangedHandler(event)}  name="picture-user"  type="file"/>
+                                {
+                                    this.state.file ? (<div className="loaded-image-content">
+                                        <i className="fa fa-times-circle close-upload" onClick={ this.closeUploading }></i>
+                                        <i className="fa fa-image"></i> <span>send image</span>
+                                        <div className="arrow-sent">
+                                            <i className="fa fa-arrow-right"></i>
+                                        </div>
+                                    </div>) : null
+                                }
+
                                 <Input
                                        elementType={ this.state.message.elementType }
                                        elementConfig={ this.state.message.elementConfig}

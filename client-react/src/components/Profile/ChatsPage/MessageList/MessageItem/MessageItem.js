@@ -15,7 +15,7 @@ const messageItem = ({content, user, date, userId, image, selectImage}) => {
 
     const messageContent = content.includes("http") ? (
         <div className="image-open" onClick={ () => selectImage(content) }>
-            <i className="fa fa-play-circle"></i>
+            <i className="fa fa-play-circle"></i> <span>image</span>
         </div>
         ) : content;
 
