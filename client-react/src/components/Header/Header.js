@@ -48,7 +48,8 @@ class Header extends Component {
                 this.props.history.push('/profile/users');
 
                 this.setState({
-                    isLoading: false
+                    isLoading: false,
+                    search: ""
                 });
             }).catch(err => console.log(err));
     };
