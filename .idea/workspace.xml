@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/services/chat-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/chat-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chat.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Chat.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
@@ -89,8 +88,8 @@
       <file leaf-file-name="MessageItem.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="235">
+              <caret line="16" column="34" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -98,14 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PictureBlock.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PictureBlock/PictureBlock.js">
+      <file leaf-file-name="MessageItem.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="36" column="6" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="36" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="433">
+              <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -172,12 +168,12 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Header/Header.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Header/Header.js" />
         <option value="$PROJECT_DIR$/routes/friends.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css" />
         <option value="$PROJECT_DIR$/routes/messages.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.js" />
         <option value="$PROJECT_DIR$/client-react/src/services/chat-service.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css" />
       </list>
     </option>
   </component>
@@ -375,12 +371,12 @@
       <workItem from="1538569246105" duration="192034000" />
       <workItem from="1539104196212" duration="1006000" />
       <workItem from="1539105314040" duration="23158000" />
-      <workItem from="1539181005652" duration="4881000" />
+      <workItem from="1539181005652" duration="5512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279995000" />
+    <option name="totallyTimeSpent" value="280626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1642" height="947" extended-state="0" />
@@ -670,13 +666,6 @@
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chats.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="121" column="18" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-593" />
@@ -710,16 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -767,6 +746,23 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
         </state>
       </provider>
     </entry>

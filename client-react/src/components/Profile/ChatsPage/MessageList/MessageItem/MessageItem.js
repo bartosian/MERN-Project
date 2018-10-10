@@ -13,7 +13,11 @@ const messageItem = ({content, user, date, userId, image}) => {
         imageClasses.push("name-message-block");
     }
 
-    const messageContent = content.includes("http") ? "Here is image" : content;
+    const messageContent = content.includes("http") ? (
+        <div className="image-open">
+            <i className="fa fa-play-circle"></i>
+        </div>
+        ) : content;
 
     let newDate =  new Date(date);
     newDate = newDate.setDate(newDate.getDate() + 1);
