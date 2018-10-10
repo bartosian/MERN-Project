@@ -18,7 +18,7 @@ class ChatService {
     addPicture(file, id) {
         const formData = new FormData();
         formData.append("picture", file);
-        return this.service
+        return this.chatService
             .post(`/messages/upload/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',

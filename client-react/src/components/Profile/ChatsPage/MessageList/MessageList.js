@@ -72,7 +72,7 @@ class MessageList extends Component {
 
     addNewMessage = () => {
 
-        if(this.state.message.value.trim() === "" || this.state.loading) {
+        if((this.state.message.value.trim() === "" && this.state.file === "") || this.state.loading) {
             return;
         }
 

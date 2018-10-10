@@ -24,7 +24,7 @@ const chat = ({ _id, messages, speakerFirst, speakerSecond, user, created_at, re
 
     let lastMessageContent = null;
     if(lastMessage.content) {
-        lastMessageContent = lastMessage.content;
+        lastMessageContent = lastMessage.content.includes("http") ? "Image file" : lastMessage.content;
         image2 = (String(lastMessage.user) === String(speakerFirst._id)) ? speakerFirst.image : speakerSecond.image;
         lastMessageContent = !lastMessageContent.length > 70 ? lastMessageContent : lastMessageContent.slice(0, 70);
     } else {
