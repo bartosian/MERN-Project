@@ -61,6 +61,21 @@ router.get('/friends/:id', middleAuth, async function(req, res, next) {
     }
 });
 
+/* Get certain friend by name */
+router.get('/friends/:name', middleAuth, async function(req, res, next) {
+    let { name } = req.params;
+    name = name.trim();
+
+    try {
+        const friends = await User.find({ username: name });
+
+        res.status(200)
+            .json(friends);
+    } catch(ex) {
+        return next(ex);
+    }
+});
+
 /* Get all the friends */
 router.get('/friends', middleAuth, async function(req, res, next) {
     const { _id } = req.user;
