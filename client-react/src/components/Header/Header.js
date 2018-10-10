@@ -49,7 +49,7 @@ class Header extends Component {
                                 value={ this.state.search }
                                 changed={ (event) => this.inputChangedHandler(event) }
                             />
-                            <div className="search-header-btn">
+                            <div className="search-header-btn" onClick={() => console.log("hi")}>
                                 <i className="fa fa-search" aria-hidden="true"></i>
                             </div>
                         </div>

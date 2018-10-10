@@ -14,7 +14,8 @@ import NavBar from './MainPage/NavBar/NavBar';
 class Profile extends Component {
 
     state = {
-      user: this.props.loggedInUser
+      user: this.props.loggedInUser,
+      users: []
     };
 
     changeUser = (newUser) => {
@@ -26,6 +27,12 @@ class Profile extends Component {
             user: nextProps.loggedInUser
         });
     }
+
+    setUsers = (users) => {
+        this.setState({
+            users: users
+        });
+    };
 
     render() {
 
@@ -48,7 +55,7 @@ class Profile extends Component {
                 <Switch>
                     <Route path={`${path}/chats`} render={(props) => <Chats path={ path } {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/news`} render={(props) => <News {...props} user={ user } getUser={ getUser } /> }/>
-                    <Route path={`${path}/users`} render={(props) => <Users {...props} user={ user } getUser={ getUser } /> }/>
+                    <Route path={`${path}/users`} render={(props) => <Users {...props} user={ user } getUser={ getUser } users={ this.state.users } /> }/>
                     <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
                     <Route path={ path } render={(props) => <Main {...props} user={ user } getUser={ getUser }/> }/>
                 </Switch>

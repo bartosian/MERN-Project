@@ -13,7 +13,7 @@ class Users extends Component {
     }
 
     state = {
-        users: [],
+        users: this.props.users,
         shownImageYrl: null
     };
 
@@ -27,6 +27,12 @@ class Users extends Component {
 
             }).catch(err => {
                 console.log(err);
+        });
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            users: nextProps.users
         });
     }
 
