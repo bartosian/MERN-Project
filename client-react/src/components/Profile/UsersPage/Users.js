@@ -13,13 +13,12 @@ class Users extends Component {
     }
 
     state = {
-        users: this.props.users,
+        users: this.props.users || [],
         shownImageYrl: null
     };
 
     componentDidMount() {
 
-        if(this.state.users.length > 0) return;
 
         this.service.getUsers()
             .then(response => {
@@ -28,15 +27,32 @@ class Users extends Component {
                     users: newUsers
                 });
 
+
+
             }).catch(err => {
                 console.log(err);
         });
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({
-            users: nextProps.users
-        });
+
+        if(nextProps.users.length === 0) {
+            this.service.getUsers()
+                .then(response => {
+                    const newUsers = response.filter(u => u._id !== this.props.user._id);
+                    this.setState({
+                        users: newUsers
+                    });
+
+                }).catch(err => {
+                console.log(err);
+            });
+        } else {
+
+            this.setState({
+                users: nextProps.users
+            });
+        }
     }
 
 

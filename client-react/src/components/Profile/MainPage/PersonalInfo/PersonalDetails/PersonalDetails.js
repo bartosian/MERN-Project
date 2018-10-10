@@ -24,8 +24,8 @@ const details = ({dob, status, contacts, country, occupation }) => {
         <Link to="/profile/edit" className="navLink"><i className="fa fa-search-plus empty-data" aria-hidden="true"></i></Link>
     );
 
-    if(Country.length > 12) {
-        Country = Country.slice(0,12);
+    if(Country.length > 13) {
+        Country = Country.slice(0,13);
     }
 
 
