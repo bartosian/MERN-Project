@@ -45,6 +45,8 @@ class Header extends Component {
             .then(response => {
                 setUsers(response);
 
+                this.props.history.push('/profile/users');
+
                 this.setState({
                     isLoading: false
                 });

@@ -18,6 +18,9 @@ class Users extends Component {
     };
 
     componentDidMount() {
+
+        if(this.state.users.length > 0) return;
+
         this.service.getUsers()
             .then(response => {
                 const newUsers = response.filter(u => u._id !== this.props.user._id);

@@ -109,12 +109,17 @@
     }
 
     .friend-info {
-        width: 55%;
+        width: 67%;
     }
 
     .friend-controls {
         width: 20%;
     }
+
+    .friend-image {
+        height: 70%;
+    }
+
 }
 
 @media (max-width: 770px) {
@@ -129,7 +134,11 @@
 
 @media (max-width: 500px) {
     .friend-info p {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .friend-image {
+        height: 70%;
     }
 
 
@@ -138,7 +147,7 @@
     }
 
     .friend-info {
-        width: 55%;
+        width: 65%;
     }
 
     .friend-controls {
