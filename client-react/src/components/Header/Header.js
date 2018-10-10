@@ -37,9 +37,9 @@ class Header extends Component {
             isLoading: true
         });
 
-        const name = this.state.search.trim();
+        let name = this.state.search.trim();
 
-        if(!name) return;
+        if(!name) name = 'allFriends';
 
         this.friendService.getCertainFriend(name)
             .then(response => {
