@@ -43,3 +43,9 @@
         font-size: 0.8rem;
     }
 }
+
+.active-link {
+    background: rgba(0, 123, 254, 0.6);
+    color: white;
+    text-shadow: 0 0 1px black;
+}
