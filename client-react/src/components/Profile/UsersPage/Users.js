@@ -82,7 +82,7 @@ class Users extends Component {
                         </div>
                     )
                 }
-                <div className="container users-wrapper">
+                <div className="container users-wrapper main-content-footer">
                     {
                         this.state.users.length > 0 ? this.state.users.map((user, idx) => (
                             <User key={ user.username + idx} user={ user } userFriends={ friends } selectPhoto={ this.selectPhoto } addFriend={ this.addNewFriend } deleteFriend={ this.deleteFriend } history={ history }/>

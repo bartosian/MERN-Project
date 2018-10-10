@@ -404,7 +404,7 @@ class EditPage extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container main-content-footer">
                 <div className="row">
                     <div className="text-center col-12 edit-header">Change your profile</div>
                 </div>

@@ -101,7 +101,7 @@ class  News extends  Component {
                         </div>
                     )
                 }
-                <div className="container news-wrapper">
+                <div className="container news-wrapper main-content-footer">
                     { news }
                 </div>
             </Fragment>

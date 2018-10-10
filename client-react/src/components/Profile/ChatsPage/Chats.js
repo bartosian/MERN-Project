@@ -62,7 +62,7 @@ class Chats extends Component {
             </div>);
 
         return (
-            <div className="container chats-wrapper">
+            <div className="container chats-wrapper main-content-footer">
                 <Switch>
                     <Route path={`${path}/chats/:id`} render={() => <MessageList chats={ chats } user={ user }/> }/>
                     <Route path={`${path}/chats`} render={() => <ChatList chats={ chats }/> }/>
