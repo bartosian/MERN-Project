@@ -31,6 +31,7 @@ class Header extends Component {
 
     findUsers = () => {
         if(this.state.isLoading) return;
+        const { setUsers } = this.props;
 
         this.setState({
             isLoading: true
@@ -42,7 +43,11 @@ class Header extends Component {
 
         this.friendService.getCertainFriend(name)
             .then(response => {
-                console.log(response);
+                setUsers(response);
+
+                this.setState({
+                    isLoading: false
+                });
             }).catch(err => console.log(err));
     };
 

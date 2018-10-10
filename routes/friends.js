@@ -66,6 +66,8 @@ router.get('/friends/search/:name', middleAuth, async function(req, res, next) {
     let { name } = req.params;
     name = name.trim();
 
+    if(!name) res.redirect('/api/friends');
+
     try {
         const friends = await User.find({ "username" : { $regex: new RegExp(name, "ig") } });
 

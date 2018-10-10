@@ -43,7 +43,7 @@ class Profile extends Component {
 
         return (
             <Fragment>
-                    <Header logout={ logout }/>
+                    <Header logout={ logout } setUsers={ this.setUsers }/>
                 {
                     pathname !== "/profile" ? ( <div className="row navbar-wrapper">
                         <div className="col-10 col-md-9">
