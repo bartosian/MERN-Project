@@ -267,3 +267,14 @@
     justify-content: center !important;
     padding-right: 10px;
 }
+
+.friends-quantity-user i {
+    color: green !important;
+}
+
+.friend-status i {
+    color: red !important;
+    text-shadow: 0 0 1px white;
+}
+
+
