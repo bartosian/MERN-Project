@@ -9,11 +9,11 @@ const friends = ({user}) => {
 
     const friendsCopyList = friends.length ? friends.length > 25 ? (
         friends.slice(0, 25).map((f, id) => (
-            <Friend key={ f.username + id } name={ f.username } url={ f.image ? f.image : "" }/>
+            <Friend key={ f.username + id } name={ f.username } url={ f.image ? f.image : "" } id={ f._id }/>
         ))
     ):(
         friends.map((f, id) => (
-            <Friend key={ f.username + id } name={ f.username } url={ f.image ? f.image : "" }/>
+            <Friend key={ f.username + id } name={ f.username } url={ f.image ? f.image : "" } id={ f._id }/>
         ))
     ): (
         <Link to="/profile/users" className="navLink"><i className="fa fa-users empty-friends" aria-hidden="true"></i></Link>
