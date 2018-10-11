@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import User from './User/User';
-import UsersService from '../../../services/users-service';
 import FriendService from '../../../services/friend-service';
 import './Users.css';
 
@@ -8,53 +7,20 @@ class Users extends Component {
 
     constructor(props) {
         super(props);
-        this.service = new UsersService();
         this.friendService = new FriendService();
     }
 
     state = {
-        users: this.props.users || [],
+        users: this.props.users,
         shownImageYrl: null
     };
 
-    componentDidMount() {
-
-
-        this.service.getUsers()
-            .then(response => {
-                const newUsers = response.filter(u => u._id !== this.props.user._id);
-                this.setState({
-                    users: newUsers
-                });
-
-
-
-            }).catch(err => {
-                console.log(err);
-        });
-    }
-
     componentWillReceiveProps(nextProps) {
 
-        if(nextProps.users.length === 0) {
-            this.service.getUsers()
-                .then(response => {
-                    const newUsers = response.filter(u => u._id !== this.props.user._id);
-                    this.setState({
-                        users: newUsers
-                    });
-
-                }).catch(err => {
-                console.log(err);
-            });
-        } else {
-
-            this.setState({
-                users: nextProps.users
-            });
-        }
+        this.setState({
+            users: nextProps.users
+        });
     }
-
 
 
     selectPhoto = (url) => {

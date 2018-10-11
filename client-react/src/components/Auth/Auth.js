@@ -30,6 +30,6 @@ const auth = (props) => {
                     </div>
                 </div>
             );
-}
+};
 
 export default auth;

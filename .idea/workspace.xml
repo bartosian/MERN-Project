@@ -3,90 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="34beda2b-c56b-4a34-a61d-90c4410459a6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/seeds.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/seeds.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/assets/images/no-user.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chat/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friend/Friend.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friend/Friend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friends.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friends.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/NavBar/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/NavBar/NavBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/News.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/SingleNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/SingleNews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/Singlenews.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/NewsPage/SingleNews/Singlenews.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/services/auth-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/auth-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/services/chat-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/chat-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/services/friend-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/friend-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/services/post-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/post-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/services/user-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/user-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react/src/services/users-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client-react/src/services/users-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cloudinary.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/cloudinary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.362950d2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.362950d2.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.3e8b584c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.3e8b584c.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.5d7a3f2e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.5d7a3f2e.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.81c3bd4d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.81c3bd4d.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.b82182ed.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.b82182ed.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.c80f6c8e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.c80f6c8e.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.fdc9ae86.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/css/main.fdc9ae86.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.030f67ab.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.030f67ab.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.0a7b9e9d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.0a7b9e9d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.2d2b06b6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.2d2b06b6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.30fc76f5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.30fc76f5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.55e021a1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.55e021a1.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.59cca324.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.59cca324.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.96e385d6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.96e385d6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.a2ec5936.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.a2ec5936.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.b43a7b81.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.b43a7b81.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.b8c1dd8d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.b8c1dd8d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.bd0bd925.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.bd0bd925.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.ef8a10e2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/js/main.ef8a10e2.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/media/bg2-main.d72f8090.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/media/main-bg3.cb8ed9e3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/media/no-user.b74e66d6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/friends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/messages.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -99,40 +18,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MessageList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.js">
+    <leaf>
+      <file leaf-file-name="Profile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="194" selection-start-line="194" selection-end-line="194" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Post.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Post.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="Chat.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Chat.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="friends.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/friends.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1634">
-              <caret line="86" column="3" lean-forward="true" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+            <state relative-caret-position="-238">
+              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -140,34 +31,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonalDetails.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js">
+      <file leaf-file-name="Users.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="161">
+              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Profile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Profile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="57" column="156" selection-start-line="57" selection-start-column="148" selection-end-line="57" selection-end-column="156" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Chats.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/Chats.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="64" column="71" selection-start-line="64" selection-start-column="71" selection-end-line="64" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -203,7 +73,6 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Friends/Friends.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Main.js" />
         <option value="$PROJECT_DIR$/client-react/src/index.css" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" />
         <option value="$PROJECT_DIR$/config/cloudinary.js" />
         <option value="$PROJECT_DIR$/routes/auth.js" />
         <option value="$PROJECT_DIR$/client-react/src/services/auth-service.js" />
@@ -229,9 +98,10 @@
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageItem/MessageItem.css" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js" />
+        <option value="$PROJECT_DIR$/client-react/src/components/Auth/Auth.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/Profile.js" />
         <option value="$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js" />
-        <option value="$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js" />
       </list>
     </option>
   </component>
@@ -308,28 +178,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Profile" type="462c0819:PsiDirectoryNode" />
-              <item name="MainPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
-              <item name="MainPage" type="462c0819:PsiDirectoryNode" />
-              <item name="PersonalInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="client-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
-              <item name="MainPage" type="462c0819:PsiDirectoryNode" />
-              <item name="PersonalInfo" type="462c0819:PsiDirectoryNode" />
-              <item name="PersonalDetails" type="462c0819:PsiDirectoryNode" />
+              <item name="UsersPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
@@ -339,16 +188,7 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Profile" type="462c0819:PsiDirectoryNode" />
               <item name="UsersPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-project" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -366,19 +206,19 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/client-react/src/assets/images" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/client-react/public" />
-      <recent name="$PROJECT_DIR$/client-react/src/components/UI" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client-react/public/images" />
       <recent name="$PROJECT_DIR$/client-react/src/components/Profile" />
       <recent name="$PROJECT_DIR$/client-react/src/components/Profile/MainPage" />
       <recent name="$PROJECT_DIR$/client-react/src/assets/images" />
       <recent name="$PROJECT_DIR$/client-react/src/components/App" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/client-react/src/assets/images" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/client-react/public" />
+      <recent name="$PROJECT_DIR$/client-react/src/components/UI" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -409,18 +249,21 @@
       <workItem from="1539105314040" duration="23158000" />
       <workItem from="1539181005652" duration="10475000" />
       <workItem from="1539204128461" duration="205000" />
-      <workItem from="1539206568707" duration="1651000" />
+      <workItem from="1539206568707" duration="1961000" />
+      <workItem from="1539217709526" duration="670000" />
+      <workItem from="1539258915503" duration="1136000" />
+      <workItem from="1539263950051" duration="2315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287445000" />
+    <option name="totallyTimeSpent" value="291876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1642" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2510796" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15422578" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -428,7 +271,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32352942" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.14235294" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -444,19 +287,19 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15982029" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288835" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18941176" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3288835" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -472,19 +315,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/assets/images/bg-main.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/assets/images/bg2-main.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/Wall/Wall.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1131" />
@@ -529,13 +359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="77" column="50" lean-forward="true" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="406" column="57" selection-start-line="406" selection-start-column="57" selection-end-line="406" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -623,13 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-react/src/components/Header/Header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -704,9 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1102">
           <caret line="64" column="71" selection-start-line="64" selection-start-column="71" selection-end-line="64" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,9 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="26" column="82" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -724,9 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -749,18 +556,12 @@
         <state relative-caret-position="-263" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.js">
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
+        <state relative-caret-position="290">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Post.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Chat.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/friends.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -769,29 +570,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Profile.js">
+    <entry file="file://$PROJECT_DIR$/models/Post.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/ChatsPage/MessageList/MessageList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="57" column="156" selection-start-line="57" selection-start-column="148" selection-end-line="57" selection-end-column="156" />
+        <state relative-caret-position="3591">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js">
+    <entry file="file://$PROJECT_DIR$/models/Chat.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+        <state relative-caret-position="523">
+          <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Auth/Login/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-378">
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/App/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-617">
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/EditPage/Edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="406" column="57" selection-start-line="406" selection-start-column="57" selection-end-line="406" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/User/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/Profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/MainPage/PersonalInfo/PersonalDetails/PersonalDetails.js">
+    <entry file="file://$PROJECT_DIR$/client-react/src/components/Profile/UsersPage/Users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="161">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>

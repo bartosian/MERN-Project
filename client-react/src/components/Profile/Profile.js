@@ -9,9 +9,15 @@ import Users from './UsersPage/Users';
 import Footer from '../Footer/Footer';
 import News from './NewsPage/News';
 import NavBar from './MainPage/NavBar/NavBar';
+import UsersService from '../../services/users-service';
 
 
 class Profile extends Component {
+
+    constructor(props) {
+        super(props);
+        this.service = new UsersService();
+    }
 
     state = {
       user: this.props.loggedInUser,
@@ -20,6 +26,19 @@ class Profile extends Component {
 
     changeUser = (newUser) => {
         this.props.getUser(newUser);
+    };
+
+    componentDidMount() {
+
+        this.service.getUsers()
+            .then(response => {
+                const newUsers = response.filter(u => u._id !== this.state.user._id);
+                this.setState({
+                    users: newUsers
+                });
+            }).catch(err => {
+            console.log(err);
+        });
     };
 
     componentWillReceiveProps(nextProps) {
