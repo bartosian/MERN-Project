@@ -16,7 +16,7 @@ const input = (props) => {
 
     switch (props.elementType) {
         case ('input'):
-            inputElement = <input  className={ inputClasses.join(' ') } { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
+            inputElement = <input  className={ inputClasses.join(' ') } { ...props.elementConfig } value={ props.value } onChange={ props.changed } onKeyPress={ props.keyPress || null } required={ true }/>;
             break;
         case ('textarea'):
             inputElement = <textarea  className={ inputClasses.join(' ') } { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
@@ -31,7 +31,7 @@ const input = (props) => {
             );
             break;
         default:
-            inputElement = <input  className={ inputClasses.join(' ') }  { ...props.elementConfig } value={ props.value } onChange={ props.changed } required={ true }/>;
+            inputElement = <input  className={ inputClasses.join(' ') }  { ...props.elementConfig } value={ props.value } onChange={ props.changed } onKeyPress={ props.keyPress || null } required={ true }/>;
     }
 
     const label = props.label ? (

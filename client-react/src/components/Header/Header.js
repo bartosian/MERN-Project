@@ -54,6 +54,13 @@ class Header extends Component {
             }).catch(err => console.log(err));
     };
 
+     catchEnter = (event) => {
+         const x = event.which || event.keyCode;
+        if(x === 13) {
+            console.log('catch enter');
+        }
+    };
+
     render() {
 
 
@@ -76,6 +83,7 @@ class Header extends Component {
                                 elementConfig={{ placeholder: "Search", name: "search", type: "text" }}
                                 value={ this.state.search }
                                 changed={ (event) => this.inputChangedHandler(event) }
+                                keyPress={ (event) => this.catchEnter(event)}
                             />
                             <div className="search-header-btn" onClick={ this.findUsers }>
                                 <i className="fa fa-search" aria-hidden="true"></i>
