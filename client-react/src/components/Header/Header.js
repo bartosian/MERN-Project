@@ -57,7 +57,7 @@ class Header extends Component {
      catchEnter = (event) => {
          const x = event.which || event.keyCode;
         if(x === 13) {
-            console.log('catch enter');
+            this.findUsers();
         }
     };
 
