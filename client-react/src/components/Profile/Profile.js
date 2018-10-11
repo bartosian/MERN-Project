@@ -74,7 +74,7 @@ class Profile extends Component {
                 <Switch>
                     <Route path={`${path}/chats`} render={(props) => <Chats path={ path } {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/news`} render={(props) => <News {...props} user={ user } getUser={ getUser } /> }/>
-                    <Route path={`${path}/users/friends`} render={(props) => <Users {...props} user={ user } getUser={ getUser } users={ this.state.users } setUsers={ this.setUsers }/> }/>
+                    <Route path={`${path}/users/friends`} render={(props) => <Users {...props} user={ user } getUser={ getUser } users={ this.state.user.friends } setUsers={ this.setUsers }/> }/>
                     <Route path={`${path}/users`} render={(props) => <Users {...props} user={ user } getUser={ getUser } users={ this.state.users } setUsers={ this.setUsers }/> }/>
                     <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
                     <Route path={ path } render={(props) => <Main {...props} user={ user } getUser={ getUser }/> }/>
