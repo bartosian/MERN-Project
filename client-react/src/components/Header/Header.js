@@ -66,8 +66,6 @@ class Header extends Component {
                 .then(response => {
                     setUsers(response, "users");
 
-                    console.log(response);
-
                     this.props.history.push('/profile/users');
 
                     this.setState({
