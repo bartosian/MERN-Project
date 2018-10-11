@@ -32,26 +32,49 @@ class Header extends Component {
     findUsers = () => {
         if(this.state.isLoading) return;
         const { setUsers } = this.props;
+        const { pathname } = this.props.location;
+        const { friends } = this.props.user;
 
         this.setState({
             isLoading: true
         });
 
+        if(pathname === "/profile/users/friends") {
+
+            let name = this.state.search.trim();
+
+            const newFriends = friends.filter(fr => {
+                return  fr.username.toLowerCase().includes(name.toLowerCase());
+            });
+
+            setUsers(newFriends, "usersFriends");
+
+            this.setState({
+                isLoading: false,
+                search: ""
+            });
+
+            return;
+        }
+
+
         let name = this.state.search.trim();
 
-        if(!name) name = 'allFriends';
+            if(!name) name = 'allFriends';
 
-        this.friendService.getCertainFriend(name)
-            .then(response => {
-                setUsers(response);
+            this.friendService.getCertainFriend(name)
+                .then(response => {
+                    setUsers(response, "users");
 
-                this.props.history.push('/profile/users');
+                    console.log(response);
 
-                this.setState({
-                    isLoading: false,
-                    search: ""
-                });
-            }).catch(err => console.log(err));
+                    this.props.history.push('/profile/users');
+
+                    this.setState({
+                        isLoading: false,
+                        search: ""
+                    });
+                }).catch(err => console.log(err));
     };
 
      catchEnter = (event) => {

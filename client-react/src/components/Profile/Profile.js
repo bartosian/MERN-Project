@@ -21,7 +21,8 @@ class Profile extends Component {
 
     state = {
       user: this.props.loggedInUser,
-      users: []
+      users: [],
+      usersFriends: this.props.loggedInUser.friends
     };
 
     changeUser = (newUser) => {
@@ -43,14 +44,25 @@ class Profile extends Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            user: nextProps.loggedInUser
+            user: nextProps.loggedInUser,
+            usersFriends: nextProps.loggedInUser.friends
         });
     }
 
-    setUsers = (users) => {
-        this.setState({
-            users: users
-        });
+    setUsers = (users, prop) => {
+
+        if (prop === "usersFriends") {
+
+            this.setState({
+                usersFriends: users
+            });
+
+            return;
+
+        }
+            this.setState({
+                users: users
+            });
     };
 
     render() {
@@ -62,7 +74,7 @@ class Profile extends Component {
 
         return (
             <Fragment>
-                    <Header logout={ logout } setUsers={ this.setUsers }/>
+                    <Header logout={ logout } setUsers={ this.setUsers } user={ user }/>
                 {
                     pathname !== "/profile" ? ( <div className="row navbar-wrapper">
                         <div className="col-10 col-md-9">
@@ -74,8 +86,8 @@ class Profile extends Component {
                 <Switch>
                     <Route path={`${path}/chats`} render={(props) => <Chats path={ path } {...props} user={ user } getUser={ getUser } /> }/>
                     <Route path={`${path}/news`} render={(props) => <News {...props} user={ user } getUser={ getUser } /> }/>
-                    <Route path={`${path}/users/friends`} render={(props) => <Users {...props} user={ user } getUser={ getUser } users={ this.state.user.friends } setUsers={ this.setUsers }/> }/>
-                    <Route path={`${path}/users`} render={(props) => <Users {...props} user={ user } getUser={ getUser } users={ this.state.users } setUsers={ this.setUsers }/> }/>
+                    <Route exact path={`${path}/users/friends`} render={(props) => <Users {...props} user={ user } getUser={ getUser } users={ this.state.usersFriends }/> }/>
+                    <Route path={`${path}/users`} render={(props) => <Users {...props} user={ user } getUser={ getUser } users={ this.state.users }/> }/>
                     <Route path={`${path}/edit`} render={(props) => <Edit {...props} user={ user } getUser={ getUser } changeUser={ this.changeUser }/> }/>
                     <Route path={ path } render={(props) => <Main {...props} user={ user } getUser={ getUser }/> }/>
                 </Switch>

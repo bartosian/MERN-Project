@@ -68,7 +68,7 @@ router.get('/friends/search/:name', middleAuth, async function(req, res, next) {
     name = name.trim();
 
     if(name === "allFriends") {
-        res.redirect('/api/friends');
+        res.redirect('/api/users');
         return;
     }
 
