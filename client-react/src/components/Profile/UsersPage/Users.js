@@ -15,11 +15,42 @@ class Users extends Component {
         shownImageYrl: null
     };
 
+    componentWillMount() {
+        const { path } = this.props.match;
+        const { friends } = this.props.user;
+
+        if(path.includes("users/friends")) {
+            this.setState({
+                users: friends
+            });
+
+        }
+
+    }
+
+    componentDidMount() {
+        console.log("-=-==-=--DidMont",this.state.users.length);
+    }
+
     componentWillReceiveProps(nextProps) {
+
+        const { path } = this.props.match;
+        const { friends } = nextProps.user;
+
+        if(path.includes("users/friends")) {
+            this.setState({
+                users: friends
+            });
+
+            return;
+
+        }
 
         this.setState({
             users: nextProps.users
         });
+
+        console.log("-=-==-=--Props",this.state.users.length);
     }
 
 
