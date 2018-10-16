@@ -119,39 +119,6 @@ class Header extends Component {
             </div>
         );
     }
-
 };
-
-return (
-    <div className="container">
-        <div className="col-12 header-comp">
-            <div className="logo-bar">
-                <div className="logo">
-                    <img className="logo-img" src={logoBg} alt="logo"/>
-                </div>
-                <Link to='/profile' className='navLink'><h1 className="main-logo--navbar">InTouch</h1></Link>
-            </div>
-            <nav className="main-nav">
-                <div className="search">
-                    <Input
-                        elementType="input"
-                        elementConfig={{ placeholder: "Search", name: "search", type: "text" }}
-                        value={ this.state.search }
-                        changed={ (event) => this.inputChangedHandler(event) }
-                        keyPress={ (event) => this.catchEnter(event)}
-                    />
-                    <div className="search-header-btn" onClick={ this.findUsers }>
-                        <i className="fa fa-search" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div className="logout">
-                    <Button clicked={ () => logout(history) } btnType="danger">Logout</Button>
-                </div>
-            </nav>
-
-        </div>
-    </div>
-);
-}
 
 export default withRouter(Header);
