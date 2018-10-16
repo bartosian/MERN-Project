@@ -185,4 +185,69 @@ class Signup extends Component {
     }
 }
 
+
+inputChangedHandler = (e, inputIdentifier) => {
+    const newSignupForm = { ...this.state.signupForm };
+    let updatedControl = { ...newSignupForm[inputIdentifier] };
+    updatedControl.value = e.target.value;
+    updatedControl.valid = this.checkValidity(updatedControl.value, updatedControl.validation);
+    updatedControl.touched = true;
+    newSignupForm[inputIdentifier] = updatedControl;
+
+    let formIsValid = true;
+    for(let inputIdentifier in newSignupForm) {
+        formIsValid = newSignupForm[inputIdentifier].valid && formIsValid;
+    }
+
+    this.setState({
+        signupForm: newSignupForm,
+        isFormValid: formIsValid
+    });
+};
+
+
+render() {
+
+    const formElementsArr = [];
+
+    for (let key in this.state.signupForm) {
+        formElementsArr.push({
+            id: key,
+            config: this.state.signupForm[key]
+        });
+    }
+
+    let form = ( <form onSubmit={ this.handleFormSubmit } action="#">
+        {
+            formElementsArr.map( el => (
+                <Input
+                    key={ el.id }
+                    label={ el.id }
+                    invalid={ !el.config.valid }
+                    elementType={ el.config.elementType }
+                    elementConfig={ el.config.elementConfig}
+                    value={ el.config.value }
+                    touched={ el.config.touched }
+                    changed={ (event) => this.inputChangedHandler(event, el.id) }
+                />
+            ))
+        }
+        <Button btnType="primary" disabled={ !this.state.isFormValid }>Submit</Button>
+    </form>);
+
+    let error = (
+        <p className="alert alert-danger">There is error with your credentials!</p>
+    );
+
+    return (
+        <div>
+            <h4 className="form-header"><span>SignUp</span> form</h4>
+            {this.state.error && error }
+            { form }
+            <p>Do you have already account?    <Link className="login-link" to="/login">Log in</Link></p>
+        </div>
+    );
+
+}
+}
 export default Signup;
